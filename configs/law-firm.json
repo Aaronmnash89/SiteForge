@@ -1,0 +1,234 @@
+{
+  "page": {
+    "sections": [
+      {
+        "type": "hero",
+        "enabled": true
+      },
+      {
+        "type": "trust",
+        "enabled": true
+      },
+      {
+        "type": "whyChooseUs",
+        "enabled": true
+      },
+      {
+        "type": "about",
+        "enabled": true
+      },
+      {
+        "type": "testimonials",
+        "enabled": true
+      },
+      {
+        "type": "practiceAreas",
+        "enabled": true
+      },
+      {
+        "type": "contact",
+        "enabled": true
+      },
+      {
+        "type": "footer",
+        "enabled": true
+      }
+    ]
+  },
+  "company": {
+    "name": "Nash Injury Law",
+    "logoText": "Nash Injury Law",
+    "phone": "(800) 555-1234",
+    "email": "info@nashlaw.com"
+  },
+  "navigation": {
+    "links": [
+      {
+        "label": "Home",
+        "href": "#home"
+      },
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Testimonials",
+        "href": "#testimonials"
+      },
+      {
+        "label": "Practice Areas",
+        "href": "#services"
+      },
+      {
+        "label": "Contact Us",
+        "href": "#contact"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Trusted Personal Injury Attorneys",
+    "title": "Injured in an Accident?",
+    "subtitle": "We fight for your rights and help accident victims recover the compensation they deserve.",
+    "buttonText": "Free Consultation",
+    "callButton": "Call 24/7"
+  },
+  "trust": {
+    "items": [
+      {
+        "value": "25+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "5,000+",
+        "label": "Cases Won"
+      },
+      {
+        "value": "$150M+",
+        "label": "Recovered"
+      },
+      {
+        "value": "4.9★",
+        "label": "Google Rating"
+      }
+    ]
+  },
+  "practiceAreas": {
+    "eyebrow": "PRACTICE AREAS",
+    "title": "Cases We Handle Every Day",
+    "subtitle": "Experienced legal representation for individuals and families across North Carolina.",
+    "items": [
+      {
+        "icon": "Car",
+        "title": "Car Accidents",
+        "description": "Protecting injured drivers and passengers after serious collisions.",
+        "href": "#"
+      },
+      {
+        "icon": "Truck",
+        "title": "Truck Accidents",
+        "description": "Experienced representation involving commercial trucking accidents.",
+        "href": "#"
+      },
+      {
+        "icon": "PersonStanding",
+        "title": "Slip & Fall",
+        "description": "Holding negligent property owners accountable.",
+        "href": "#"
+      },
+      {
+        "icon": "HeartPulse",
+        "title": "Medical Malpractice",
+        "description": "Fighting for victims of medical negligence.",
+        "href": "#"
+      },
+      {
+        "icon": "Scale",
+        "title": "Wrongful Death",
+        "description": "Compassionate representation for grieving families.",
+        "href": "#"
+      },
+      {
+        "icon": "ShieldPlus",
+        "title": "Catastrophic Injury",
+        "description": "Helping clients rebuild their lives after devastating injuries.",
+        "href": "#"
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "eyebrow": "WHY CHOOSE US",
+    "title": "Committed to Fighting for You",
+    "subtitle": "Our firm combines decades of experience with a client-first approach to deliver outstanding legal representation.",
+    "features": [
+      {
+        "icon": "Scale",
+        "title": "Experienced Attorneys",
+        "description": "Decades of experience handling personal injury cases."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "No Fee Unless We Win",
+        "description": "You don't pay unless we recover compensation."
+      },
+      {
+        "icon": "Phone",
+        "title": "Available 24/7",
+        "description": "Speak with an attorney whenever you need help."
+      },
+      {
+        "icon": "Award",
+        "title": "Proven Results",
+        "description": "Millions recovered for injured clients."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "ABOUT OUR FIRM",
+    "title": "Experienced Attorneys. Proven Results.",
+    "description": "For more than 25 years, Nash Injury Law has fought for individuals and families who have been injured due to someone else's negligence. Our mission is simple: protect your rights, maximize your compensation, and treat you with the respect you deserve.",
+    "image": "/profileImage.jpg",
+    "buttonText": "Meet Our Team",
+    "highlights": [
+      "25+ Years Experience",
+      "5,000+ Cases Won",
+      "Millions Recovered"
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "CLIENT TESTIMONIALS",
+    "title": "Trusted By Clients Across North Carolina",
+    "reviews": [
+      {
+        "name": "Sarah M.",
+        "case": "Auto Accident",
+        "quote": "Nash Injury Law handled everything with professionalism. I was able to focus on healing while they dealt with the insurance company."
+      },
+      {
+        "name": "Michael R.",
+        "case": "Slip & Fall",
+        "quote": "From day one I felt like family. They answered every question and secured a settlement beyond what I expected."
+      },
+      {
+        "name": "Jennifer T.",
+        "case": "Personal Injury",
+        "quote": "The team was responsive, compassionate, and fought tirelessly for me. I couldn't recommend them enough."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "FREE CONSULTATION",
+    "title": "Ready to Fight for Your Rights?",
+    "subtitle": "Don't face the insurance companies alone. Speak with an experienced attorney today.",
+    "buttonText": "Schedule Consultation",
+    "phoneButton": "Call (800) 555-1234"
+  },
+  "footer": {
+    "tagline": "Fighting for injured clients across North Carolina for over 25 years.",
+    "address": "123 Main Street, Asheville, NC",
+    "copyright": "© 2026 Nash Injury Law. All rights reserved.",
+    "quickLinks": [
+      {
+        "label": "Home",
+        "href": "#home"
+      },
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Practice Areas",
+        "href": "#services"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "practiceAreas": [
+      "Car Accidents",
+      "Truck Accidents",
+      "Medical Malpractice",
+      "Wrongful Death"
+    ]
+  }
+}
