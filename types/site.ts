@@ -129,6 +129,12 @@ export interface SitePage {
   sections: PageSection[];
 }
 
+export type ThemeName =
+  | "law"
+  | "dental"
+  | "automotive"
+  | "roofing";
+
 export interface SiteConfig {
   page: SitePage;
 
@@ -147,4 +153,11 @@ export interface SiteConfig {
 
   contact: ContactCTAData;
   footer: FooterData;
+
+   theme:ThemeName;
+}
+
+export interface LawThemeConfig {
+  colors: {};
+  typography: {};
 }

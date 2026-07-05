@@ -1,9 +1,15 @@
 import Navigation from "@/components/layout/Navigation";
 import SectionRenderer from "@/components/renderer/SectionRenderer";
+import { themes } from "@/configs/themes";
 
-import config from "@/configs/law-firm.json";
+import configData from "@/configs/content/law-firm.json";
+import { SiteConfig } from "@/types/site";
+
+const config: SiteConfig = configData;
+
 
 export default function Home() {
+  const theme = themes[config.theme];
   return (
     <main className="pt-24">
       <Navigation

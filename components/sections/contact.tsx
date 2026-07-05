@@ -1,6 +1,7 @@
 import { ContactCTAData } from "@/types/site";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { lawTheme } from "@/configs/themes/law";
 
 interface ContactCTAProps {
   contactCTA: ContactCTAData;
@@ -12,7 +13,7 @@ export default function ContactCTA({
   return (
     <section
       id="contact"
-      className="bg-blue-950 py-28"
+      className={`${lawTheme.colors.primary} ${lawTheme.layout.sectionSpacing}`}
     >
       <Container className="mx-auto max-w-5xl px-6 text-center">
 
