@@ -2,6 +2,7 @@ import Image from "next/image";
 import { AboutData } from "@/types/site";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { lawTheme } from "@/configs/themes/law";
 
 
 interface AboutProps {
@@ -12,7 +13,7 @@ export default function About({ about }: AboutProps) {
   return (
     <section
       id="about"
-      className="bg-black py-32"
+      className={`${lawTheme.colors.primary} ${lawTheme.layout.sectionSpacing}`}
     >
       <Container className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
 

@@ -3,6 +3,7 @@ import { TestimonialsData } from "@/types/site";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { lawTheme } from "@/configs/themes/law";
 
 interface TestimonialsProps {
   testimonials: TestimonialsData;
@@ -12,7 +13,9 @@ export default function Testimonials({
   testimonials,
 }: TestimonialsProps) {
   return (
-    <section className="bg-gradient-to-b from-[#0B1120] to-black py-32" id="testimonials">
+    <section
+      id="testimonials"
+      className={`${lawTheme.colors.primary} ${lawTheme.layout.sectionSpacing}`} >
       <Container className="mx-auto max-w-7xl px-6">
 
         <Card className="mb-16 text-center">

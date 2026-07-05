@@ -9,6 +9,7 @@ import { WhyChooseUsData } from "@/types/site";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { lawTheme } from "@/configs/themes/law";
 
 interface WhyChooseUsProps {
   whyChooseUs: WhyChooseUsData;
@@ -25,7 +26,9 @@ export default function WhyChooseUs({
   whyChooseUs,
 }: WhyChooseUsProps) {
   return (
-    <section className="relative py-28 bg-gradient-to-b from-blue-950/20 to-black" id="whyChooseUs">
+    <section
+      id="whyChooseUs"
+      className={`${lawTheme.colors.primary} ${lawTheme.layout.sectionSpacing}`} >
       <Container className="mx-auto max-w-7xl px-6">
 
         <SectionHeading

@@ -2,17 +2,17 @@ import { ThemeConfig } from "./types";
 
 export const lawTheme: ThemeConfig = {
     colors: {
-        primary: "bg-blue-900",
-        secondary: "bg-amber-500",
+        primary: "bg-neutral-950",      // almost black
+        secondary: "bg-amber-600",      // gold
         accent: "text-amber-500",
 
         background: "bg-white",
-        surface: "bg-gray-100",
+        surface: "bg-zinc-100",
 
-        text: "text-gray-900",
-        textLight: "text-gray-600",
+        text: "text-zinc-900",
+        textLight: "text-zinc-600",
 
-        border: "border-gray-300",
+        border: "border-zinc-300",
     },
 
     typography: {

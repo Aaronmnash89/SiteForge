@@ -1,6 +1,7 @@
 import { HeroData } from "@/types/site";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
+import { lawTheme } from "@/configs/themes/law";
 
 interface HeroProps {
   hero: HeroData;
@@ -9,7 +10,9 @@ interface HeroProps {
 export default function Hero({ hero }: HeroProps) {
   return (
 
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-28 pb-20" id="home">
+    <section 
+    id="hero"
+    className={`${lawTheme.colors.primary} ${lawTheme.layout.sectionSpacing}`} >
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-950/20 to-transparent" />
 

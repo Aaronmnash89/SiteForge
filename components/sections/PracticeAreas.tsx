@@ -13,6 +13,7 @@ import { PracticeAreasData } from "@/types/site";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { lawTheme } from "@/configs/themes/law";
 
 interface PracticeAreasProps {
   practiceAreas: PracticeAreasData;
@@ -29,10 +30,11 @@ const icons = {
 
 export default function PracticeAreas({
   practiceAreas,
-}: PracticeAreasProps)
-{
+}: PracticeAreasProps) {
   return (
-    <section className="py-32" id="services">
+    <section
+      id="practiceAreas"
+      className={`${lawTheme.colors.primary} ${lawTheme.layout.sectionSpacing}`} >
       <Container className="mx-auto max-w-7xl px-6">
 
         <SectionHeading
