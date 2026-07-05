@@ -1,10 +1,10 @@
 import Hero from "@/components/sections/Hero";
-import TrustBar from "@/components/sections/trustBar";
-import WhyChooseUs from "@/components/sections/whyChooseUs";
+import TrustBar from "@/components/sections/TrustBar";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import About from "@/components/sections/About";
 import Testimonials from "@/components/sections/Testimonials";
 import PracticeAreas from "@/components/sections/PracticeAreas";
-import ContactCTA from "@/components/sections/contact";
+import ContactCTA from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
 
 import { SiteConfig, PageSection } from "@/types/site";

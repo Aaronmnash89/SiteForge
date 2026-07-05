@@ -111,3 +111,40 @@ export interface ContactCTAData {
   buttonText: string;
   phoneButton: string;
 }
+
+export interface FooterData {
+  tagline: string;
+  address: string;
+  copyright: string;
+  quickLinks: NavigationLink[];
+  practiceAreas: string[];
+}
+
+export interface PageSection {
+  type: string;
+  enabled: boolean;
+}
+
+export interface SitePage {
+  sections: PageSection[];
+}
+
+export interface SiteConfig {
+  page: SitePage;
+
+  company: CompanyData;
+  navigation: NavigationData;
+
+  hero: HeroData;
+  trust: TrustData;
+  whyChooseUs: WhyChooseUsData;
+  about: AboutData;
+  testimonials: TestimonialsData;
+  practiceAreas: PracticeAreasData;
+
+  services?: ServicesData;
+  faq?: FAQData;
+
+  contact: ContactCTAData;
+  footer: FooterData;
+}

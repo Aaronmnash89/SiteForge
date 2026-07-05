@@ -29,7 +29,8 @@ const icons = {
 
 export default function PracticeAreas({
   practiceAreas,
-}: PracticeAreasProps) {
+}: PracticeAreasProps)
+{
   return (
     <section className="py-32" id="services">
       <Container className="mx-auto max-w-7xl px-6">
@@ -81,3 +82,4 @@ export default function PracticeAreas({
     </section>
   );
 }
+
