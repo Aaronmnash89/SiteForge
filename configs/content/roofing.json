@@ -35,11 +35,12 @@
       }
     ]
   },
+  "theme": "roofing",
   "company": {
-    "name": "Nash Injury Law",
-    "logoText": "Nash Injury Law",
+    "name": "Nash Roofing",
+    "logoText": "Nash Roofing",
     "phone": "(800) 555-1234",
-    "email": "info@nashlaw.com"
+    "email": "info@nashroofing.com"
   },
   "navigation": {
     "links": [
@@ -190,22 +191,22 @@
       },
       {
         "name": "Jennifer T.",
-        "case": "Personal Injury",
+        "case": "Dental Malpractice",
         "quote": "The team was responsive, compassionate, and fought tirelessly for me. I couldn't recommend them enough."
       }
     ]
   },
   "contact": {
     "eyebrow": "FREE CONSULTATION",
-    "title": "Ready to Fight for Your Rights?",
-    "subtitle": "Don't face the insurance companies alone. Speak with an experienced attorney today.",
+    "title": "Ready for dental care?",
+    "subtitle": "Don't face the insurance companies alone. Speak with an experienced dentist today.",
     "buttonText": "Schedule Consultation",
     "phoneButton": "Call (800) 555-1234"
   },
   "footer": {
-    "tagline": "Fighting for injured clients across North Carolina for over 25 years.",
+    "tagline": "",
     "address": "123 Main Street, Asheville, NC",
-    "copyright": "© 2026 Nash Injury Law. All rights reserved.",
+    "copyright": "© 2026 Nash Roofing. All rights reserved.",
     "quickLinks": [
       {
         "label": "Home",
@@ -225,9 +226,9 @@
       }
     ],
     "practiceAreas": [
-      "Car Accidents",
-      "Truck Accidents",
-      "Medical Malpractice",
+      "Crazy Dental Stuff",
+      "Dental Stuff",
+      "Dental Malpractice",
       "Wrongful Death"
     ]
   }
