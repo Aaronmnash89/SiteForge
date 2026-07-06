@@ -10,9 +10,11 @@ import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { lawTheme } from "@/configs/themes/law";
+import { ThemeConfig } from "@/configs/themes/types";
 
 interface WhyChooseUsProps {
-  whyChooseUs: WhyChooseUsData;
+    whyChooseUs: WhyChooseUsData;
+    theme: ThemeConfig;
 }
 
 const icons = {
@@ -23,12 +25,13 @@ const icons = {
 };
 
 export default function WhyChooseUs({
-  whyChooseUs,
+    whyChooseUs,
+    theme
 }: WhyChooseUsProps) {
   return (
     <section
       id="whyChooseUs"
-      className={`${lawTheme.colors.primary} ${lawTheme.layout.sectionSpacing}`} >
+      className={`${theme.colors.primary} ${theme.layout.sectionSpacing}`} >
       <Container className="mx-auto max-w-7xl px-6">
 
         <SectionHeading

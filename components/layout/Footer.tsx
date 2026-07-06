@@ -1,13 +1,17 @@
 import { FooterData, CompanyData } from "@/types/site";
+import Button from "../ui/Button";
+import { ThemeConfig } from "@/configs/themes/types";
 
 interface FooterProps {
   footer: FooterData;
   company: CompanyData;
+  theme: ThemeConfig;
 }
 
 export default function Footer({
   footer,
   company,
+  theme,
 }: FooterProps) {
   return (
     <footer className="border-t border-white/10 bg-black">
@@ -73,9 +77,12 @@ export default function Footer({
             Available 24/7 to discuss your case.
           </p>
 
-          <button className="mt-6 rounded-xl bg-blue-600 px-6 py-3 font-semibold transition hover:bg-blue-700">
+          <Button
+            theme={theme}
+            className="mt-6 w-45 px-6 py-3"
+          >
             Contact Us
-          </button>
+          </Button>
         </div>
 
       </div>

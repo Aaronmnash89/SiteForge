@@ -1,34 +1,49 @@
+"use client";
+import { ThemeConfig } from "@/configs/themes/types";
+
 interface ButtonProps {
   children: React.ReactNode;
   variant?: "primary" | "secondary";
   className?: string;
+  theme: ThemeConfig;
 }
 
 export default function Button({
   children,
   variant = "primary",
   className = "",
+  theme,
 }: ButtonProps) {
-  const styles = {
-    primary:
-      "bg-blue-600 text-white hover:bg-blue-700 hover:shadow-xl",
 
-    secondary:
-      "border border-white text-white hover:bg-white hover:text-black",
+  const styles = {
+    primary: `
+    ${theme.button.primaryColor}
+    text-white
+  `,
+
+    secondary: `
+    ${theme.colors.secondary}
+    text-black
+  `,
   };
+
+  const hoverStyles = {
+  primary: theme.button.primaryHover,
+  secondary: theme.button.secondaryHover,
+};
+
 
   return (
     <button
       className={`
-        inline-flex items-center justify-center
-        rounded-xl
-        px-8 py-4
-        font-semibold
-        transition-all duration-300
-        hover:-translate-y-1
-        ${styles[variant]}
-        ${className}
-      `}
+    ${styles[variant]}
+    ${theme.button.padding}
+    ${theme.button.rounded}
+    ${theme.button.shadow}
+    ${hoverStyles[variant]}
+    ${theme.button.transition}
+    ${className}
+  `}
     >
       {children}
     </button>

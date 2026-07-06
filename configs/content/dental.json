@@ -35,9 +35,7 @@
       }
     ]
   },
-  "theme": {
-    "name": "dental"
-  },
+  "theme": "dental",
   "company": {
     "name": "Nash Dental",
     "logoText": "Nash Dental",
@@ -69,9 +67,9 @@
     ]
   },
   "hero": {
-    "eyebrow": "Trusted Personal Injury Attorneys",
-    "title": "Injured in an Accident?",
-    "subtitle": "We fight for your rights and help accident victims recover the compensation they deserve.",
+    "eyebrow": "Trusted Dental Care",
+    "title": "Need Dental Work?",
+    "subtitle": "We can help you with your dental needs. Our experienced team is here to provide top-notch care and ensure your smile stays healthy.",
     "buttonText": "Free Consultation",
     "callButton": "Call 24/7"
   },
@@ -83,11 +81,11 @@
       },
       {
         "value": "5,000+",
-        "label": "Cases Won"
+        "label": "Patients Served"
       },
       {
         "value": "$150M+",
-        "label": "Recovered"
+        "label": "Patient Savings"
       },
       {
         "value": "4.9★",
@@ -97,19 +95,19 @@
   },
   "practiceAreas": {
     "eyebrow": "PRACTICE AREAS",
-    "title": "Cases We Handle Every Day",
-    "subtitle": "Experienced legal representation for individuals and families across North Carolina.",
+    "title": "Dental Services We Offer",
+    "subtitle": "Comprehensive dental care for patients of all ages.",
     "items": [
       {
-        "icon": "Car",
-        "title": "Car Accidents",
-        "description": "Protecting injured drivers and passengers after serious collisions.",
+        "icon": "Sparkles",
+        "title": "Dental Implants",
+        "description": "Restoring your smile with natural-looking dental implants.",
         "href": "#"
       },
       {
-        "icon": "Truck",
-        "title": "Truck Accidents",
-        "description": "Experienced representation involving commercial trucking accidents.",
+        "icon": "Smile",
+        "title": "Teeth Whitening",
+        "description": "Brighten your smile with our professional teeth whitening treatments.",
         "href": "#"
       },
       {
@@ -119,29 +117,23 @@
         "href": "#"
       },
       {
-        "icon": "HeartPulse",
-        "title": "Medical Malpractice",
-        "description": "Fighting for victims of medical negligence.",
-        "href": "#"
-      },
-      {
         "icon": "Scale",
-        "title": "Wrongful Death",
-        "description": "Compassionate representation for grieving families.",
+        "title": "Sliding Scale Dentistry",
+        "description": "Compassionate dental care for all patients, regardless of their ability to pay.",
         "href": "#"
       },
       {
         "icon": "ShieldPlus",
-        "title": "Catastrophic Injury",
-        "description": "Helping clients rebuild their lives after devastating injuries.",
+        "title": "Insurance Assistance",
+        "description": "Helping clients navigate their insurance coverage and maximize their benefits.",
         "href": "#"
       }
     ]
   },
   "whyChooseUs": {
     "eyebrow": "WHY CHOOSE US",
-    "title": "Committed to Fighting for You",
-    "subtitle": "Our firm combines decades of experience with a client-first approach to deliver outstanding legal representation.",
+    "title": "Committed to Your Dental Health",
+    "subtitle": "Our team is dedicated to providing exceptional dental care and ensuring your comfort and satisfaction.",
     "features": [
       {
         "icon": "Scale",

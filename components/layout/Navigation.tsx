@@ -8,6 +8,7 @@ interface NavigationProps {
     navigation: NavigationData;
 }
 
+
 export default function Navigation({
     company,
     navigation,
@@ -41,7 +42,7 @@ export default function Navigation({
                 });
             },
             {
-                threshold: 0.6,
+                threshold: 0.20, // Adjust this value as needed for blue bar on navigation
             }
         );
 

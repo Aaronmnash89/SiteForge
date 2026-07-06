@@ -23,7 +23,7 @@ export const roofingTheme: ThemeConfig = {
     button: {
         rounded: "rounded-xl",
         padding: "px-8 py-4",
-        shadow: "shadow-xl",
+        shadow: "shadow-xl"
     },
 
     cards: {

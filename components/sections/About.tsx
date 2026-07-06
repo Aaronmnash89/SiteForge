@@ -1,19 +1,21 @@
+"use client";
 import Image from "next/image";
 import { AboutData } from "@/types/site";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { lawTheme } from "@/configs/themes/law";
-
+import Button from "@/components/ui/Button";
+import { ThemeConfig } from "@/configs/themes/types";
 
 interface AboutProps {
   about: AboutData;
+  theme: ThemeConfig;
 }
 
-export default function About({ about }: AboutProps) {
+export default function About({ about, theme }: AboutProps) {
   return (
     <section
       id="about"
-      className={`${lawTheme.colors.primary} ${lawTheme.layout.sectionSpacing}`}
+      className={`${theme.colors.primary} ${theme.layout.sectionSpacing}`}
     >
       <Container className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
 
@@ -37,9 +39,9 @@ export default function About({ about }: AboutProps) {
             ))}
           </div>
 
-          <button className="mt-10 rounded-xl bg-blue-600 px-8 py-4 font-semibold transition hover:bg-blue-700">
+          <Button theme={theme} className="mt-10">
             {about.buttonText}
-          </button>
+          </Button>
         </div>
 
         {/* Right Image */}

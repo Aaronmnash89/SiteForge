@@ -4,18 +4,21 @@ import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { lawTheme } from "@/configs/themes/law";
+import { ThemeConfig } from "@/configs/themes/types";
 
 interface TestimonialsProps {
-  testimonials: TestimonialsData;
+    testimonials: TestimonialsData;
+    theme: ThemeConfig;
 }
 
 export default function Testimonials({
   testimonials,
+  theme
 }: TestimonialsProps) {
   return (
     <section
       id="testimonials"
-      className={`${lawTheme.colors.primary} ${lawTheme.layout.sectionSpacing}`} >
+      className={`${theme.colors.primary} ${theme.layout.sectionSpacing}`} >
       <Container className="mx-auto max-w-7xl px-6">
 
         <Card className="mb-16 text-center">

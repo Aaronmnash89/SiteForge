@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -6,35 +7,44 @@ import {
   PersonStanding,
   HeartPulse,
   Scale,
+  Sparkles,
   ShieldPlus,
+  Smile,
+  BadgePlus,
 } from "lucide-react";
 
 import { PracticeAreasData } from "@/types/site";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { lawTheme } from "@/configs/themes/law";
+import { ThemeConfig } from "@/configs/themes/types";
 
 interface PracticeAreasProps {
   practiceAreas: PracticeAreasData;
+  theme: ThemeConfig;
 }
 
 const icons = {
+  ArrowRight,
   Car,
   Truck,
   PersonStanding,
   HeartPulse,
   Scale,
+  Sparkles,
   ShieldPlus,
+  Smile,
+  BadgePlus,
 };
 
 export default function PracticeAreas({
   practiceAreas,
+  theme,
 }: PracticeAreasProps) {
   return (
     <section
       id="practiceAreas"
-      className={`${lawTheme.colors.primary} ${lawTheme.layout.sectionSpacing}`} >
+      className={`${theme.colors.primary} ${theme.layout.sectionSpacing}`} >
       <Container className="mx-auto max-w-7xl px-6">
 
         <SectionHeading

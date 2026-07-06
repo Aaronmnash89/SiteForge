@@ -8,48 +8,82 @@ import ContactCTA from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
 
 import { SiteConfig, PageSection } from "@/types/site";
+import { themes } from "@/configs/themes";
 
 interface Props {
-    section: PageSection;
-    config: SiteConfig;
+  section: PageSection;
+  config: SiteConfig;
 }
 
 export default function SectionRenderer({
-    section,
-    config,
+  section,
+  config,
 }: Props) {
 
-    const sectionMap = {
-        hero: <Hero hero={config.hero} />,
-        trust: <TrustBar trust={config.trust} />,
-        whyChooseUs: (
-            <WhyChooseUs whyChooseUs={config.whyChooseUs} />
-        ),
+  const theme = themes[config.theme];
 
-        about: <About about={config.about} />,
+  const sectionMap = {
+    hero: (
+      <Hero
+        hero={config.hero}
+        theme={theme}
+      />
+    ),
 
-        testimonials: (
-            <Testimonials testimonials={config.testimonials} />
-        ),
+    trust: (
+      <TrustBar
+        trust={config.trust}
+        theme={theme}
+      />
+    ),
 
-        practiceAreas: (
-            <PracticeAreas practiceAreas={config.practiceAreas} />
-        ),
+    whyChooseUs: (
+      <WhyChooseUs
+        whyChooseUs={config.whyChooseUs}
+        theme={theme}
+      />
+    ),
 
-        contact: (
-            <ContactCTA contactCTA={config.contact} />
-        ),
-        footer: (
-            <Footer
-                footer={config.footer}
-                company={config.company}
-            />
-        ),
-    };
+    about: (
+      <About
+        about={config.about}
+        theme={theme}
+      />
+    ),
 
-    return (
-        sectionMap[
-        section.type as keyof typeof sectionMap
-        ] ?? null
-    );
+    testimonials: (
+      <Testimonials
+        testimonials={config.testimonials}
+        theme={theme}
+      />
+    ),
+
+    practiceAreas: (
+      <PracticeAreas
+        practiceAreas={config.practiceAreas}
+        theme={theme}
+      />
+    ),
+
+    contact: (
+      <ContactCTA
+        contactCTA={config.contact}
+        theme={theme}
+      />
+    ),
+
+    footer: (
+      <Footer
+        footer={config.footer}
+        company={config.company}
+        theme={theme}
+      />
+    ),
+  };
+
+  return (
+    sectionMap[
+      section.type as keyof typeof sectionMap
+    ] ?? null
+  );
 }

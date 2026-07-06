@@ -1,18 +1,24 @@
-import { HeroData } from "@/types/site";
+"use client";
+import { HeroData, ThemeName } from "@/types/site";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
-import { lawTheme } from "@/configs/themes/law";
+import { ThemeConfig } from "@/configs/themes/types";
+
 
 interface HeroProps {
   hero: HeroData;
+  theme: ThemeConfig;
 }
 
-export default function Hero({ hero }: HeroProps) {
+export default function Hero({
+  hero,
+  theme,
+}: HeroProps) {
   return (
 
-    <section 
-    id="hero"
-    className={`${lawTheme.colors.primary} ${lawTheme.layout.sectionSpacing}`} >
+    <section
+      id="home"
+      className={`${theme.colors.primary} ${theme.layout.sectionSpacing}`} >
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-950/20 to-transparent" />
 
@@ -40,11 +46,15 @@ export default function Hero({ hero }: HeroProps) {
 
           {/* Call To Action Buttons */}
           <div className="mt-12 flex flex-wrap justify-center gap-6">
-            <Button className="w-60">
+            <Button
+              theme={theme}
+              className="w-60"
+            >
               {hero.buttonText}
             </Button>
 
             <Button
+              theme={theme}
               variant="secondary"
               className="w-60"
             >
