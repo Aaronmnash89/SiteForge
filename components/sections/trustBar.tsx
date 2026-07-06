@@ -1,15 +1,17 @@
 import { lawTheme } from "@/configs/themes/law";
 import { TrustData } from "@/types/site";
+import { ThemeConfig } from "@/configs/themes/types";
 
 interface TrustBarProps {
   trust: TrustData;
+  theme: ThemeConfig;
 }
 
-export default function TrustBar({ trust }: TrustBarProps) {
+export default function TrustBar({ trust, theme }: TrustBarProps) {
   return (
     <section
       id="trust"
-      className={`${lawTheme.colors.primary} ${lawTheme.layout.sectionSpacing}`} >
+      className={`${theme.colors.primary} ${theme.layout.sectionSpacing}`} >
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-10 px-6 text-center md:grid-cols-4">
         {trust.items.map((item) => (
           <div key={item.label}>

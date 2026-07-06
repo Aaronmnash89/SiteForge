@@ -11,7 +11,7 @@ const config: SiteConfig = configData;
 export default function Home() {
   const theme = themes[config.theme];
   return (
-    <main className="pt-24">
+    <body>
       <Navigation
         company={config.company}
         navigation={config.navigation}
@@ -24,7 +24,7 @@ export default function Home() {
           config={config}
         />
       ))}
-    </main>
+    </body>
   );
 }
 

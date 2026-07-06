@@ -22,6 +22,10 @@ export interface ThemeConfig {
     rounded: string;
     padding: string;
     shadow: string;
+    primaryColor: string;
+    primaryHover: string;
+    secondaryHover: string;
+    transition: string;
   };
 
   cards: {

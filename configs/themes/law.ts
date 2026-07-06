@@ -24,6 +24,13 @@ export const lawTheme: ThemeConfig = {
         rounded: "rounded-xl",
         padding: "px-8 py-4",
         shadow: "shadow-xl",
+        primaryColor: "bg-blue-600 text-white",
+        primaryHover:
+            "hover:bg-white hover:text-black hover:-translate-y-1",
+
+        secondaryHover:
+            "hover:bg-white hover:text-black hover:-translate-y-1",
+        transition: "transition-all duration-300",
     },
 
     cards: {
