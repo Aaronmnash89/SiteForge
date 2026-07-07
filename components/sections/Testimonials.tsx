@@ -1,30 +1,33 @@
+"use client";
+
 import { Star } from "lucide-react";
 import { TestimonialsData } from "@/types/site";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { lawTheme } from "@/configs/themes/law";
 import { ThemeConfig } from "@/configs/themes/types";
 
 interface TestimonialsProps {
-    testimonials: TestimonialsData;
-    theme: ThemeConfig;
+  testimonials: TestimonialsData;
+  theme: ThemeConfig;
 }
 
 export default function Testimonials({
   testimonials,
-  theme
+  theme,
 }: TestimonialsProps) {
   return (
     <section
       id="testimonials"
-      className={`${theme.colors.primary} ${theme.layout.sectionSpacing}`} >
+      className={`${theme.colors.primary} ${theme.layout.sectionSpacing}`}
+    >
       <Container className="mx-auto max-w-7xl px-6">
 
         <Card className="mb-16 text-center">
           <SectionHeading
             eyebrow={testimonials.eyebrow}
             title={testimonials.title}
+            theme={theme}
           />
         </Card>
 
@@ -32,28 +35,42 @@ export default function Testimonials({
           {testimonials.reviews.map((review) => (
             <Card
               key={review.name}
-              className="rounded-3xl border border-white/10 bg-black p-8 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-blue-500/50"
+              className={`
+                ${theme.cards.rounded}
+                ${theme.cards.shadow}
+                ${theme.colors.surface}
+                border
+                ${theme.colors.border}
+                p-8
+                transition-all
+                duration-300
+                hover:-translate-y-2
+              `}
             >
               <div className="mb-6 flex gap-1">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
                     size={18}
-                    className="fill-blue-500 text-blue-500"
+                    className={`fill-current ${theme.colors.accent}`}
                   />
                 ))}
               </div>
 
-              <p className="mb-8 text-gray-400 leading-8">
+              <p
+                className={`mb-8 leading-8 ${theme.colors.textLight}`}
+              >
                 "{review.quote}"
               </p>
 
               <div>
-                <h3 className="text-xl font-bold">
+                <h3
+                  className={`${theme.typography.heading} ${theme.colors.text} text-xl`}
+                >
                   {review.name}
                 </h3>
 
-                <p className="text-blue-500">
+                <p className={theme.colors.accent}>
                   {review.case}
                 </p>
               </div>

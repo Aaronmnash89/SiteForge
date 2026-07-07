@@ -6,7 +6,6 @@ import Testimonials from "@/components/sections/Testimonials";
 import PracticeAreas from "@/components/sections/PracticeAreas";
 import ContactCTA from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
-
 import { SiteConfig, PageSection } from "@/types/site";
 import { themes } from "@/configs/themes";
 

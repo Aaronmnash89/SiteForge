@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { AboutData } from "@/types/site";
 import Container from "@/components/ui/Container";
@@ -11,7 +12,10 @@ interface AboutProps {
   theme: ThemeConfig;
 }
 
-export default function About({ about, theme }: AboutProps) {
+export default function About({
+  about,
+  theme,
+}: AboutProps) {
   return (
     <section
       id="about"
@@ -24,7 +28,9 @@ export default function About({ about, theme }: AboutProps) {
           <SectionHeading
             eyebrow={about.eyebrow}
             title={about.title}
+            subtitle={about.description}
             centered={false}
+            theme={theme}
           />
 
           <div className="mt-10 space-y-4">
@@ -33,19 +39,35 @@ export default function About({ about, theme }: AboutProps) {
                 key={highlight}
                 className="flex items-center gap-3"
               >
-                <div className="h-2 w-2 rounded-full bg-blue-500" />
-                <span>{highlight}</span>
+                <div
+                  className={`h-2 w-2 rounded-full ${theme.colors.secondary}`}
+                />
+
+                <span className={theme.colors.text}>
+                  {highlight}
+                </span>
               </div>
             ))}
           </div>
 
-          <Button theme={theme} className="mt-10">
+          <Button
+            theme={theme}
+            className="mt-10"
+          >
             {about.buttonText}
           </Button>
         </div>
 
         {/* Right Image */}
-        <div className="overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+        <div
+          className={`
+            overflow-hidden
+            ${theme.cards.rounded}
+            ${theme.cards.shadow}
+            border
+            ${theme.colors.border}
+          `}
+        >
           <Image
             src={about.image}
             alt={about.title}

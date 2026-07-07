@@ -9,7 +9,7 @@ export const dentalTheme: ThemeConfig = {
         background: "bg-white",
         surface: "bg-white",
 
-        text: "text-slate-900",
+        text: "text-zinc-900",
         textLight: "text-slate-600",
 
         border: "border-gray-100",

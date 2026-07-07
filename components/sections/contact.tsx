@@ -25,6 +25,7 @@ export default function ContactCTA({
           eyebrow={contactCTA.eyebrow}
           title={contactCTA.title}
           subtitle={contactCTA.subtitle}
+          theme={theme}
         />
 
         <div className="mt-10 flex flex-wrap justify-center gap-6">
