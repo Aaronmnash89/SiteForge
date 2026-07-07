@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import {
   ArrowRight,
@@ -44,13 +45,15 @@ export default function PracticeAreas({
   return (
     <section
       id="practiceAreas"
-      className={`${theme.colors.primary} ${theme.layout.sectionSpacing}`} >
+      className={`${theme.colors.primary} ${theme.layout.sectionSpacing}`}
+    >
       <Container className="mx-auto max-w-7xl px-6">
 
         <SectionHeading
           eyebrow={practiceAreas.eyebrow}
           title={practiceAreas.title}
           subtitle={practiceAreas.subtitle}
+          theme={theme}
         />
 
         <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -62,26 +65,61 @@ export default function PracticeAreas({
             return (
               <Card
                 key={item.title}
-                className="group rounded-3xl border border-white/10 bg-black p-8 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-2xl"
+                className={`
+                  group
+                  ${theme.cards.rounded}
+                  ${theme.cards.shadow}
+                  ${theme.colors.surface}
+                  border
+                  ${theme.colors.border}
+                  p-8
+                  transition-all
+                  duration-300
+                  hover:-translate-y-2
+                `}
               >
-                <div className="mb-8 inline-flex rounded-2xl bg-blue-600/10 p-4 text-blue-500 transition group-hover:scale-110 group-hover:bg-blue-600/20">
+                <div
+                  className={`
+                    mb-8
+                    inline-flex
+                    rounded-2xl
+                    p-4
+                    transition
+                    group-hover:scale-110
+                    ${theme.colors.primary}
+                    ${theme.colors.accent}
+                  `}
+                >
                   <Icon size={34} />
                 </div>
 
-                <h3 className="text-2xl font-bold">
+                <h3
+                  className={`${theme.typography.heading} ${theme.colors.text} text-2xl`}
+                >
                   {item.title}
                 </h3>
 
-                <p className="mt-4 leading-8 text-gray-400">
+                <p
+                  className={`${theme.colors.textLight} mt-4 leading-8`}
+                >
                   {item.description}
                 </p>
 
                 <Link
                   href={item.href}
-                  className="mt-8 inline-flex items-center gap-2 font-semibold text-blue-500 transition group-hover:gap-4"
+                  className={`
+                    ${theme.colors.accent}
+                    mt-8
+                    inline-flex
+                    items-center
+                    gap-2
+                    font-semibold
+                    transition-all
+                    duration-300
+                    group-hover:gap-4
+                  `}
                 >
                   Learn More
-
                   <ArrowRight size={18} />
                 </Link>
               </Card>
@@ -94,4 +132,3 @@ export default function PracticeAreas({
     </section>
   );
 }
-
