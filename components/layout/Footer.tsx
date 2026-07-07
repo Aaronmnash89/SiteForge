@@ -14,20 +14,25 @@ export default function Footer({
   theme,
 }: FooterProps) {
   return (
-    <footer className="border-t border-white/10 bg-black">
-      <div className="mx-auto grid max-w-7xl gap-16 px-6 py-20 md:grid-cols-4">
-
+    <footer
+      className={`${theme.colors.background} border-t ${theme.colors.border}`}
+    >
+      <div
+        className={`mx-auto grid ${theme.layout.containerWidth} gap-16 px-6 py-20 md:grid-cols-4`}
+      >
         {/* Company */}
         <div>
-          <h3 className="text-2xl font-bold">
+          <h3
+            className={`${theme.colors.text} ${theme.typography.heading} text-2xl`}
+          >
             {company.logoText}
           </h3>
 
-          <p className="mt-4 text-gray-400">
+          <p className={`mt-4 ${theme.colors.textLight}`}>
             {footer.tagline}
           </p>
 
-          <div className="mt-6 space-y-2 text-gray-300">
+          <div className={`mt-6 space-y-2 ${theme.colors.textLight}`}>
             <p>{company.phone}</p>
             <p>{company.email}</p>
             <p>{footer.address}</p>
@@ -36,7 +41,9 @@ export default function Footer({
 
         {/* Quick Links */}
         <div>
-          <h4 className="font-semibold text-white">
+          <h4
+            className={`${theme.colors.text} ${theme.typography.heading}`}
+          >
             Quick Links
           </h4>
 
@@ -45,7 +52,10 @@ export default function Footer({
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className="text-gray-400 transition hover:text-blue-500"
+                  className={`${theme.colors.textLight} transition hover:${theme.colors.accent.replace(
+                    "text-",
+                    "text-"
+                  )}`}
                 >
                   {link.label}
                 </a>
@@ -54,13 +64,15 @@ export default function Footer({
           </ul>
         </div>
 
-        {/* Practice Areas */}
+        {/* Services */}
         <div>
-          <h4 className="font-semibold text-white">
-            Practice Areas
+          <h4
+            className={`${theme.colors.text} ${theme.typography.heading}`}
+          >
+            Services
           </h4>
 
-          <ul className="mt-4 space-y-3 text-gray-400">
+          <ul className={`mt-4 space-y-3 ${theme.colors.textLight}`}>
             {footer.practiceAreas.map((item) => (
               <li key={item}>{item}</li>
             ))}
@@ -69,12 +81,14 @@ export default function Footer({
 
         {/* CTA */}
         <div>
-          <h4 className="font-semibold text-white">
-            Free Consultation
+          <h4
+            className={`${theme.colors.text} ${theme.typography.heading}`}
+          >
+            Schedule Today
           </h4>
 
-          <p className="mt-4 text-gray-400">
-            Available 24/7 to discuss your case.
+          <p className={`mt-4 ${theme.colors.textLight}`}>
+            We're accepting new patients and would love to care for your smile.
           </p>
 
           <Button
@@ -84,10 +98,11 @@ export default function Footer({
             Contact Us
           </Button>
         </div>
-
       </div>
 
-      <div className="border-t border-white/10 py-6 text-center text-sm text-gray-500">
+      <div
+        className={`border-t ${theme.colors.border} py-6 text-center text-sm ${theme.colors.textLight}`}
+      >
         {footer.copyright}
       </div>
     </footer>
