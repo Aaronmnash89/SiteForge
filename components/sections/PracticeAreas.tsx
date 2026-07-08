@@ -63,7 +63,10 @@ export default function PracticeAreas({
               icons[item.icon as keyof typeof icons];
 
             return (
-             <Card theme={theme}>
+              <Card
+                key={item.title}
+                theme={theme}
+              >
                 <div
                   className={`
                     mb-8

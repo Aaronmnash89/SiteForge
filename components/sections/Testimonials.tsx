@@ -35,8 +35,11 @@ export default function Testimonials({
         </Card>
 
         <div className="grid gap-8 md:grid-cols-3">
-          {testimonials.reviews.map((review) => (
-            <Card theme={theme}>
+          {testimonials.reviews.map((review, index) => (
+            <Card
+              key={`${review.name}-${index}`}
+              theme={theme}
+            >
               <div className="mb-6 flex gap-1">
                 {[...Array(5)].map((_, i) => (
                   <Star
