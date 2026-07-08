@@ -50,34 +50,33 @@ export default function About({
             ))}
           </div>
 
-          <Button
-            theme={theme}
-            className="mt-10"
-          >
-            {about.buttonText}
-          </Button>
+          <div className="mt-6">
+            <Button theme={theme}>
+              {about.buttonText}
+            </Button>
+          </div>
         </div>
 
         {/* Right Image */}
-        <div
-          className={`
-            overflow-hidden
-            ${theme.cards.rounded}
-            ${theme.cards.shadow}
-            border
-            ${theme.colors.border}
-          `}
-        >
+        <div className="relative overflow-hidden rounded-2xl">
           <Image
             src={about.image}
             alt={about.title}
             width={600}
             height={700}
-            className="h-full w-full object-cover"
+            className="
+      h-full
+      w-full
+      object-cover
+      rounded-2xl
+    "
           />
+
+
         </div>
 
       </Container>
     </section>
   );
 }
+

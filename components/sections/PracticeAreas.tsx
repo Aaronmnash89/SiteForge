@@ -63,21 +63,7 @@ export default function PracticeAreas({
               icons[item.icon as keyof typeof icons];
 
             return (
-              <Card
-                key={item.title}
-                className={`
-                  group
-                  ${theme.cards.rounded}
-                  ${theme.cards.shadow}
-                  ${theme.colors.surface}
-                  border
-                  ${theme.colors.border}
-                  p-8
-                  transition-all
-                  duration-300
-                  hover:-translate-y-2
-                `}
-              >
+             <Card theme={theme}>
                 <div
                   className={`
                     mb-8

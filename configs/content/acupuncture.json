@@ -1,0 +1,206 @@
+{
+  "page": {
+    "sections": [
+      { "type": "hero", "enabled": true },
+      { "type": "trust", "enabled": true },
+      { "type": "whyChooseUs", "enabled": true },
+      { "type": "about", "enabled": true },
+      { "type": "testimonials", "enabled": true },
+      { "type": "practiceAreas", "enabled": true },
+      { "type": "contact", "enabled": true },
+      { "type": "footer", "enabled": true }
+    ]
+  },
+
+  "theme": "acupuncture",
+
+  "company": {
+    "name": "Dr. Davis Acupuncture",
+    "logoText": "Dr. Davis Acupuncture",
+    "phone": "(800) 555-1234",
+    "email": "info@DrDavisacupuncture.com"
+  },
+
+  "navigation": {
+    "links": [
+      {
+        "label": "Home",
+        "href": "#home"
+      },
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Testimonials",
+        "href": "#testimonials"
+      },
+      {
+        "label": "Services",
+        "href": "#practiceAreas"
+      },
+      {
+        "label": "Contact Us",
+        "href": "#contact"
+      }
+    ]
+  },
+
+  "hero": {
+    "eyebrow": "Holistic Wellness & Healing",
+    "title": "Restore Balance. Relieve Pain. Feel Your Best.",
+    "subtitle": "Experience personalized acupuncture treatments designed to reduce pain, restore balance, and support your body's natural healing process.",
+    "buttonText": "Book Appointment",
+    "callButton": "Call Today"
+  },
+
+  "trust": {
+    "items": [
+      {
+        "value": "20+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "8,000+",
+        "label": "Treatments Provided"
+      },
+      {
+        "value": "98%",
+        "label": "Patient Satisfaction"
+      },
+      {
+        "value": "4.9★",
+        "label": "Google Rating"
+      }
+    ]
+  },
+
+  "whyChooseUs": {
+    "eyebrow": "WHY CHOOSE US",
+    "title": "Personalized Care For Your Wellness Journey",
+    "subtitle": "Our goal is to help you achieve lasting wellness through compassionate care, evidence-based acupuncture, and personalized treatment plans.",
+    "features": [
+      {
+        "icon": "Award",
+        "title": "Experienced Practitioner",
+        "description": "Years of experience helping patients manage pain, stress, and chronic conditions naturally."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Whole-Body Approach",
+        "description": "We focus on treating the root cause rather than simply masking symptoms."
+      },
+      {
+        "icon": "Phone",
+        "title": "Flexible Scheduling",
+        "description": "Convenient appointment times designed to fit your busy lifestyle."
+      },
+      {
+        "icon": "Scale",
+        "title": "Customized Treatment Plans",
+        "description": "Every patient receives care tailored to their unique health goals and needs."
+      }
+    ]
+  },
+
+  "about": {
+    "eyebrow": "ABOUT OUR CLINIC",
+    "title": "Helping You Achieve Better Health Naturally",
+    "description": "At Dr. Davis Acupuncture, we believe the body has an incredible ability to heal itself when properly supported. We provide personalized acupuncture treatments that promote balance, relieve discomfort, and improve overall wellness in a relaxing environment.",
+    "image": "/images/maegan.jpg",
+    "buttonText": "Meet Our Practitioner",
+    "highlights": [
+      "20+ Years Experience",
+      "Holistic Wellness Focus",
+      "Personalized Care Plans"
+    ]
+  },
+
+  "practiceAreas": {
+    "eyebrow": "OUR SERVICES",
+    "title": "Acupuncture Treatments",
+    "subtitle": "Natural therapies designed to improve your health and quality of life.",
+    "items": [
+      {
+        "icon": "Sparkles",
+        "title": "Pain Relief",
+        "description": "Reduce chronic pain, headaches, neck pain, back pain, and joint discomfort through targeted acupuncture treatments.",
+        "href": "#"
+      },
+      {
+        "icon": "Smile",
+        "title": "Stress & Anxiety",
+        "description": "Restore balance, improve sleep quality, and reduce everyday stress naturally.",
+        "href": "#"
+      },
+      {
+        "icon": "ShieldPlus",
+        "title": "Women's Health",
+        "description": "Support hormonal balance, fertility, pregnancy wellness, and overall reproductive health.",
+        "href": "#"
+      }
+    ]
+  },
+
+  "testimonials": {
+    "eyebrow": "PATIENT TESTIMONIALS",
+    "title": "Helping Patients Feel Their Best",
+    "reviews": [
+      {
+        "name": "Sarah M.",
+        "case": "Chronic Back Pain",
+        "quote": "After just a few sessions my back pain was dramatically reduced. The entire experience was calming and professional."
+      },
+      {
+        "name": "Michael R.",
+        "case": "Stress Management",
+        "quote": "I started acupuncture to help manage stress and improve sleep. The results have been life-changing."
+      },
+      {
+        "name": "Jennifer T.",
+        "case": "Migraine Relief",
+        "quote": "I suffered from migraines for years. Thanks to Dr. Davis Acupuncture, they're far less frequent and much more manageable."
+      }
+    ]
+  },
+
+  "contact": {
+    "eyebrow": "START YOUR WELLNESS JOURNEY",
+    "title": "Ready To Feel Better Naturally?",
+    "subtitle": "Whether you're seeking pain relief, stress reduction, or better overall wellness, we're here to help. Schedule your consultation today.",
+    "buttonText": "Book Appointment",
+    "phoneButton": "Call (800) 555-1234"
+  },
+
+  "footer": {
+    "tagline": "Helping our community live healthier, more balanced lives.",
+    "address": "123 Main Street, Asheville, NC",
+    "copyright": "© 2026 Dr. Davis Acupuncture. All rights reserved.",
+
+    "quickLinks": [
+      {
+        "label": "Home",
+        "href": "#home"
+      },
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Services",
+        "href": "#practiceAreas"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+
+    "practiceAreas": [
+      "Pain Management",
+      "Stress & Anxiety",
+      "Women's Health",
+      "General Wellness"
+    ]
+  }
+}
