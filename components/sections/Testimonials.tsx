@@ -23,7 +23,10 @@ export default function Testimonials({
     >
       <Container className="mx-auto max-w-7xl px-6">
 
-        <Card className="mb-16 text-center">
+        <Card
+          theme={theme}
+          className="mb-16 text-center"
+        >
           <SectionHeading
             eyebrow={testimonials.eyebrow}
             title={testimonials.title}
@@ -33,20 +36,7 @@ export default function Testimonials({
 
         <div className="grid gap-8 md:grid-cols-3">
           {testimonials.reviews.map((review) => (
-            <Card
-              key={review.name}
-              className={`
-                ${theme.cards.rounded}
-                ${theme.cards.shadow}
-                ${theme.colors.surface}
-                border
-                ${theme.colors.border}
-                p-8
-                transition-all
-                duration-300
-                hover:-translate-y-2
-              `}
-            >
+            <Card theme={theme}>
               <div className="mb-6 flex gap-1">
                 {[...Array(5)].map((_, i) => (
                   <Star

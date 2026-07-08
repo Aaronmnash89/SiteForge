@@ -1,24 +1,29 @@
+import { ThemeConfig } from "@/configs/themes/types";
+
 interface CardProps {
   children: React.ReactNode;
   className?: string;
+  theme: ThemeConfig;
 }
 
 export default function Card({
   children,
   className = "",
+  theme,
 }: CardProps) {
   return (
     <div
       className={`
-        rounded-2xl
+        ${theme.cards.rounded}
         border
-        border-white/10
-        bg-white/5
+        ${theme.colors.border}
+        ${theme.colors.surface}
         p-8
+        ${theme.cards.shadow}
         transition-all
         duration-300
         hover:-translate-y-2
-        hover:border-blue-500
+        ${theme.cards.hoverBorder}
         ${className}
       `}
     >

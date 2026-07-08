@@ -133,7 +133,8 @@ export type ThemeName =
   | "law"
   | "dental"
   | "automotive"
-  | "roofing";
+  | "roofing"
+  | "acupuncture";
 
 export interface SiteConfig {
   page: SitePage;

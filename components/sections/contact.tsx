@@ -3,7 +3,6 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { ThemeConfig } from "@/configs/themes/types";
 import Button from "../ui/Button";
-import { theme } from "@/configs/lib/theme";
 
 interface ContactCTAProps {
   contactCTA: ContactCTAData;
@@ -36,7 +35,7 @@ export default function ContactCTA({
           <Button
             variant="secondary"
             theme={theme}
-            className="w-60"
+           
           >
             {contactCTA.phoneButton}
           </Button>

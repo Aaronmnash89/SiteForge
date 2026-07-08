@@ -43,24 +43,12 @@ export default function WhyChooseUs({
 
         <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {whyChooseUs.features.map((feature) => {
-            const Icon =
-              icons[feature.icon as keyof typeof icons];
+            const Icon = icons[feature.icon as keyof typeof icons];
 
             return (
               <Card
                 key={feature.title}
-                className={`
-                  group
-                  ${theme.cards.rounded}
-                  ${theme.cards.shadow}
-                  ${theme.colors.surface}
-                  border
-                  ${theme.colors.border}
-                  p-8
-                  transition-all
-                  duration-300
-                  hover:-translate-y-2
-                `}
+                theme={theme}
               >
                 <div
                   className={`

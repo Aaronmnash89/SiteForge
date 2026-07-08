@@ -20,7 +20,16 @@ export default function Hero({
       className={`${theme.colors.primary} ${theme.layout.sectionSpacing}`}
     >
       {/* Background Glow */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent" />
+      <div
+        className="
+    absolute
+    inset-0
+    bg-gradient-to-br
+    from-black/10
+    to-transparent
+    pointer-events-none
+  "
+      />
 
       {/* Hero Container */}
       <Container className="relative z-10 w-full max-w-5xl px-6">
@@ -55,14 +64,13 @@ export default function Hero({
           {/* Accent Line */}
           <div
             className={`
-              mx-auto
-              mt-3
-              mb-8
-              h-1
-              w-24
-              rounded-full
-              ${theme.colors.secondary}
-            `}
+    mx-auto
+    mt-3
+    h-1
+    w-24
+    rounded-full
+    ${theme.colors.underline}
+  `}
           />
 
           {/* Heading */}
@@ -74,6 +82,7 @@ export default function Hero({
               text-6xl
               md:text-7xl
               leading-none
+              mt-6
               ${theme.typography.heading}
               ${theme.colors.text}
             `}
@@ -98,14 +107,13 @@ export default function Hero({
 
           {/* CTA */}
           <div className="mt-12 flex flex-wrap justify-center gap-6">
-            <Button theme={theme} className="w-60">
+            <Button theme={theme}>
               {hero.buttonText}
             </Button>
 
             <Button
               theme={theme}
               variant="secondary"
-              className="w-60"
             >
               {hero.callButton}
             </Button>

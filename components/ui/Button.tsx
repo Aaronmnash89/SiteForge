@@ -16,18 +16,13 @@ export default function Button({
 }: ButtonProps) {
 
   const styles = {
-    primary: `
-    ${theme.button.primaryColor}
-    text-white
-  `,
+  primary: theme.button.primaryColor,
 
-    secondary: `
-    ${theme.colors.secondary}
-    text-black
-  `,
-  };
+  secondary: theme.colors.secondary,
 
-  const hoverStyles = {
+};
+
+const hoverStyles = {
   primary: theme.button.primaryHover,
   secondary: theme.button.secondaryHover,
 };
