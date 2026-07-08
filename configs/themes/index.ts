@@ -10,7 +10,7 @@ export const themes = {
   dental: dentalTheme,
   automotive: automotiveTheme,
   roofing: roofingTheme,
-  acupuncture: acupunctureTheme
-};
+  acupuncture: acupunctureTheme,
+} as const;
 
 export type ThemeName = keyof typeof themes;

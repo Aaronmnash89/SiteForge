@@ -5,7 +5,7 @@ import { themes } from "@/configs/themes";
 import configData from "@/configs/content/acupuncture.json";
 import { SiteConfig } from "@/types/site";
 
-const config: SiteConfig = configData;
+const config: SiteConfig = configData as SiteConfig;
 
 export default function Home() {
   const theme = themes[config.theme];

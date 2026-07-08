@@ -1,3 +1,5 @@
+import type { ThemeName } from "@/configs/themes";
+
 export interface CompanyData {
   name: string;
   logoText: string;
@@ -128,13 +130,6 @@ export interface PageSection {
 export interface SitePage {
   sections: PageSection[];
 }
-
-export type ThemeName =
-  | "law"
-  | "dental"
-  | "automotive"
-  | "roofing"
-  | "acupuncture";
 
 export interface SiteConfig {
   page: SitePage;
