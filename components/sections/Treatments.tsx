@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import {
   ArrowRight,
   Car,
@@ -11,17 +10,17 @@ import {
   Sparkles,
   ShieldPlus,
   Smile,
-  BadgePlus,
+ BadgePlus,
 } from "lucide-react";
 
-import { PracticeAreasData } from "@/types/site";
+import { TreatmentsData } from "@/types/site";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { ThemeConfig } from "@/configs/themes/types";
 
-interface PracticeAreasProps {
-  practiceAreas: PracticeAreasData;
+interface TreatmentsProps {
+  treatments: TreatmentsData;
   theme: ThemeConfig;
 }
 
@@ -38,52 +37,32 @@ const icons = {
   BadgePlus,
 };
 
-export default function PracticeAreas({
-  practiceAreas,
+export default function Treatments({
+  treatments,
   theme,
-}: PracticeAreasProps) {
+}: TreatmentsProps) {
   return (
     <section
-      id="practiceAreas"
-      className={`${theme.colors.primary} ${theme.layout.sectionSpacing} relative overflow-hidden`}
+      id="treatments"
+      className={`${theme.colors.primary} ${theme.layout.sectionSpacing}`}
     >
-      <div
-        className="
-    absolute
-    right-[-180px]
-    top-1/4
-    -translate-y-1/2
-    w-[800px]
-    h-[800px]
-    opacity-30
-    pointer-events-none
-    z-0
-  "
-      >
-        <img
-          src="/images/IMG_0144.JPG"
-          alt=""
-          className="w-full h-full object-cover rounded-full"
-        />
-      </div>
       <Container className="mx-auto max-w-7xl px-6">
 
         <SectionHeading
-          eyebrow={practiceAreas.eyebrow}
-          title={practiceAreas.title}
-          subtitle={practiceAreas.subtitle}
+          eyebrow={treatments.eyebrow}
+          title={treatments.title}
+          subtitle={treatments.subtitle}
           theme={theme}
         />
 
         <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-
-          {practiceAreas.items.map((item) => {
+          {treatments.items.map((item, index) => {
             const Icon =
               icons[item.icon as keyof typeof icons];
 
             return (
               <Card
-                key={item.title}
+                key={`${item.title}-${index}`}
                 theme={theme}
               >
                 <div
@@ -112,12 +91,9 @@ export default function PracticeAreas({
                 >
                   {item.description}
                 </p>
-
-
               </Card>
             );
           })}
-
         </div>
 
       </Container>
