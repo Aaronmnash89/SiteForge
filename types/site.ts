@@ -33,6 +33,19 @@ export interface TrustData {
   items: TrustItem[];
 }
 
+export interface Treatments {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface TreatmentsData {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  items: Treatments[];
+}
+
 export interface WhyChooseUsFeature {
   icon: string;
   title: string;
@@ -143,7 +156,7 @@ export interface SiteConfig {
   about: AboutData;
   testimonials: TestimonialsData;
   practiceAreas: PracticeAreasData;
-
+  treatments: TreatmentsData;
   services?: ServicesData;
   faq?: FAQData;
 

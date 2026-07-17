@@ -17,37 +17,21 @@
   "company": {
     "name": "Dr. Davis Acupuncture",
     "logoText": "Dr. Davis Acupuncture",
-    "phone": "(800) 555-1234",
-    "email": "info@DrDavisacupuncture.com"
+    "phone": "(828) 407-0412",
+    "email": ""
   },
 
   "navigation": {
-    "links": [
-      {
-        "label": "Home",
-        "href": "#home"
-      },
-      {
-        "label": "About",
-        "href": "#about"
-      },
-      {
-        "label": "Testimonials",
-        "href": "#testimonials"
-      },
-      {
-        "label": "Services",
-        "href": "#practiceAreas"
-      },
-      {
-        "label": "Contact Us",
-        "href": "#contact"
-      }
-    ]
-  },
+  "links": [
+    { "label": "Home", "href": "/" },
+    { "label": "About", "href": "/about" },
+    { "label": "Treatments", "href": "/treatments" },
+    { "label": "Booking", "href": "/booking" }
+  ]
+},
 
   "hero": {
-    "eyebrow": "Holistic Wellness & Healing",
+    "eyebrow": "Acupuncture & Healing",
     "title": "Restore Balance. Relieve Pain. Feel Your Best.",
     "subtitle": "Experience personalized acupuncture treatments designed to reduce pain, restore balance, and support your body's natural healing process.",
     "buttonText": "Book Appointment",
@@ -57,11 +41,11 @@
   "trust": {
     "items": [
       {
-        "value": "20+",
+        "value": "10+",
         "label": "Years Experience"
       },
       {
-        "value": "8,000+",
+        "value": "a lot",
         "label": "Treatments Provided"
       },
       {
@@ -117,7 +101,7 @@
   },
 
   "practiceAreas": {
-    "eyebrow": "OUR SERVICES",
+    "eyebrow": "SERVICES",
     "title": "Acupuncture Treatments",
     "subtitle": "Natural therapies designed to improve your health and quality of life.",
     "items": [
@@ -136,7 +120,68 @@
       {
         "icon": "ShieldPlus",
         "title": "Women's Health",
-        "description": "Support hormonal balance, fertility, pregnancy wellness, and overall reproductive health.",
+        "description": "Hormonal balance, fertility, pregnancy wellness, and overall reproductive health.",
+        "href": "#"
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Chronic Conditions",
+        "description": "Chronic fatigue, Long Covid, digestive issues, Fibromyalgia, and autoimmune conditions.",
+        "href": "#"
+      },
+      {
+        "icon": "Smile",
+        "title": "Oncology Support",
+        "description": "For patients undergoing cancer treatment; boosting the immune system, helping to manage medication side effects, and improve quality of life.",
+        "href": "#"
+      },
+      {
+        "icon": "ShieldPlus",
+        "title": "End of Life Care",
+        "description": "Support for patients and families during the end-of-life journey, focusing on comfort and dignity.",
+        "href": "#"
+      }
+    ]
+  },
+  "treatments": {
+    "eyebrow": "TREATMENTS",
+    "title": "Modalities",
+    "subtitle": "Natural therapies designed to improve your health and quality of life.",
+    "items": [
+      {
+        "icon": "Sparkles",
+        "title": "Acupuncture",
+        "description": "Personalized",
+        "href": "#"
+      },
+      {
+        "icon": "Smile",
+        "title": "Herbal Medicine",
+        "description": "",
+        "href": "#"
+      },
+      {
+        "icon": "ShieldPlus",
+        "title": "Cupping & Gua sha",
+        "description": "",
+        "href": "#"
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Moxibustion",
+        "description": "",
+        "href": "#"
+      },
+      {
+        "icon": "Smile",
+        "title": "Electro Acupunture",
+        "description": "",
+        "href": "#"
+      },
+      {
+        "icon": "ShieldPlus",
+        "title": "Tui Na",
+        "description": "",
         "href": "#"
       }
     ]
@@ -147,19 +192,19 @@
     "title": "Helping Patients Feel Their Best",
     "reviews": [
       {
-        "name": "Sarah M.",
-        "case": "Chronic Back Pain",
-        "quote": "After just a few sessions my back pain was dramatically reduced. The entire experience was calming and professional."
+        "name": "Kim M.",
+        "case": "",
+        "quote": "Dr. Maegan Davis is amazing. I instantly felt welcomed and heard. She has a calm presence and I always feel better after a treatment with her."
       },
       {
-        "name": "Michael R.",
-        "case": "Stress Management",
-        "quote": "I started acupuncture to help manage stress and improve sleep. The results have been life-changing."
+        "name": "Savannah S.",
+        "case": "",
+        "quote": "I have been getting acupuncture with Maegan and it has been life-changing. My body and mind feel more balanced and at ease. My sleep, anxiety, depression, digestion, stress levels, and energy levels are worlds better. I recommend her to everyone I know. She has a super calm and loving energy and is very easy to connect with. She is a great listener, and truly cares about you and what you have to share."
       },
       {
-        "name": "Jennifer T.",
-        "case": "Migraine Relief",
-        "quote": "I suffered from migraines for years. Thanks to Dr. Davis Acupuncture, they're far less frequent and much more manageable."
+        "name": "Anita F.",
+        "case": "",
+        "quote": "Maegan is so very caring and competent, always explaining what's going on so that I understand it. Thank you so much! Anita"
       }
     ]
   },
@@ -169,30 +214,30 @@
     "title": "Ready To Feel Better Naturally?",
     "subtitle": "Whether you're seeking pain relief, stress reduction, or better overall wellness, we're here to help. Schedule your consultation today.",
     "buttonText": "Book Appointment",
-    "phoneButton": "Call (800) 555-1234"
+    "phoneButton": "Call (828) 407-0412"
   },
 
   "footer": {
-    "tagline": "Helping our community live healthier, more balanced lives.",
-    "address": "123 Main Street, Asheville, NC",
+    "tagline": "",
+    "address": "340 Carl Eller Rd. #2, Mars Hill, NC - Inside ''A Touch Of Balance''. \n\n\n\n\n\n\n Asheville location coming soon.",
     "copyright": "© 2026 Dr. Davis Acupuncture. All rights reserved.",
 
     "quickLinks": [
       {
         "label": "Home",
-        "href": "#home"
+        "href": "/home"
       },
       {
         "label": "About",
-        "href": "#about"
+        "href": "/about"
       },
       {
         "label": "Services",
-        "href": "#practiceAreas"
+        "href": "/treatments"
       },
       {
         "label": "Contact",
-        "href": "#contact"
+        "href": "/contact"
       }
     ],
 
@@ -200,7 +245,9 @@
       "Pain Management",
       "Stress & Anxiety",
       "Women's Health",
-      "General Wellness"
+      "Chronic Conditions",
+      "Oncology Support",
+      "End of Life Care"
     ]
   }
 }

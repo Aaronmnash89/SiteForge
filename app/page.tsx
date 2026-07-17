@@ -1,7 +1,10 @@
 import Navigation from "@/components/layout/Navigation";
-import SectionRenderer from "@/components/renderer/SectionRenderer";
-import { themes } from "@/configs/themes";
+import Hero from "@/components/sections/Hero";
+import TrustBar from "@/components/sections/TrustBar";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
+import Footer from "@/components/layout/Footer";
 
+import { themes } from "@/configs/themes";
 import configData from "@/configs/content/acupuncture.json";
 import { SiteConfig } from "@/types/site";
 
@@ -29,13 +32,26 @@ export default function Home() {
           theme={theme}
         />
 
-        {config.page.sections.map((section) => (
-          <SectionRenderer
-            key={section.type}
-            section={section}
-            config={config}
-          />
-        ))}
+        <Hero
+          hero={config.hero}
+          theme={theme}
+        />
+
+        <TrustBar
+          trust={config.trust}
+          theme={theme}
+        />
+
+        <WhyChooseUs
+          whyChooseUs={config.whyChooseUs}
+          theme={theme}
+        />
+
+        <Footer
+          footer={config.footer}
+          company={config.company}
+          theme={theme}
+        />
       </div>
 
     </main>

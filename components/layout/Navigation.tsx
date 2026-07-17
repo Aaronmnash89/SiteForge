@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { CompanyData, NavigationData } from "@/types/site";
 import { useEffect, useState } from "react";
 import { ThemeConfig } from "@/configs/themes/types";
@@ -105,7 +105,7 @@ export default function Navigation({
 
           return (
             <li key={link.label} className="relative">
-              <a
+              <Link
                 href={link.href}
                 className={`
                   transition-colors duration-300
@@ -113,7 +113,7 @@ export default function Navigation({
                 `}
               >
                 {link.label}
-              </a>
+              </Link>
 
               <span
                 className={`

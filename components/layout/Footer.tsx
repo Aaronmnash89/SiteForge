@@ -88,7 +88,7 @@ export default function Footer({
           </h4>
 
           <p className={`mt-4 ${theme.colors.textLight}`}>
-            We're accepting new patients and would love to care for your smile.
+           
           </p>
 
           <Button
