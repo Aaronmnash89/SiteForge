@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import {
   ArrowRight,
   Car,
@@ -45,20 +44,21 @@ export default function PracticeAreas({
   return (
     <section
       id="practiceAreas"
-      className={`${theme.colors.primary} ${theme.layout.sectionSpacing} relative overflow-hidden`}
+      className={`${theme.colors.primary} ${theme.layout.sectionSpacing} relative isolate overflow-hidden`}
     >
+      {/* Background Image */}
       <div
         className="
-    absolute
-    right-[-180px]
-    top-1/4
-    -translate-y-1/2
-    w-[800px]
-    h-[800px]
-    opacity-30
-    pointer-events-none
-    z-0
-  "
+          absolute
+          right-[-220px]
+          top-[45%]
+          -translate-y-1/2
+          w-[900px]
+          h-[900px]
+          opacity-50
+          pointer-events-none
+          -z-10
+        "
       >
         <img
           src="/images/IMG_0144.JPG"
@@ -66,8 +66,8 @@ export default function PracticeAreas({
           className="w-full h-full object-cover rounded-full"
         />
       </div>
-      <Container className="mx-auto max-w-7xl px-6">
 
+      <Container className="relative z-10 mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow={practiceAreas.eyebrow}
           title={practiceAreas.title}
@@ -76,10 +76,8 @@ export default function PracticeAreas({
         />
 
         <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-
           {practiceAreas.items.map((item) => {
-            const Icon =
-              icons[item.icon as keyof typeof icons];
+            const Icon = icons[item.icon as keyof typeof icons];
 
             return (
               <Card
@@ -112,14 +110,10 @@ export default function PracticeAreas({
                 >
                   {item.description}
                 </p>
-
-
               </Card>
             );
           })}
-
         </div>
-
       </Container>
     </section>
   );

@@ -67,6 +67,7 @@ export default function SectionRenderer({
     contact: (
       <ContactCTA
         contactCTA={config.contact}
+        company={config.company}
         theme={theme}
       />
     ),
@@ -82,7 +83,7 @@ export default function SectionRenderer({
 
   return (
     sectionMap[
-      section.type as keyof typeof sectionMap
+    section.type as keyof typeof sectionMap
     ] ?? null
   );
 }

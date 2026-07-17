@@ -51,7 +51,10 @@ export default function About({
           </div>
 
           <div className="mt-6">
-            <Button theme={theme}>
+            <Button
+              href="/booking"
+              theme={theme}
+            >
               {about.buttonText}
             </Button>
           </div>

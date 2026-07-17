@@ -107,7 +107,10 @@ export default function Hero({
 
           {/* CTA */}
           <div className="mt-12 flex flex-wrap justify-center gap-6">
-            <Button theme={theme}>
+            <Button
+              href="/booking"
+              theme={theme}
+            >
               {hero.buttonText}
             </Button>
 

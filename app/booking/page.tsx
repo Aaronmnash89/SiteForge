@@ -20,6 +20,7 @@ export default function BookingPage() {
 
       <ContactCTA
         contactCTA={config.contact}
+        company={config.company}
         theme={theme}
       />
 

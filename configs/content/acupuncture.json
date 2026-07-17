@@ -18,6 +18,7 @@
     "name": "Dr. Davis Acupuncture",
     "logoText": "Dr. Davis Acupuncture",
     "phone": "(828) 407-0412",
+    "phoneHref": "tel: +8284070412",
     "email": ""
   },
 
@@ -92,7 +93,7 @@
     "title": "Helping You Achieve Better Health Naturally",
     "description": "At Dr. Davis Acupuncture, we believe the body has an incredible ability to heal itself when properly supported. We provide personalized acupuncture treatments that promote balance, relieve discomfort, and improve overall wellness in a relaxing environment.",
     "image": "/images/maegan.jpg",
-    "buttonText": "Meet Our Practitioner",
+    "buttonText": "Book Appointment",
     "highlights": [
       "20+ Years Experience",
       "Holistic Wellness Focus",
@@ -225,14 +226,14 @@
     "quickLinks": [
       {
         "label": "Home",
-        "href": "/home"
+        "href": "/"
       },
       {
         "label": "About",
         "href": "/about"
       },
       {
-        "label": "Services",
+        "label": "Treatments & Services",
         "href": "/treatments"
       },
       {

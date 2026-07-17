@@ -1,17 +1,20 @@
-import { ContactCTAData } from "@/types/site";
+import { ContactCTAData, CompanyData } from "@/types/site";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { ThemeConfig } from "@/configs/themes/types";
 import Button from "../ui/Button";
+import Link from "next/link";
 
 interface ContactCTAProps {
   contactCTA: ContactCTAData;
+  company: CompanyData;
   theme: ThemeConfig;
 }
 
 export default function ContactCTA({
   contactCTA,
-  theme
+  company,
+  theme,
 }: ContactCTAProps) {
   return (
     <section
@@ -28,17 +31,21 @@ export default function ContactCTA({
         />
 
         <div className="mt-10 flex flex-wrap justify-center gap-6">
-          <Button theme={theme}>
+          <Button
+            href="/booking"
+            theme={theme}
+          >
             {contactCTA.buttonText}
           </Button>
 
-          <Button
-            variant="secondary"
-            theme={theme}
-           
-          >
-            {contactCTA.phoneButton}
-          </Button>
+          <Link href={`tel:${company.phone.replace(/[^\d+]/g, "")}`}>
+            <Button
+              variant="secondary"
+              theme={theme}
+            >
+              {contactCTA.phoneButton}
+            </Button>
+          </Link>
         </div>
 
       </Container>

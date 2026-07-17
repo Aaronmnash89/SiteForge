@@ -1,11 +1,13 @@
 "use client";
 import { ThemeConfig } from "@/configs/themes/types";
+import Link from "next/link";
 
 interface ButtonProps {
   children: React.ReactNode;
   variant?: "primary" | "secondary";
   className?: string;
   theme: ThemeConfig;
+  href?: string;
 }
 
 export default function Button({
@@ -13,6 +15,7 @@ export default function Button({
   variant = "primary",
   className = "",
   theme,
+  href
 }: ButtonProps) {
 
   const styles = {
@@ -28,19 +31,28 @@ const hoverStyles = {
 };
 
 
+  const classes = `
+  ${styles[variant]}
+  ${theme.button.padding}
+  ${theme.button.rounded}
+  ${theme.button.shadow}
+  ${hoverStyles[variant]}
+  ${theme.button.transition}
+  inline-flex items-center justify-center
+  ${className}
+`;
+
+if (href) {
   return (
-    <button
-      className={`
-    ${styles[variant]}
-    ${theme.button.padding}
-    ${theme.button.rounded}
-    ${theme.button.shadow}
-    ${hoverStyles[variant]}
-    ${theme.button.transition}
-    ${className}
-  `}
-    >
+    <Link href={href} className={classes}>
       {children}
-    </button>
+    </Link>
   );
+}
+
+return (
+  <button className={classes}>
+    {children}
+  </button>
+);
 }

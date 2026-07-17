@@ -2,16 +2,16 @@ import { ThemeConfig } from "./types";
 
 export const acupunctureTheme: ThemeConfig = {
     colors: {
-        primary: "bg-amber-50",          // warm cream page background
-        secondary: "border border-emerald-800 bg-transparent text-emerald-800",       // light earthy accent backgrounds
-        accent: "text-amber-700",        // eyebrow text / small accents
-        underline: "bg-amber-700",
-        background: "bg-white",
-        surface: "bg-emerald-50/40",
-        text: "text-stone-900",
-        textLight: "text-stone-600",
-        border: "border-stone-200",
-    },
+    primary: "bg-amber-50",
+    secondary: "border border-emerald-800 bg-transparent text-emerald-800",
+    accent: "text-amber-700",
+    underline: "bg-amber-700",
+    background: "bg-white",
+    surface: "bg-stone-50/60 backdrop-blur-md",
+    text: "text-stone-900",
+    textLight: "text-stone-600",
+    border: "border-stone-200/40",
+},
 
     about: {
         imageDecoration: {
