@@ -68,10 +68,6 @@ export default function Navigation({
     ? theme.navigation.activeTextScrolled
     : theme.navigation.activeText;
 
-  console.log(company.logo);
-  console.log(company.logoDark);
-  console.log(scrolled);
-
   return (
     <>
       <nav
@@ -81,9 +77,10 @@ export default function Navigation({
           flex items-center justify-between
           px-4 md:px-8
           transition-all duration-300
-          ${scrolled
-            ? `${theme.navigation.backgroundScrolled} shadow-lg`
-            : theme.navigation.background
+          ${
+            scrolled
+              ? `${theme.navigation.backgroundScrolled} shadow-lg`
+              : theme.navigation.background
           }
         `}
       >
@@ -92,49 +89,35 @@ export default function Navigation({
           {company.logo ? (
             <div
               className={`
-        relative
-        w-[220px]
-        transition-all duration-300
-        ${scrolled ? "h-20" : "h-24"}
-      `}
+                relative
+                w-[250px]
+                h-20
+                origin-left
+                transition-transform duration-300
+                ${scrolled ? "scale-90" : "scale-100"}
+              `}
             >
-              {/* Light logo (shown on cream navbar) */}
               <Image
-                src={scrolled ? company.logoDark! : company.logo!}
+                src={
+                  scrolled && company.logoDark
+                    ? company.logoDark
+                    : company.logo
+                }
                 alt={company.name}
-                width={220}
-                height={80}
+                fill
                 priority
-                className={`
-    w-auto
-    transition-all duration-300
-    ${scrolled ? "h-20" : "h-24"}
-  `}
+                sizes="250px"
+                className="object-contain object-left"
               />
-
-              {/* Dark logo (shown on maroon navbar) */}
-              {company.logoDark && (
-                <Image
-                  src={scrolled ? company.logoDark! : company.logo!}
-                  alt={company.name}
-                  fill
-                  sizes="220px"
-                  priority
-                  className="
-    object-contain
-    object-left
-  "
-                />
-              )}
             </div>
           ) : (
             <h1
               className={`
-        ${logoColor}
-        font-bold
-        transition-all duration-300
-        ${scrolled ? "text-xl" : "text-2xl"}
-      `}
+                ${logoColor}
+                font-bold
+                transition-all duration-300
+                ${scrolled ? "text-xl" : "text-2xl"}
+              `}
             >
               {company.name}
             </h1>
@@ -151,7 +134,8 @@ export default function Navigation({
         >
           {navigation.links.map((link) => {
             const isActive =
-              activeSection === link.href.replace("#", "");
+              activeSection === link.href.replace("/", "") ||
+              (link.href === "/" && activeSection === "home");
 
             return (
               <li key={link.label} className="relative">
@@ -167,7 +151,9 @@ export default function Navigation({
 
                 <span
                   className={`
-                    absolute -bottom-2 left-0
+                    absolute
+                    -bottom-2
+                    left-0
                     h-0.5
                     ${theme.navigation.underline}
                     transition-all duration-300
@@ -192,15 +178,15 @@ export default function Navigation({
       {mobileMenuOpen && (
         <div
           className={`
-      md:hidden
-      fixed
-      top-20
-      left-0
-      right-0
-      z-40
-      ${theme.navigation.backgroundScrolled}
-      shadow-xl
-    `}
+            md:hidden
+            fixed
+            top-20
+            left-0
+            right-0
+            z-40
+            ${theme.navigation.backgroundScrolled}
+            shadow-xl
+          `}
         >
           <ul className="flex flex-col gap-6 p-6">
             {navigation.links.map((link) => (
@@ -209,12 +195,12 @@ export default function Navigation({
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`
-              block
-              text-lg
-              ${theme.navigation.textScrolled}
-              ${theme.navigation.textHoverScrolled}
-              transition-colors
-            `}
+                    block
+                    text-lg
+                    ${theme.navigation.textScrolled}
+                    ${theme.navigation.textHoverScrolled}
+                    transition-colors
+                  `}
                 >
                   {link.label}
                 </Link>
