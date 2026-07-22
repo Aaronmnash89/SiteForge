@@ -39,9 +39,13 @@
   "company": {
     "name": "East West Acupuncture",
     "logo": "/images/ew_new_logo.png",
+    "logoDark": "/images/ew_logo_dark.png",
     "phone": "(828) 407-0412",
     "phoneHref": "tel: +8284070412",
     "email": ""
+
+
+    
   },
   "navigation": {
     "links": [

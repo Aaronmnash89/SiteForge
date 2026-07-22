@@ -77,28 +77,39 @@ export default function Navigation({
           flex items-center justify-between
           px-4 md:px-8
           transition-all duration-300
-          ${scrolled
-            ? `${theme.navigation.backgroundScrolled} shadow-lg`
-            : theme.navigation.background
+          ${
+            scrolled
+              ? `${theme.navigation.backgroundScrolled} shadow-lg`
+              : theme.navigation.background
           }
         `}
       >
         {/* Logo */}
         <Link href="/" className="flex items-center">
           {company.logo ? (
-            <Image
-              src={company.logo}
-              alt={company.name}
-              width={220}
-              height={80}
-              priority
+            <div
               className={`
-                object-contain
-                w-auto
-                transition-all duration-300
-                ${scrolled ? "h-12 md:h-16" : "h-14 md:h-20"}
+                relative
+                w-[250px]
+                h-20
+                origin-left
+                transition-transform duration-300
+                ${scrolled ? "scale-90" : "scale-100"}
               `}
-            />
+            >
+              <Image
+                src={
+                  scrolled && company.logoDark
+                    ? company.logoDark
+                    : company.logo
+                }
+                alt={company.name}
+                fill
+                priority
+                sizes="250px"
+                className="object-contain object-left"
+              />
+            </div>
           ) : (
             <h1
               className={`
@@ -123,7 +134,8 @@ export default function Navigation({
         >
           {navigation.links.map((link) => {
             const isActive =
-              activeSection === link.href.replace("#", "");
+              activeSection === link.href.replace("/", "") ||
+              (link.href === "/" && activeSection === "home");
 
             return (
               <li key={link.label} className="relative">
@@ -139,7 +151,9 @@ export default function Navigation({
 
                 <span
                   className={`
-                    absolute -bottom-2 left-0
+                    absolute
+                    -bottom-2
+                    left-0
                     h-0.5
                     ${theme.navigation.underline}
                     transition-all duration-300
@@ -161,40 +175,40 @@ export default function Navigation({
       </nav>
 
       {/* Mobile Menu */}
-{mobileMenuOpen && (
-  <div
-    className={`
-      md:hidden
-      fixed
-      top-20
-      left-0
-      right-0
-      z-40
-      ${theme.navigation.backgroundScrolled}
-      shadow-xl
-    `}
-  >
-    <ul className="flex flex-col gap-6 p-6">
-      {navigation.links.map((link) => (
-        <li key={link.label}>
-          <Link
-            href={link.href}
-            onClick={() => setMobileMenuOpen(false)}
-            className={`
-              block
-              text-lg
-              ${theme.navigation.textScrolled}
-              ${theme.navigation.textHoverScrolled}
-              transition-colors
-            `}
-          >
-            {link.label}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-)}
+      {mobileMenuOpen && (
+        <div
+          className={`
+            md:hidden
+            fixed
+            top-20
+            left-0
+            right-0
+            z-40
+            ${theme.navigation.backgroundScrolled}
+            shadow-xl
+          `}
+        >
+          <ul className="flex flex-col gap-6 p-6">
+            {navigation.links.map((link) => (
+              <li key={link.label}>
+                <Link
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`
+                    block
+                    text-lg
+                    ${theme.navigation.textScrolled}
+                    ${theme.navigation.textHoverScrolled}
+                    transition-colors
+                  `}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </>
   );
 }
