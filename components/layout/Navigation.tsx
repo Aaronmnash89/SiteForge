@@ -77,10 +77,9 @@ export default function Navigation({
           flex items-center justify-between
           px-4 md:px-8
           transition-all duration-300
-          ${
-            scrolled
-              ? `${theme.navigation.backgroundScrolled} shadow-lg`
-              : theme.navigation.background
+          ${scrolled
+            ? `${theme.navigation.backgroundScrolled} shadow-lg`
+            : theme.navigation.background
           }
         `}
       >
@@ -162,39 +161,40 @@ export default function Navigation({
       </nav>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div
-          className={`
-            md:hidden
-            fixed
-            top-20
-            left-0
-            right-0
-            z-40
-            ${theme.navigation.backgroundScrolled}
-            shadow-xl
-          `}
-        >
-          <ul className="flex flex-col gap-6 p-6">
-            {navigation.links.map((link) => (
-              <li key={link.label}>
-                <Link
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`
-                    block
-                    text-lg
-                    ${navText}
-                    ${navHover}
-                  `}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+{mobileMenuOpen && (
+  <div
+    className={`
+      md:hidden
+      fixed
+      top-20
+      left-0
+      right-0
+      z-40
+      ${theme.navigation.backgroundScrolled}
+      shadow-xl
+    `}
+  >
+    <ul className="flex flex-col gap-6 p-6">
+      {navigation.links.map((link) => (
+        <li key={link.label}>
+          <Link
+            href={link.href}
+            onClick={() => setMobileMenuOpen(false)}
+            className={`
+              block
+              text-lg
+              ${theme.navigation.textScrolled}
+              ${theme.navigation.textHoverScrolled}
+              transition-colors
+            `}
+          >
+            {link.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
     </>
   );
 }
