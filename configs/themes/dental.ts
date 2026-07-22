@@ -15,15 +15,24 @@ export const dentalTheme: ThemeConfig = {
 
 
     about: {},
-    
+
     navigation: {
         background: "bg-white/80 backdrop-blur-md",
         backgroundScrolled: "bg-white/95 backdrop-blur-md",
+
         text: "text-slate-900",
+        textScrolled: "text-slate-900",
+
         textHover: "hover:text-cyan-600",
+        textHoverScrolled: "hover:text-cyan-600",
+
         activeText: "text-cyan-600",
+        activeTextScrolled: "text-cyan-600",
+
         underline: "bg-cyan-600",
+
         logo: "text-slate-900",
+        logoScrolled: "text-slate-900",
     },
 
     typography: {
