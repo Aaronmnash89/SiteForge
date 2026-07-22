@@ -17,22 +17,22 @@ export default function Hero({
   return (
     <section
       id="home"
-      className={`${theme.colors.primary} ${theme.layout.sectionSpacing}`}
+      className={`${theme.colors.primary} py-16 md:py-28`}
     >
       {/* Background Glow */}
       <div
         className="
-    absolute
-    inset-0
-    bg-gradient-to-br
-    from-black/10
-    to-transparent
-    pointer-events-none
-  "
+          absolute
+          inset-0
+          bg-gradient-to-br
+          from-black/10
+          to-transparent
+          pointer-events-none
+        "
       />
 
       {/* Hero Container */}
-      <Container className="relative z-10 w-full max-w-5xl px-6">
+      <Container className="relative z-10 w-full max-w-5xl px-4 sm:px-6">
         <div
           className={`
             relative
@@ -43,15 +43,23 @@ export default function Hero({
             ${theme.colors.surface}
             border
             ${theme.colors.border}
-            px-16
-            py-20
+
+            px-6
+            py-10
+
+            sm:px-10
+            sm:py-14
+
+            lg:px-16
+            lg:py-20
           `}
         >
           {/* Eyebrow */}
           <p
             className={`
               text-center
-              text-sm
+              text-xs
+              sm:text-sm
               font-semibold
               uppercase
               tracking-[0.3em]
@@ -64,13 +72,14 @@ export default function Hero({
           {/* Accent Line */}
           <div
             className={`
-    mx-auto
-    mt-3
-    h-1
-    w-24
-    rounded-full
-    ${theme.colors.underline}
-  `}
+              mx-auto
+              mt-3
+              h-1
+              w-20
+              sm:w-24
+              rounded-full
+              ${theme.colors.underline}
+            `}
           />
 
           {/* Heading */}
@@ -79,10 +88,14 @@ export default function Hero({
               mx-auto
               max-w-4xl
               text-center
-              text-6xl
-              md:text-7xl
-              leading-none
+
+              text-4xl
+              sm:text-5xl
+              lg:text-7xl
+
+              leading-tight
               mt-6
+
               ${theme.typography.heading}
               ${theme.colors.text}
             `}
@@ -94,11 +107,16 @@ export default function Hero({
           <p
             className={`
               mx-auto
-              mt-8
+              mt-6
               max-w-2xl
               text-center
-              text-xl
+
+              text-base
+              sm:text-lg
+              lg:text-xl
+
               leading-relaxed
+
               ${theme.colors.textLight}
             `}
           >
@@ -106,20 +124,36 @@ export default function Hero({
           </p>
 
           {/* CTA */}
-          <div className="mt-12 flex flex-wrap justify-center gap-6">
-            <Button
-              href="/booking"
-              theme={theme}
-            >
-              {hero.buttonText}
-            </Button>
+          <div
+            className="
+              mt-10
+              flex
+              flex-col
+              sm:flex-row
+              justify-center
+              gap-4
+              sm:gap-6
+            "
+          >
+            <div className="w-full sm:w-auto">
+              <Button
+                href="/booking"
+                theme={theme}
+                className="w-full"
+              >
+                {hero.buttonText}
+              </Button>
+            </div>
 
-            <Button
-              theme={theme}
-              variant="secondary"
-            >
-              {hero.callButton}
-            </Button>
+            <div className="w-full sm:w-auto">
+              <Button
+                theme={theme}
+                variant="secondary"
+                className="w-full"
+              >
+                {hero.callButton}
+              </Button>
+            </div>
           </div>
         </div>
       </Container>
