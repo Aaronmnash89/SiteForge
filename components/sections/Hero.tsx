@@ -1,24 +1,26 @@
 "use client";
 
-import { HeroData } from "@/types/site";
+import { HeroData, CompanyData } from "@/types/site";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import { ThemeConfig } from "@/configs/themes/types";
 
 interface HeroProps {
   hero: HeroData;
+  company: CompanyData;
   theme: ThemeConfig;
 }
 
 export default function Hero({
   hero,
+  company,
   theme,
 }: HeroProps) {
   return (
     <section
-  id="home"
-  className={`${theme.colors.primary} pt-28 pb-16 md:pt-36 md:pb-28`}
->
+      id="home"
+      className={`${theme.colors.primary} pt-28 pb-16 md:pt-36 md:pb-28`}
+    >
       {/* Background Glow */}
       <div
         className="
@@ -122,7 +124,7 @@ export default function Hero({
             {hero.subtitle}
           </p>
 
-          {/* CTA */}
+          {/* CTA Buttons */}
           <div
             className="
               mt-10
@@ -146,6 +148,7 @@ export default function Hero({
 
             <div className="w-full sm:w-auto">
               <Button
+                href={company.phoneHref}
                 theme={theme}
                 variant="secondary"
                 className="w-full"

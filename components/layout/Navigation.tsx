@@ -73,7 +73,7 @@ export default function Navigation({
       <nav
         className={`
           fixed top-0 left-0 right-0 z-50
-          h-20
+          h-24
           flex items-center justify-between
           px-4 md:px-8
           transition-all duration-300
@@ -90,11 +90,13 @@ export default function Navigation({
             <div
               className={`
                 relative
-                w-[250px]
-                h-20
                 origin-left
-                transition-transform duration-300
-                ${scrolled ? "scale-90" : "scale-100"}
+                transition-all duration-300
+                ${
+                  scrolled
+                    ? "w-[280px] h-20"
+                    : "w-[360px] h-24"
+                }
               `}
             >
               <Image
@@ -106,7 +108,7 @@ export default function Navigation({
                 alt={company.name}
                 fill
                 priority
-                sizes="250px"
+                sizes="(max-width:768px) 220px, 360px"
                 className="object-contain object-left"
               />
             </div>
@@ -134,11 +136,14 @@ export default function Navigation({
         >
           {navigation.links.map((link) => {
             const isActive =
-              activeSection === link.href.replace("/", "") ||
+              activeSection === link.href.replace("#", "") ||
               (link.href === "/" && activeSection === "home");
 
             return (
-              <li key={link.label} className="relative">
+              <li
+                key={link.label}
+                className="relative"
+              >
                 <Link
                   href={link.href}
                   className={`
@@ -170,7 +175,11 @@ export default function Navigation({
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className={`md:hidden ${navText}`}
         >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {mobileMenuOpen ? (
+            <X size={30} />
+          ) : (
+            <Menu size={30} />
+          )}
         </button>
       </nav>
 
@@ -180,7 +189,7 @@ export default function Navigation({
           className={`
             md:hidden
             fixed
-            top-20
+            top-24
             left-0
             right-0
             z-40
