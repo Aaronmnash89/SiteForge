@@ -21,65 +21,74 @@ export default function About({
       id="about"
       className={`${theme.colors.primary} ${theme.layout.sectionSpacing}`}
     >
-      <Container className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
+      <Container className="mx-auto max-w-7xl px-6">
+        <div className="grid items-center gap-16 lg:grid-cols-2">
 
-        {/* Left Content */}
-        <div>
-          <SectionHeading
-            eyebrow={about.eyebrow}
-            title={about.title}
-            subtitle={about.description}
-            centered={false}
-            theme={theme}
-          />
+          {/* Left Column */}
+          <div className="flex flex-col">
 
-          <div className="mt-10 space-y-4">
-            {about.highlights.map((highlight) => (
-              <div
-                key={highlight}
-                className="flex items-center gap-3"
-              >
-                <div
-                  className={`h-2 w-2 rounded-full ${theme.colors.secondary}`}
-                />
-
-                <span className={theme.colors.text}>
-                  {highlight}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-6">
-            <Button
-              href="/booking"
+            {/* Heading */}
+            <SectionHeading
+              eyebrow={about.eyebrow}
+              title={about.title}
+              subtitle={about.description}
+              centered={false}
               theme={theme}
-            >
-              {about.buttonText}
-            </Button>
+            />
+
+            {/* Image (Mobile Only) */}
+            <div className="relative mb-10 overflow-hidden rounded-2xl lg:hidden">
+              <Image
+                src={about.image}
+                alt={about.title}
+                width={600}
+                height={700}
+                className="h-full w-full rounded-2xl object-cover"
+              />
+            </div>
+
+            {/* Highlights */}
+            <div className="space-y-4">
+              {about.highlights.map((highlight) => (
+                <div
+                  key={highlight}
+                  className="flex items-center gap-3"
+                >
+                  <div
+                    className={`h-2 w-2 rounded-full ${theme.colors.secondary}`}
+                  />
+
+                  <span className={theme.colors.text}>
+                    {highlight}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Button */}
+            <div className="mt-6">
+              <Button
+                href="/booking"
+                theme={theme}
+              >
+                {about.buttonText}
+              </Button>
+            </div>
           </div>
-        </div>
 
-        {/* Right Image */}
-        <div className="relative overflow-hidden rounded-2xl">
-          <Image
-            src={about.image}
-            alt={about.title}
-            width={600}
-            height={700}
-            className="
-      h-full
-      w-full
-      object-cover
-      rounded-2xl
-    "
-          />
-
+          {/* Image (Desktop Only) */}
+          <div className="relative hidden overflow-hidden rounded-2xl lg:block">
+            <Image
+              src={about.image}
+              alt={about.title}
+              width={600}
+              height={700}
+              className="h-full w-full rounded-2xl object-cover"
+            />
+          </div>
 
         </div>
-
       </Container>
     </section>
   );
 }
-
