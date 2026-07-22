@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CompanyData, NavigationData } from "@/types/site";
 import { useEffect, useState } from "react";
 import { ThemeConfig } from "@/configs/themes/types";
+import Image from "next/image";
 
 interface NavigationProps {
   company: CompanyData;
@@ -81,14 +82,14 @@ export default function Navigation({
       {/* Logo */}
       <Link href="/" className="flex items-center">
         {company.logo ? (
-          <img
+          <Image
             src={company.logo}
             alt={company.name}
-            className={`
-        w-auto
-        transition-all duration-300
-        ${scrolled ? "h-14" : "h-16"}
-      `}
+            width={220}
+            height={80}
+            priority
+            className={`w-auto transition-all duration-300 ${scrolled ? "h-14" : "h-16"
+              }`}
           />
         ) : (
           <h1
@@ -99,7 +100,7 @@ export default function Navigation({
         ${scrolled ? "text-xl" : "text-2xl"}
       `}
           >
-            {company.logoText ?? company.name}
+            {company.name}
           </h1>
         )}
       </Link>

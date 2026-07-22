@@ -9,7 +9,6 @@ export interface SEOData {
 export interface CompanyData {
   name: string;
   logo?: string;
-  logoText?: string;
   phone: string;
   phoneHref: string;
   email: string;
