@@ -69,15 +69,16 @@ export default function Navigation({
   return (
     <nav
       className={`
-        fixed top-0 left-0 right-0 z-50
-        flex items-center justify-between
-        border-b border-white/10
-        transition-all duration-300
-        ${scrolled
-          ? `${theme.navigation.backgroundScrolled} py-4 px-8 shadow-lg`
-          : `${theme.navigation.background} py-6 px-8`
+    fixed top-0 left-0 right-0 z-50
+    h-20
+    flex items-center justify-between
+    px-8
+    transition-all duration-300
+    ${scrolled
+          ? `${theme.navigation.backgroundScrolled} shadow-lg`
+          : theme.navigation.background
         }
-      `}
+  `}
     >
       {/* Logo */}
       <Link href="/" className="flex items-center">
@@ -88,8 +89,11 @@ export default function Navigation({
             width={220}
             height={80}
             priority
-            className={`w-auto transition-all duration-300 ${scrolled ? "h-14" : "h-16"
-              }`}
+            className={`
+    w-auto
+    transition-all duration-300
+    ${scrolled ? "h-12" : "h-14"}
+  `}
           />
         ) : (
           <h1
