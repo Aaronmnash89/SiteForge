@@ -92,7 +92,7 @@ export default function Navigation({
             className={`
     w-auto
     transition-all duration-300
-    ${scrolled ? "h-12" : "h-14"}
+    ${scrolled ? "h-20" : "h-24"}
   `}
           />
         ) : (
