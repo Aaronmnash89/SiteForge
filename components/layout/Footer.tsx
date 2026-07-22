@@ -22,11 +22,7 @@ export default function Footer({
       >
         {/* Company */}
         <div>
-          <h3
-            className={`${theme.colors.text} ${theme.typography.heading} text-2xl`}
-          >
-            {company.logo}
-          </h3>
+          
 
           <p className={`mt-4 ${theme.colors.textLight}`}>
             {footer.tagline}

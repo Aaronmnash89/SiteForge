@@ -4,6 +4,7 @@ import { CompanyData, NavigationData } from "@/types/site";
 import { useEffect, useState } from "react";
 import { ThemeConfig } from "@/configs/themes/types";
 import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 interface NavigationProps {
   company: CompanyData;
@@ -18,6 +19,7 @@ export default function Navigation({
 }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -112,10 +114,10 @@ export default function Navigation({
       {/* Navigation */}
       <ul
         className={`
-          flex
-          transition-all duration-300
-          ${scrolled ? "gap-6 text-sm" : "gap-8 text-base"}
-        `}
+    hidden md:flex
+    transition-all duration-300
+    ${scrolled ? "gap-6 text-sm" : "gap-8 text-base"}
+  `}
       >
         {navigation.links.map((link) => {
           const isActive =
@@ -146,6 +148,20 @@ export default function Navigation({
           );
         })}
       </ul>
+      <button
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        className={`
+    md:hidden
+    ${navText}
+    transition-colors
+  `}
+      >
+        {mobileMenuOpen ? (
+          <X size={28} />
+        ) : (
+          <Menu size={28} />
+        )}
+      </button>
     </nav>
   );
 }
