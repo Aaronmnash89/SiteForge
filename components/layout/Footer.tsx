@@ -25,7 +25,7 @@ export default function Footer({
           <h3
             className={`${theme.colors.text} ${theme.typography.heading} text-2xl`}
           >
-            {company.logoText}
+            {company.logo}
           </h3>
 
           <p className={`mt-4 ${theme.colors.textLight}`}>
