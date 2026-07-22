@@ -16,9 +16,9 @@ export default function Hero({
 }: HeroProps) {
   return (
     <section
-      id="home"
-      className={`${theme.colors.primary} py-16 md:py-28`}
-    >
+  id="home"
+  className={`${theme.colors.primary} pt-28 pb-16 md:pt-36 md:pb-28`}
+>
       {/* Background Glow */}
       <div
         className="
