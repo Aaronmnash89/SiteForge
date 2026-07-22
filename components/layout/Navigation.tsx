@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { CompanyData, NavigationData } from "@/types/site";
 import { useEffect, useState } from "react";
@@ -51,7 +52,6 @@ export default function Navigation({
     return () => observer.disconnect();
   }, []);
 
-  // Navigation colors based on scroll state
   const logoColor = scrolled
     ? theme.navigation.logoScrolled
     : theme.navigation.logo;
@@ -69,99 +69,132 @@ export default function Navigation({
     : theme.navigation.activeText;
 
   return (
-    <nav
-      className={`
-    fixed top-0 left-0 right-0 z-50
-    h-20
-    flex items-center justify-between
-    px-8
-    transition-all duration-300
-    ${scrolled
-          ? `${theme.navigation.backgroundScrolled} shadow-lg`
-          : theme.navigation.background
-        }
-  `}
-    >
-      {/* Logo */}
-      <Link href="/" className="flex items-center">
-        {company.logo ? (
-          <Image
-            src={company.logo}
-            alt={company.name}
-            width={220}
-            height={80}
-            priority
-            className={`
-    w-auto
-    transition-all duration-300
-    ${scrolled ? "h-20" : "h-24"}
-  `}
-          />
-        ) : (
-          <h1
-            className={`
-        ${logoColor}
-        font-bold
-        transition-all duration-300
-        ${scrolled ? "text-xl" : "text-2xl"}
-      `}
-          >
-            {company.name}
-          </h1>
-        )}
-      </Link>
-
-      {/* Navigation */}
-      <ul
+    <>
+      <nav
         className={`
-    hidden md:flex
-    transition-all duration-300
-    ${scrolled ? "gap-6 text-sm" : "gap-8 text-base"}
-  `}
+          fixed top-0 left-0 right-0 z-50
+          h-20
+          flex items-center justify-between
+          px-4 md:px-8
+          transition-all duration-300
+          ${
+            scrolled
+              ? `${theme.navigation.backgroundScrolled} shadow-lg`
+              : theme.navigation.background
+          }
+        `}
       >
-        {navigation.links.map((link) => {
-          const isActive =
-            activeSection === link.href.replace("#", "");
+        {/* Logo */}
+        <Link href="/" className="flex items-center">
+          {company.logo ? (
+            <Image
+              src={company.logo}
+              alt={company.name}
+              width={220}
+              height={80}
+              priority
+              className={`
+                object-contain
+                w-auto
+                transition-all duration-300
+                ${scrolled ? "h-12 md:h-16" : "h-14 md:h-20"}
+              `}
+            />
+          ) : (
+            <h1
+              className={`
+                ${logoColor}
+                font-bold
+                transition-all duration-300
+                ${scrolled ? "text-xl" : "text-2xl"}
+              `}
+            >
+              {company.name}
+            </h1>
+          )}
+        </Link>
 
-          return (
-            <li key={link.label} className="relative">
-              <Link
-                href={link.href}
-                className={`
-                  transition-colors duration-300
-                  ${isActive ? navActive : `${navText} ${navHover}`}
-                `}
-              >
-                {link.label}
-              </Link>
+        {/* Desktop Navigation */}
+        <ul
+          className={`
+            hidden md:flex
+            transition-all duration-300
+            ${scrolled ? "gap-6 text-sm" : "gap-8 text-base"}
+          `}
+        >
+          {navigation.links.map((link) => {
+            const isActive =
+              activeSection === link.href.replace("#", "");
 
-              <span
-                className={`
-                  absolute -bottom-2 left-0
-                  h-0.5
-                  ${theme.navigation.underline}
-                  transition-all duration-300
-                  ${isActive ? "w-full" : "w-0"}
-                `}
-              />
-            </li>
-          );
-        })}
-      </ul>
-      <button
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        className={`
-    md:hidden
-    ${navText}
-    transition-colors
-  `}
-      >
-        {mobileMenuOpen ? (
-          <X size={28} />
-        ) : (
-          <Menu size={28} />
-        )}
-      </button>
-    </nav>
+            return (
+              <li key={link.label} className="relative">
+                <Link
+                  href={link.href}
+                  className={`
+                    transition-colors duration-300
+                    ${isActive ? navActive : `${navText} ${navHover}`}
+                  `}
+                >
+                  {link.label}
+                </Link>
+
+                <span
+                  className={`
+                    absolute -bottom-2 left-0
+                    h-0.5
+                    ${theme.navigation.underline}
+                    transition-all duration-300
+                    ${isActive ? "w-full" : "w-0"}
+                  `}
+                />
+              </li>
+            );
+          })}
+        </ul>
+
+        {/* Mobile Hamburger */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className={`md:hidden ${navText}`}
+        >
+          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </nav>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div
+          className={`
+            md:hidden
+            fixed
+            top-20
+            left-0
+            right-0
+            z-40
+            ${theme.navigation.backgroundScrolled}
+            shadow-xl
+          `}
+        >
+          <ul className="flex flex-col gap-6 p-6">
+            {navigation.links.map((link) => (
+              <li key={link.label}>
+                <Link
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`
+                    block
+                    text-lg
+                    ${navText}
+                    ${navHover}
+                  `}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </>
   );
 }
