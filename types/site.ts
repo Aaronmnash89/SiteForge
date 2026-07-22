@@ -2,8 +2,10 @@ import type { ThemeName } from "@/configs/themes";
 
 export interface CompanyData {
   name: string;
-  logoText: string;
+  logo?: string;
+  logoText?: string;
   phone: string;
+  phoneHref: string;
   email: string;
 }
 

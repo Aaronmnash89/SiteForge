@@ -1,44 +1,75 @@
 {
   "page": {
     "sections": [
-      { "type": "hero", "enabled": true },
-      { "type": "trust", "enabled": true },
-      { "type": "whyChooseUs", "enabled": true },
-      { "type": "about", "enabled": true },
-      { "type": "testimonials", "enabled": true },
-      { "type": "practiceAreas", "enabled": true },
-      { "type": "contact", "enabled": true },
-      { "type": "footer", "enabled": true }
+      {
+        "type": "hero",
+        "enabled": true
+      },
+      {
+        "type": "trust",
+        "enabled": true
+      },
+      {
+        "type": "whyChooseUs",
+        "enabled": true
+      },
+      {
+        "type": "about",
+        "enabled": true
+      },
+      {
+        "type": "testimonials",
+        "enabled": true
+      },
+      {
+        "type": "practiceAreas",
+        "enabled": true
+      },
+      {
+        "type": "contact",
+        "enabled": true
+      },
+      {
+        "type": "footer",
+        "enabled": true
+      }
     ]
   },
-
   "theme": "acupuncture",
-
   "company": {
     "name": "Dr. Davis Acupuncture",
-    "logoText": "Dr. Davis Acupuncture",
+    "logo": "/images/ew_logo.png",
     "phone": "(828) 407-0412",
     "phoneHref": "tel: +8284070412",
     "email": ""
   },
-
   "navigation": {
-  "links": [
-    { "label": "Home", "href": "/" },
-    { "label": "About", "href": "/about" },
-    { "label": "Treatments", "href": "/treatments" },
-    { "label": "Booking", "href": "/booking" }
-  ]
-},
-
+    "links": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "About",
+        "href": "/about"
+      },
+      {
+        "label": "Treatments",
+        "href": "/treatments"
+      },
+      {
+        "label": "Booking",
+        "href": "/booking"
+      }
+    ]
+  },
   "hero": {
     "eyebrow": "Acupuncture & Healing",
-    "title": "Restore Balance. Relieve Pain. Feel Your Best.",
+    "title": "Ancient Medicine for Modern Health",
     "subtitle": "Experience personalized acupuncture treatments designed to reduce pain, restore balance, and support your body's natural healing process.",
     "buttonText": "Book Appointment",
     "callButton": "Call Today"
   },
-
   "trust": {
     "items": [
       {
@@ -59,7 +90,6 @@
       }
     ]
   },
-
   "whyChooseUs": {
     "eyebrow": "WHY CHOOSE US",
     "title": "Personalized Care For Your Wellness Journey",
@@ -87,7 +117,6 @@
       }
     ]
   },
-
   "about": {
     "eyebrow": "ABOUT OUR CLINIC",
     "title": "Helping You Achieve Better Health Naturally",
@@ -100,7 +129,6 @@
       "Personalized Care Plans"
     ]
   },
-
   "practiceAreas": {
     "eyebrow": "SERVICES",
     "title": "Acupuncture Treatments",
@@ -187,7 +215,6 @@
       }
     ]
   },
-
   "testimonials": {
     "eyebrow": "PATIENT TESTIMONIALS",
     "title": "Helping Patients Feel Their Best",
@@ -209,7 +236,6 @@
       }
     ]
   },
-
   "contact": {
     "eyebrow": "START YOUR WELLNESS JOURNEY",
     "title": "Ready To Feel Better Naturally?",
@@ -217,12 +243,10 @@
     "buttonText": "Book Appointment",
     "phoneButton": "Call (828) 407-0412"
   },
-
   "footer": {
     "tagline": "",
     "address": "340 Carl Eller Rd. #2, Mars Hill, NC - Inside ''A Touch Of Balance''. \n\n\n\n\n\n\n Asheville location coming soon.",
     "copyright": "© 2026 Dr. Davis Acupuncture. All rights reserved.",
-
     "quickLinks": [
       {
         "label": "Home",
@@ -241,7 +265,6 @@
         "href": "/contact"
       }
     ],
-
     "practiceAreas": [
       "Pain Management",
       "Stress & Anxiety",
