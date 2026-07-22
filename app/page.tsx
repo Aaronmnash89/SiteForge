@@ -34,6 +34,7 @@ export default function Home() {
 
         <Hero
           hero={config.hero}
+          company={config.company}
           theme={theme}
         />
 
