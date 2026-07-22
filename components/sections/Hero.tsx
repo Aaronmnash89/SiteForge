@@ -25,7 +25,6 @@ export default function Hero({
           absolute
           inset-0
           bg-gradient-to-br
-          from-black/10
           to-transparent
           pointer-events-none
         "

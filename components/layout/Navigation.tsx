@@ -68,6 +68,10 @@ export default function Navigation({
     ? theme.navigation.activeTextScrolled
     : theme.navigation.activeText;
 
+  console.log(company.logo);
+  console.log(company.logoDark);
+  console.log(scrolled);
+
   return (
     <>
       <nav
@@ -86,27 +90,51 @@ export default function Navigation({
         {/* Logo */}
         <Link href="/" className="flex items-center">
           {company.logo ? (
-            <Image
-              src={company.logo}
-              alt={company.name}
-              width={220}
-              height={80}
-              priority
+            <div
               className={`
-                object-contain
-                w-auto
-                transition-all duration-300
-                ${scrolled ? "h-12 md:h-16" : "h-14 md:h-20"}
-              `}
-            />
+        relative
+        w-[220px]
+        transition-all duration-300
+        ${scrolled ? "h-20" : "h-24"}
+      `}
+            >
+              {/* Light logo (shown on cream navbar) */}
+              <Image
+                src={scrolled ? company.logoDark! : company.logo!}
+                alt={company.name}
+                width={220}
+                height={80}
+                priority
+                className={`
+    w-auto
+    transition-all duration-300
+    ${scrolled ? "h-20" : "h-24"}
+  `}
+              />
+
+              {/* Dark logo (shown on maroon navbar) */}
+              {company.logoDark && (
+                <Image
+                  src={scrolled ? company.logoDark! : company.logo!}
+                  alt={company.name}
+                  fill
+                  sizes="220px"
+                  priority
+                  className="
+    object-contain
+    object-left
+  "
+                />
+              )}
+            </div>
           ) : (
             <h1
               className={`
-                ${logoColor}
-                font-bold
-                transition-all duration-300
-                ${scrolled ? "text-xl" : "text-2xl"}
-              `}
+        ${logoColor}
+        font-bold
+        transition-all duration-300
+        ${scrolled ? "text-xl" : "text-2xl"}
+      `}
             >
               {company.name}
             </h1>
@@ -161,9 +189,9 @@ export default function Navigation({
       </nav>
 
       {/* Mobile Menu */}
-{mobileMenuOpen && (
-  <div
-    className={`
+      {mobileMenuOpen && (
+        <div
+          className={`
       md:hidden
       fixed
       top-20
@@ -173,28 +201,28 @@ export default function Navigation({
       ${theme.navigation.backgroundScrolled}
       shadow-xl
     `}
-  >
-    <ul className="flex flex-col gap-6 p-6">
-      {navigation.links.map((link) => (
-        <li key={link.label}>
-          <Link
-            href={link.href}
-            onClick={() => setMobileMenuOpen(false)}
-            className={`
+        >
+          <ul className="flex flex-col gap-6 p-6">
+            {navigation.links.map((link) => (
+              <li key={link.label}>
+                <Link
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`
               block
               text-lg
               ${theme.navigation.textScrolled}
               ${theme.navigation.textHoverScrolled}
               transition-colors
             `}
-          >
-            {link.label}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </>
   );
 }
