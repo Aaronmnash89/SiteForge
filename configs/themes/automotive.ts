@@ -18,11 +18,20 @@ export const automotiveTheme: ThemeConfig = {
     navigation: {
         background: "bg-amber-50/80 backdrop-blur-md",
         backgroundScrolled: "bg-amber-50/95 backdrop-blur-md",
+
         text: "text-stone-800",
+        textScrolled: "text-stone-800",
+
         textHover: "hover:text-amber-700",
+        textHoverScrolled: "hover:text-amber-700",
+
         activeText: "text-amber-700",
+        activeTextScrolled: "text-amber-700",
+
         underline: "bg-amber-700",
+
         logo: "text-stone-900",
+        logoScrolled: "text-stone-900",
     },
 
     typography: {
@@ -45,7 +54,7 @@ export const automotiveTheme: ThemeConfig = {
     cards: {
         rounded: "rounded-2xl",
         shadow: "shadow-md",
-         hoverBorder: "hover:border-amber-700",
+        hoverBorder: "hover:border-amber-700",
     },
 
     layout: {
