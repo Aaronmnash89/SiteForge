@@ -52,12 +52,13 @@ export default function SectionHeading({
       {subtitle && (
         <p
           className={`
-        ${theme.colors.textLight}
-        mt-6
-        ${centered ? "mx-auto max-w-3xl" : "max-w-3xl"}
-        text-lg
-        leading-relaxed
-      `}
+      ${theme.colors.textLight}
+      mt-6
+      ${centered ? "mx-auto max-w-3xl" : "max-w-3xl"}
+      text-lg
+      leading-relaxed
+      whitespace-pre-line
+    `}
         >
           {subtitle}
         </p>
