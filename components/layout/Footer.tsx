@@ -22,7 +22,7 @@ export default function Footer({
       >
         {/* Company */}
         <div>
-          
+
 
           <p className={`mt-4 ${theme.colors.textLight}`}>
             {footer.tagline}
@@ -84,10 +84,11 @@ export default function Footer({
           </h4>
 
           <p className={`mt-4 ${theme.colors.textLight}`}>
-           
+
           </p>
 
           <Button
+            href={company.phoneHref}
             theme={theme}
             className="mt-6 w-45 px-6 py-3"
           >
