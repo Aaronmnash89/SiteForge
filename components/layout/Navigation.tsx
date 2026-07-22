@@ -72,24 +72,37 @@ export default function Navigation({
         flex items-center justify-between
         border-b border-white/10
         transition-all duration-300
-        ${
-          scrolled
-            ? `${theme.navigation.backgroundScrolled} py-4 px-8 shadow-lg`
-            : `${theme.navigation.background} py-6 px-8`
+        ${scrolled
+          ? `${theme.navigation.backgroundScrolled} py-4 px-8 shadow-lg`
+          : `${theme.navigation.background} py-6 px-8`
         }
       `}
     >
       {/* Logo */}
-      <h1
-        className={`
-          ${logoColor}
-          font-bold
-          transition-all duration-300
-          ${scrolled ? "text-xl" : "text-2xl"}
-        `}
-      >
-        {company.logoText}
-      </h1>
+      <Link href="/" className="flex items-center">
+        {company.logo ? (
+          <img
+            src={company.logo}
+            alt={company.name}
+            className={`
+        w-auto
+        transition-all duration-300
+        ${scrolled ? "h-14" : "h-16"}
+      `}
+          />
+        ) : (
+          <h1
+            className={`
+        ${logoColor}
+        font-bold
+        transition-all duration-300
+        ${scrolled ? "text-xl" : "text-2xl"}
+      `}
+          >
+            {company.logoText ?? company.name}
+          </h1>
+        )}
+      </Link>
 
       {/* Navigation */}
       <ul
