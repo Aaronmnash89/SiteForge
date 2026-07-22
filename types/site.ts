@@ -1,5 +1,11 @@
 import type { ThemeName } from "@/configs/themes";
 
+export interface SEOData {
+  title: string;
+  description: string;
+  keywords: string[];
+}
+
 export interface CompanyData {
   name: string;
   logo?: string;
@@ -148,7 +154,7 @@ export interface SitePage {
 
 export interface SiteConfig {
   page: SitePage;
-
+  seo: SEOData;
   company: CompanyData;
   navigation: NavigationData;
 
@@ -165,7 +171,7 @@ export interface SiteConfig {
   contact: ContactCTAData;
   footer: FooterData;
 
-   theme:ThemeName;
+  theme: ThemeName;
 }
 
 export interface LawThemeConfig {

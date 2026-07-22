@@ -37,7 +37,7 @@
   },
   "theme": "acupuncture",
   "company": {
-    "name": "Dr. Davis Acupuncture",
+    "name": "East West Acupuncture",
     "logo": "/images/ew_logo.png",
     "phone": "(828) 407-0412",
     "phoneHref": "tel: +8284070412",
@@ -272,6 +272,17 @@
       "Chronic Conditions",
       "Oncology Support",
       "End of Life Care"
+    ]
+  },
+  "seo": {
+    "title": "East West Acupuncture | Mars Hill, NC",
+    "description": "Professional acupuncture treatments in Mars Hill, NC. Pain relief, women's health, stress management, oncology support, and holistic wellness.",
+    "keywords": [
+      "Acupuncture",
+      "Mars Hill",
+      "Asheville",
+      "Pain Relief",
+      "Women's Health"
     ]
   }
 }
