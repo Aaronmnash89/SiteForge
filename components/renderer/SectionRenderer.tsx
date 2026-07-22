@@ -25,6 +25,7 @@ export default function SectionRenderer({
     hero: (
       <Hero
         hero={config.hero}
+        company={config.company}
         theme={theme}
       />
     ),
