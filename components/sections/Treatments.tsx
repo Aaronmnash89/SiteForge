@@ -62,7 +62,7 @@ export default function Treatments({
           <div
             className="
               absolute
-              left-[-250px]
+              left-[-220px]
               top-1/2
               -translate-y-1/2
               w-[900px]
