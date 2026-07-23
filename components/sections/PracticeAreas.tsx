@@ -49,16 +49,27 @@ export default function PracticeAreas({
       {/* Background Image */}
       <div
         className="
-          absolute
-          right-[-220px]
-          top-[45%]
-          -translate-y-1/2
-          w-[900px]
-          h-[900px]
-          opacity-50
-          pointer-events-none
-          -z-10
-        "
+    absolute
+    top-[45%]
+    -translate-y-1/2
+
+    right-[-160px]
+    xl:right-[-240px]
+    2xl:right-[-420px]
+
+    w-[700px]
+    h-[700px]
+
+    xl:w-[850px]
+    xl:h-[850px]
+
+    2xl:w-[1000px]
+    2xl:h-[1000px]
+
+    opacity-50
+    pointer-events-none
+    -z-10
+  "
       >
         <img
           src="/images/IMG_0144.JPG"

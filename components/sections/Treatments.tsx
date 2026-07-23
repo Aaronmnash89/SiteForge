@@ -61,16 +61,19 @@ export default function Treatments({
           {/* Background Image */}
           <div
             className="
-              absolute
-              left-[-220px]
-              top-1/2
-              -translate-y-1/2
-              w-[900px]
-              h-[900px]
-              opacity-50
-              pointer-events-none
-              z-0
-            "
+    absolute
+    top-1/2
+    -translate-y-1/2
+
+    -left-[28vw]
+
+    w-[900px]
+    h-[900px]
+
+    opacity-50
+    pointer-events-none
+    z-0
+  "
           >
             <img
               src="/images/IMG_0466.JPG"
