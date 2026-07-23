@@ -90,7 +90,7 @@ export default function Navigation({
           }
   `}
       >
-        <div className="mx-auto flex h-24 w-full max-w-7xl items-center justify-between px-5 md:px-8">
+        <div className="flex h-24 w-full items-center justify-between px-6 md:px-10 xl:px-20 2xl:px-28">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             {company.logoDark ? (
