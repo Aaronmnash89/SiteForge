@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { HeroData, CompanyData } from "@/types/site";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
@@ -31,6 +32,24 @@ export default function Hero({
           pointer-events-none
         "
       />
+
+      {/* Large Logo */}
+      <div className="relative z-10 flex justify-center mb-8 md:mb-12">
+        <Image
+          src="/images/ew_logo_2.png"
+          alt={company.name}
+          width={1200}
+          height={500}
+          priority
+          className="
+    h-auto
+    w-[320px]
+    sm:w-[450px]
+    md:w-[600px]
+    lg:w-[750px]
+  "
+        />
+      </div>
 
       {/* Hero Container */}
       <Container className="relative z-10 w-full max-w-5xl px-4 sm:px-6">

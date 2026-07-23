@@ -1,6 +1,5 @@
 import Navigation from "@/components/layout/Navigation";
 import Hero from "@/components/sections/Hero";
-import TrustBar from "@/components/sections/TrustBar";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Footer from "@/components/layout/Footer";
 
@@ -38,10 +37,6 @@ export default function Home() {
           theme={theme}
         />
 
-        <TrustBar
-          trust={config.trust}
-          theme={theme}
-        />
 
         <WhyChooseUs
           whyChooseUs={config.whyChooseUs}

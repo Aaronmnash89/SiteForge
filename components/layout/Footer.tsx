@@ -31,7 +31,9 @@ export default function Footer({
           <div className={`mt-6 space-y-2 ${theme.colors.textLight}`}>
             <p>{company.phone}</p>
             <p>{company.email}</p>
-            <p>{footer.address}</p>
+            <p className="whitespace-pre-line">
+              {footer.address}
+            </p>
           </div>
         </div>
 

@@ -62,7 +62,7 @@ export default function Treatments({
           <div
             className="
               absolute
-              left-[-220px]
+              left-[-250px]
               top-1/2
               -translate-y-1/2
               w-[900px]
@@ -73,7 +73,7 @@ export default function Treatments({
             "
           >
             <img
-              src="/images/IMG_0036.JPG"
+              src="/images/IMG_0466.JPG"
               alt=""
               className="h-full w-full object-cover rounded-full"
             />
