@@ -93,39 +93,36 @@ export default function Navigation({
         <div className="mx-auto flex h-24 w-full max-w-7xl items-center justify-between px-5 md:px-8">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            {company.logo ? (
+            {company.logoDark ? (
               <div
                 className={`
-                relative
-                origin-left
-                transition-all duration-300
-                ${scrolled
-                    ? "w-[220px] sm:w-[250px] md:w-[280px] h-20"
-                    : "w-[260px] sm:w-[300px] md:w-[360px] h-24"
+        relative
+        origin-left
+        transition-all duration-300
+        overflow-hidden
+        ${scrolled
+                    ? "w-[220px] sm:w-[250px] md:w-[280px] h-20 opacity-100"
+                    : "w-[220px] sm:w-[250px] md:w-[280px] h-20 opacity-0 pointer-events-none"
                   }
-              `}
+      `}
               >
                 <Image
-                  src={
-                    scrolled && company.logoDark
-                      ? company.logoDark
-                      : company.logo
-                  }
+                  src={company.logoDark}
                   alt={company.name}
                   fill
                   priority
-                  sizes="(max-width:768px) 220px, 360px"
+                  sizes="(max-width:768px) 220px, 280px"
                   className="object-contain object-left"
                 />
               </div>
             ) : (
               <h1
                 className={`
-                ${logoColor}
-                font-bold
-                transition-all duration-300
-                ${scrolled ? "text-xl" : "text-2xl"}
-              `}
+        ${logoColor}
+        font-bold
+        transition-all duration-300
+        ${scrolled ? "opacity-100" : "opacity-0"}
+      `}
               >
                 {company.name}
               </h1>
