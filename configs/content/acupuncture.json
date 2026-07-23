@@ -38,8 +38,8 @@
   "theme": "acupuncture",
   "company": {
     "name": "East West Acupuncture",
-    "logo": "/images/ew_new_logo.png",
-    "logoDark": "/images/ew_logo_dark.png",
+    "logo": "/images/ew_nav_logo.png",
+    "logoDark": "/images/ew_nav_logo.png",
     "phone": "(828) 407-0412",
     "phoneHref": "tel:8284070412",
     "email": ""
@@ -249,8 +249,8 @@
   },
   "footer": {
     "tagline": "",
-    "address": "340 Carl Eller Rd. #2, Mars Hill, NC - Inside ''A Touch Of Balance''. \n\n\n\n\n\n\n Asheville location coming soon.",
-    "copyright": "© 2026 Dr. Davis Acupuncture. All rights reserved.",
+    "address": "340 Carl Eller Rd. #2, \nMars Hill, North Carolina \nInside ''A Touch Of Balance'' \n\nAsheville location coming soon...",
+    "copyright": "© 2026 East West Acupuncture & Herbs. All rights reserved.",
     "quickLinks": [
       {
         "label": "Home",

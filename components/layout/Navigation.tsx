@@ -72,90 +72,96 @@ export default function Navigation({
     <>
       <nav
         className={`
-          fixed top-0 left-0 right-0 z-50
-          h-24
-          flex items-center justify-between
-          px-4 md:px-8
-          transition-all duration-300
-          ${
-            scrolled
-              ? `${theme.navigation.backgroundScrolled} shadow-lg`
-              : theme.navigation.background
+    fixed
+    top-0
+    left-0
+    right-0
+    z-50
+
+    pt-[env(safe-area-inset-top)]
+    h-[calc(6rem+env(safe-area-inset-top))]
+
+    transition-all
+    duration-300
+
+    ${scrolled
+            ? `${theme.navigation.backgroundScrolled} shadow-lg`
+            : theme.navigation.background
           }
-        `}
+  `}
       >
-        {/* Logo */}
-        <Link href="/" className="flex items-center">
-          {company.logo ? (
-            <div
-              className={`
+        <div className="mx-auto flex h-24 w-full max-w-7xl items-center justify-between px-5 md:px-8">
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
+            {company.logo ? (
+              <div
+                className={`
                 relative
                 origin-left
                 transition-all duration-300
-                ${
-                  scrolled
-                    ? "w-[280px] h-20"
-                    : "w-[360px] h-24"
-                }
+                ${scrolled
+                    ? "w-[220px] sm:w-[250px] md:w-[280px] h-20"
+                    : "w-[260px] sm:w-[300px] md:w-[360px] h-24"
+                  }
               `}
-            >
-              <Image
-                src={
-                  scrolled && company.logoDark
-                    ? company.logoDark
-                    : company.logo
-                }
-                alt={company.name}
-                fill
-                priority
-                sizes="(max-width:768px) 220px, 360px"
-                className="object-contain object-left"
-              />
-            </div>
-          ) : (
-            <h1
-              className={`
+              >
+                <Image
+                  src={
+                    scrolled && company.logoDark
+                      ? company.logoDark
+                      : company.logo
+                  }
+                  alt={company.name}
+                  fill
+                  priority
+                  sizes="(max-width:768px) 220px, 360px"
+                  className="object-contain object-left"
+                />
+              </div>
+            ) : (
+              <h1
+                className={`
                 ${logoColor}
                 font-bold
                 transition-all duration-300
                 ${scrolled ? "text-xl" : "text-2xl"}
               `}
-            >
-              {company.name}
-            </h1>
-          )}
-        </Link>
+              >
+                {company.name}
+              </h1>
+            )}
+          </Link>
 
-        {/* Desktop Navigation */}
-        <ul
-          className={`
+          {/* Desktop Navigation */}
+          <ul
+            className={`
             hidden md:flex
             transition-all duration-300
             ${scrolled ? "gap-6 text-sm" : "gap-8 text-base"}
           `}
-        >
-          {navigation.links.map((link) => {
-            const isActive =
-              activeSection === link.href.replace("#", "") ||
-              (link.href === "/" && activeSection === "home");
+          >
+            {navigation.links.map((link) => {
+              const isActive =
+                activeSection === link.href.replace("#", "") ||
+                (link.href === "/" && activeSection === "home");
 
-            return (
-              <li
-                key={link.label}
-                className="relative"
-              >
-                <Link
-                  href={link.href}
-                  className={`
+              return (
+                <li
+                  key={link.label}
+                  className="relative"
+                >
+                  <Link
+                    href={link.href}
+                    className={`
                     transition-colors duration-300
                     ${isActive ? navActive : `${navText} ${navHover}`}
                   `}
-                >
-                  {link.label}
-                </Link>
+                  >
+                    {link.label}
+                  </Link>
 
-                <span
-                  className={`
+                  <span
+                    className={`
                     absolute
                     -bottom-2
                     left-0
@@ -164,23 +170,32 @@ export default function Navigation({
                     transition-all duration-300
                     ${isActive ? "w-full" : "w-0"}
                   `}
-                />
-              </li>
-            );
-          })}
-        </ul>
+                  />
+                </li>
+              );
+            })}
+          </ul>
 
-        {/* Mobile Hamburger */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className={`md:hidden ${navText}`}
-        >
-          {mobileMenuOpen ? (
-            <X size={30} />
-          ) : (
-            <Menu size={30} />
-          )}
-        </button>
+          {/* Mobile Hamburger */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className={`
+            md:hidden
+            flex
+            h-11
+            w-11
+            items-center
+            justify-center
+            ${navText}
+            `}
+          >
+            {mobileMenuOpen ? (
+              <X size={30} />
+            ) : (
+              <Menu size={30} />
+            )}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}
