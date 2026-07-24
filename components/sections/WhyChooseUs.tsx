@@ -1,8 +1,8 @@
 import {
   Scale,
   ShieldCheck,
-  Phone,
   Award,
+  Leaf,
 } from "lucide-react";
 
 import { WhyChooseUsData } from "@/types/site";
@@ -19,7 +19,7 @@ interface WhyChooseUsProps {
 const icons = {
   Scale,
   ShieldCheck,
-  Phone,
+  Leaf,
   Award,
 };
 

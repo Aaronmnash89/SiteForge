@@ -111,7 +111,11 @@ export interface FAQData {
   eyebrow: string;
   title: string;
   subtitle: string;
-  items: FAQItem[];
+
+  questions: {
+    question: string;
+    answer: string;
+  }[];
 }
 
 export interface Service {
@@ -159,7 +163,6 @@ export interface SiteConfig {
   navigation: NavigationData;
 
   hero: HeroData;
-  trust: TrustData;
   whyChooseUs: WhyChooseUsData;
   about: AboutData;
   testimonials: TestimonialsData;

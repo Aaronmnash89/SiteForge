@@ -43,9 +43,6 @@
     "phone": "(828) 407-0412",
     "phoneHref": "tel:8284070412",
     "email": ""
-
-
-    
   },
   "navigation": {
     "links": [
@@ -64,6 +61,10 @@
       {
         "label": "Booking",
         "href": "/booking"
+      },
+      {
+        "label": "FAQs",
+        "href": "/faqs"
       }
     ]
   },
@@ -73,26 +74,6 @@
     "subtitle": "Experience personalized acupuncture treatments designed to reduce pain, restore balance, and support your body's natural healing process.",
     "buttonText": "Book Appointment",
     "callButton": "Call Today"
-  },
-  "trust": {
-    "items": [
-      {
-        "value": "10+",
-        "label": "Years Experience"
-      },
-      {
-        "value": "a lot",
-        "label": "Treatments Provided"
-      },
-      {
-        "value": "98%",
-        "label": "Patient Satisfaction"
-      },
-      {
-        "value": "4.9★",
-        "label": "Google Rating"
-      }
-    ]
   },
   "whyChooseUs": {
     "eyebrow": "WHY CHOOSE US",
@@ -110,14 +91,14 @@
         "description": "We focus on treating the root cause rather than simply masking symptoms."
       },
       {
-        "icon": "Phone",
-        "title": "Flexible Scheduling",
-        "description": "Convenient appointment times designed to fit your busy lifestyle."
+        "icon": "Leaf",
+        "title": "Quality Time",
+        "description": "Appointments that are never rushed and where you feel completely heard by your practitioner."
       },
       {
         "icon": "Scale",
         "title": "Customized Treatment Plans",
-        "description": "Every patient receives care tailored to their unique health goals and needs."
+        "description": "Every patient receives care tailored to their unique health goals and needs using Chinese Medicine tongue and pulse diagnosis."
       }
     ]
   },
@@ -246,6 +227,29 @@
     "subtitle": "Whether you're seeking pain relief, stress reduction, or better overall wellness, we're here to help. Schedule your consultation today.",
     "buttonText": "Book Appointment",
     "phoneButton": "Call (828) 407-0412"
+  },
+  "faq": {
+    "eyebrow": "Frequently Asked Questions",
+    "title": "Questions We Hear Most Often",
+    "subtitle": "Everything you need to know before your first visit.",
+    "questions": [
+      {
+        "question": "Does acupuncture hurt?",
+        "answer": "Most patients experience little to no discomfort. The needles are extremely thin and many people find treatments relaxing."
+      },
+      {
+        "question": "What conditions can acupuncture treat?",
+        "answer": "Acupuncture can help with pain, stress, anxiety, headaches, digestive issues, women's health, insomnia, allergies, and many chronic conditions."
+      },
+      {
+        "question": "How long is a treatment?",
+        "answer": "Most appointments last between 60 and 90 minutes depending on your treatment plan."
+      },
+      {
+        "question": "How many treatments will I need?",
+        "answer": "This varies by condition. Acute issues may improve in a few visits while chronic conditions generally require ongoing care."
+      }
+    ]
   },
   "footer": {
     "tagline": "",

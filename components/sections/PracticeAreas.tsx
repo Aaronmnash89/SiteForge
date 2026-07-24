@@ -72,7 +72,7 @@ export default function PracticeAreas({
   "
       >
         <img
-          src="/images/IMG_0144.JPG"
+          src="/images/IMG_0466.JPG"
           alt=""
           className="w-full h-full object-cover rounded-full"
         />
