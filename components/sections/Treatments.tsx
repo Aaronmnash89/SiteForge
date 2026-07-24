@@ -76,7 +76,7 @@ export default function Treatments({
   "
           >
             <img
-              src="/images/IMG_0466.JPG"
+              src="/images/cupping.JPG"
               alt=""
               className="h-full w-full object-cover rounded-full"
             />
