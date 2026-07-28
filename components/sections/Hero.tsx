@@ -20,161 +20,152 @@ export default function Hero({
   return (
     <section
       id="home"
-      className={`${theme.colors.primary} pt-28 pb-16 md:pt-36 md:pb-28`}
+      className="relative min-h-screen overflow-hidden"
     >
-      {/* Background Glow */}
-      <div
-        className="
-          absolute
-          inset-0
-          bg-gradient-to-br
-          to-transparent
-          pointer-events-none
-        "
-      />
-
-      {/* Large Logo */}
-      <div className="relative z-10 flex justify-center mb-8 md:mb-12">
+      {/* Background Image */}
+      <div className="absolute inset-0">
         <Image
-          src="/images/ew_logo_2.png"
-          alt={company.name}
-          width={1200}
-          height={500}
+          src="/images/hero-herbs.jpg"
+          alt="Traditional Chinese Medicine Herbs"
+          fill
           priority
-          className="
-    h-auto
-    w-[320px]
-    sm:w-[450px]
-    md:w-[600px]
-    lg:w-[750px]
-  "
+          className="object-cover"
         />
+
+        {/* Warm Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#261020]/25 via-[#261020]/45 to-[#182526]/65" />
       </div>
 
-      {/* Hero Container */}
-      <Container className="relative z-10 w-full max-w-5xl px-4 sm:px-6">
+      <Container
+        className="
+          relative
+          z-10
+          flex
+          min-h-screen
+          items-center
+          justify-center
+          px-6
+        "
+      >
         <div
-          className={`
-            relative
-            mx-auto
+          className="
+            w-full
             max-w-5xl
-            ${theme.cards.rounded}
-            ${theme.cards.shadow}
-            ${theme.colors.surface}
-            border
-            ${theme.colors.border}
-
-            px-6
-            py-10
-
-            sm:px-10
-            sm:py-14
-
-            lg:px-16
-            lg:py-20
-          `}
+            text-center
+          "
         >
           {/* Eyebrow */}
+
           <p
-            className={`
-              text-center
-              text-xs
-              sm:text-sm
-              font-semibold
+            className="
               uppercase
-              tracking-[0.3em]
-              ${theme.colors.accent}
-            `}
+              tracking-[0.4em]
+              text-sm
+              text-[#F2F2F2]/85
+              mb-8
+            "
           >
             {hero.eyebrow}
           </p>
 
-          {/* Accent Line */}
-          <div
-            className={`
-              mx-auto
-              mt-3
-              h-1
-              w-20
-              sm:w-24
-              rounded-full
-              ${theme.colors.underline}
-            `}
-          />
-
           {/* Heading */}
+
           <h1
             className={`
-              mx-auto
-              max-w-4xl
-              text-center
-
-              text-4xl
-              sm:text-5xl
-              lg:text-7xl
-
-              leading-tight
-              mt-6
-
               ${theme.typography.heading}
-              ${theme.colors.text}
+
+              text-[#F2F2F2]
+
+              text-5xl
+              sm:text-6xl
+              md:text-7xl
+              lg:text-[7rem]
+
+              leading-[0.92]
+
+              drop-shadow-[0_10px_30px_rgba(0,0,0,.55)]
             `}
           >
             {hero.title}
           </h1>
 
           {/* Subtitle */}
+
           <p
             className={`
+              ${theme.typography.body}
+
+              mt-10
               mx-auto
-              mt-6
-              max-w-2xl
-              text-center
+              max-w-3xl
 
-              text-base
-              sm:text-lg
-              lg:text-xl
+              text-xl
+              leading-9
 
-              leading-relaxed
-
-              ${theme.colors.textLight}
+              text-[#F2F2F2]/90
             `}
           >
             {hero.subtitle}
           </p>
 
-          {/* CTA Buttons */}
+          {/* Decorative Divider */}
+
           <div
             className="
-              mt-10
-              flex
+              mx-auto
+              mt-12
+              h-px
+              w-36
+
+              bg-gradient-to-r
+              from-transparent
+              via-[#F2F2F2]/70
+              to-transparent
+            "
+          />
+
+          {/* CTA Area */}
+
+          <div
+            className="
+              mt-12
+
+              inline-flex
+
               flex-col
               sm:flex-row
-              justify-center
-              gap-4
-              sm:gap-6
+
+              gap-5
+
+              rounded-full
+
+              bg-[#261020]/45
+
+              backdrop-blur-sm
+
+              border
+              border-white/10
+
+              px-8
+              py-6
+
+              shadow-[0_15px_45px_rgba(0,0,0,.25)]
             "
           >
-            <div className="w-full sm:w-auto">
-              <Button
-                href="/booking"
-                theme={theme}
-                className="w-full"
-              >
-                {hero.buttonText}
-              </Button>
-            </div>
+            <Button
+              href="/booking"
+              theme={theme}
+            >
+              {hero.buttonText}
+            </Button>
 
-            <div className="w-full sm:w-auto">
-              <Button
-                href={company.phoneHref}
-                theme={theme}
-                variant="secondary"
-                className="w-full"
-              >
-                {hero.callButton}
-              </Button>
-            </div>
+            <Button
+              href={company.phoneHref}
+              variant="secondary"
+              theme={theme}
+            >
+              {hero.callButton}
+            </Button>
           </div>
         </div>
       </Container>

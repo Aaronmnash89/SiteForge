@@ -33,6 +33,8 @@ const hoverStyles = {
 
   const classes = `
   ${styles[variant]}
+  ${theme.typography.heading}
+  ${theme.typography.body}
   ${theme.button.padding}
   ${theme.button.rounded}
   ${theme.button.shadow}

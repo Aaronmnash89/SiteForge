@@ -1,22 +1,14 @@
 "use client";
 
 import {
-  ArrowRight,
-  Car,
-  Truck,
-  PersonStanding,
   HeartPulse,
-  Scale,
-  Sparkles,
-  ShieldPlus,
-  Smile,
-  BadgePlus,
+  Flower2,
+  Leaf,
+  MoonStar,
 } from "lucide-react";
 
 import { PracticeAreasData } from "@/types/site";
 import Container from "@/components/ui/Container";
-import Card from "@/components/ui/Card";
-import SectionHeading from "@/components/ui/SectionHeading";
 import { ThemeConfig } from "@/configs/themes/types";
 
 interface PracticeAreasProps {
@@ -24,18 +16,12 @@ interface PracticeAreasProps {
   theme: ThemeConfig;
 }
 
-const icons = {
-  ArrowRight,
-  Car,
-  Truck,
-  PersonStanding,
+const featureIcons = [
   HeartPulse,
-  Scale,
-  Sparkles,
-  ShieldPlus,
-  Smile,
-  BadgePlus,
-};
+  Flower2,
+  Leaf,
+  MoonStar,
+];
 
 export default function PracticeAreas({
   practiceAreas,
@@ -43,89 +29,261 @@ export default function PracticeAreas({
 }: PracticeAreasProps) {
   return (
     <section
-      id="practiceAreas"
-      className={`${theme.colors.primary} ${theme.layout.sectionSpacing} relative isolate overflow-hidden`}
+  id="practiceAreas"
+  className="bg-[#F7F3EE] py-36 overflow-hidden relative"
+>
+  <Container className="max-w-[1700px]">
+
+    <div className="grid lg:grid-cols-[0.9fr_1.1fr] items-center gap-20">
+
+  {/* ===========================
+      LEFT CONTENT
+  =========================== */}
+
+  <div className="relative z-10">
+
+    <p
+      className="
+        uppercase
+        tracking-[0.35em]
+        text-sm
+        text-[#7A4B67]
+        mb-6
+      "
     >
-      {/* Background Image */}
+      {practiceAreas.eyebrow}
+    </p>
+
+    <h2
+      className={`
+        ${theme.typography.heading}
+
+        text-[#261020]
+
+        text-5xl
+        lg:text-7xl
+        xl:text-8xl
+
+        leading-[0.98]
+
+        max-w-xl
+      `}
+    >
+      {practiceAreas.title}
+    </h2>
+
+    <p
+      className={`
+        ${theme.typography.body}
+
+        mt-10
+
+        text-xl
+        leading-10
+
+        max-w-xl
+
+        text-[#5E5A56]
+      `}
+    >
+      {practiceAreas.subtitle}
+    </p>
+
+    <div className="flex items-center gap-6 mt-14">
+
+      <div className="w-24 h-px bg-[#A87897]" />
+
+      <span
+        className="
+          uppercase
+          tracking-[0.35em]
+          text-xs
+          text-[#A87897]
+        "
+      >
+        Conditions We Treat
+      </span>
+
+    </div>
+
+  </div>
+
+  {/* ===========================
+      HERO IMAGE
+  =========================== */}
+
+  <div
+    className="
+      relative
+
+    lg:-mr-44
+    xl:-mr-56
+    2xl:-mr-72
+
+    lg:mt-8
+    xl:mt-16
+    "
+  >
+
+    <div
+      className="
+        overflow-hidden
+
+        rounded-[56px]
+
+        shadow-[0_55px_110px_rgba(0,0,0,.18)]
+
+        h-[900px]
+        xl:h-[1080px]
+
+        w-full
+      "
+    >
+
+      <img
+        src="/images/IMG_0466.JPG"
+        alt="Acupuncture treatment"
+        className="
+          h-full
+          w-full
+
+          object-cover
+          object-center
+
+          transition
+          duration-700
+
+          hover:scale-105
+        "
+      />
+
+    </div>
+
+  </div>
+
+</div>
+
+
+    {/* ===========================
+        PRACTICE AREA LIST
+    =========================== */}
+
+          <div className="mt-28">
+
+        {/* ==========================================
+            PRACTICE AREAS GRID
+        ========================================== */}
+
+        <div className="grid lg:grid-cols-2 gap-x-24 gap-y-14">
+
+          {practiceAreas.items.map((item, index) => {
+
+  const Icon = featureIcons[index % featureIcons.length];
+
+  return (
+
+    <div
+      key={`${item.title}-${index}`}
+      className="
+        group
+        flex
+        items-start
+        gap-6
+
+        border-b
+        border-[#D6CBC2]
+
+        pb-8
+
+        transition-all
+        duration-300
+      "
+    >
+
       <div
         className="
-    absolute
-    top-[45%]
-    -translate-y-1/2
+          h-14
+          w-14
+          shrink-0
 
-    right-[-160px]
-    xl:right-[-240px]
-    2xl:right-[-420px]
+          rounded-full
 
-    w-[700px]
-    h-[700px]
+          bg-[#591E4A]/8
 
-    xl:w-[850px]
-    xl:h-[850px]
+          flex
+          items-center
+          justify-center
 
-    2xl:w-[1000px]
-    2xl:h-[1000px]
+          transition-all
+          duration-300
 
-    opacity-50
-    pointer-events-none
-    -z-10
-  "
+          group-hover:bg-[#591E4A]
+        "
       >
-        <img
-          src="/images/IMG_0466.JPG"
-          alt=""
-          className="w-full h-full object-cover rounded-full"
+
+        <Icon
+          size={22}
+          strokeWidth={1.7}
+          className="
+            text-[#591E4A]
+            transition-all
+            duration-300
+
+            group-hover:text-white
+            group-hover:scale-110
+          "
         />
+
       </div>
 
-      <Container className="relative z-10 mx-auto max-w-7xl px-6">
-        <SectionHeading
-          eyebrow={practiceAreas.eyebrow}
-          title={practiceAreas.title}
-          subtitle={practiceAreas.subtitle}
-          theme={theme}
-        />
+      <div className="flex-1">
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {practiceAreas.items.map((item) => {
-            const Icon = icons[item.icon as keyof typeof icons];
+        <h3
+          className={`
+            ${theme.typography.heading}
 
-            return (
-              <Card
-                key={item.title}
-                theme={theme}
-              >
-                <div
-                  className={`
-                    mb-8
-                    inline-flex
-                    rounded-2xl
-                    p-4
-                    transition
-                    group-hover:scale-110
-                    ${theme.colors.primary}
-                    ${theme.colors.accent}
-                  `}
-                >
-                  <Icon size={34} />
-                </div>
+            text-[#261020]
 
-                <h3
-                  className={`${theme.typography.heading} ${theme.colors.text} text-2xl`}
-                >
-                  {item.title}
-                </h3>
+            text-3xl
 
-                <p
-                  className={`${theme.colors.textLight} mt-4 leading-8`}
-                >
-                  {item.description}
-                </p>
-              </Card>
-            );
-          })}
+            transition-all
+            duration-300
+
+            group-hover:translate-x-1
+          `}
+        >
+          {item.title}
+        </h3>
+
+        <p
+          className={`
+            ${theme.typography.body}
+
+            mt-3
+
+            text-lg
+            leading-8
+
+            text-[#5E5A56]
+          `}
+        >
+          {item.description}
+        </p>
+
+      </div>
+
+    </div>
+
+  );
+
+})}
+
         </div>
-      </Container>
-    </section>
+
+      </div>
+
+    </Container>
+
+  </section>
   );
 }

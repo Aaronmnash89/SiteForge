@@ -1,22 +1,14 @@
 "use client";
 
 import {
-  ArrowRight,
-  Car,
-  Truck,
-  PersonStanding,
-  HeartPulse,
-  Scale,
+  Leaf,
+  HeartHandshake,
   Sparkles,
-  ShieldPlus,
-  Smile,
-  BadgePlus,
+  Flower2,
 } from "lucide-react";
 
 import { TreatmentsData } from "@/types/site";
 import Container from "@/components/ui/Container";
-import Card from "@/components/ui/Card";
-import SectionHeading from "@/components/ui/SectionHeading";
 import { ThemeConfig } from "@/configs/themes/types";
 
 interface TreatmentsProps {
@@ -24,18 +16,12 @@ interface TreatmentsProps {
   theme: ThemeConfig;
 }
 
-const icons = {
-  ArrowRight,
-  Car,
-  Truck,
-  PersonStanding,
-  HeartPulse,
-  Scale,
+const featureIcons = [
+  Leaf,
+  HeartHandshake,
   Sparkles,
-  ShieldPlus,
-  Smile,
-  BadgePlus,
-};
+  Flower2,
+];
 
 export default function Treatments({
   treatments,
@@ -44,89 +30,228 @@ export default function Treatments({
   return (
     <section
       id="treatments"
-      className={`${theme.colors.primary} ${theme.layout.sectionSpacing} relative overflow-hidden`}
+      className="relative overflow-hidden min-h-screen"
     >
-      <Container className="mx-auto max-w-7xl px-6">
-        <div className="relative z-20">
-          <SectionHeading
-            eyebrow={treatments.eyebrow}
-            title={treatments.title}
-            subtitle={treatments.subtitle}
-            theme={theme}
-          />
-        </div>
-        {/* Cards + Background Image */}
-        <div className="relative mt-20">
+      {/* Background */}
 
-          {/* Background Image */}
+      <div className="absolute inset-0">
+
+        <img
+          src="/images/cupping.JPG"
+          alt="Traditional Cupping Therapy"
+          className="h-full w-full object-cover"
+        />
+
+        <div className="absolute inset-0 bg-[#261020]/35" />
+
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_left_center,rgba(92,44,65,.12),transparent_65%)]" />
+
+      </div>
+
+      {/* Content */}
+
+      <Container
+        className="
+          relative
+          z-10
+
+          min-h-screen
+
+          flex
+          items-center
+        "
+      >
+        <div
+          className="
+            w-full
+            grid
+            lg:grid-cols-2
+            items-center
+          "
+        >
+
+          {/* Empty side */}
+
+          <div />
+
+          {/* Right Content */}
+
           <div
             className="
-    absolute
-    top-1/2
-    -translate-y-1/2
+              max-w-2xl
 
-    -left-[28vw]
-
-    w-[900px]
-    h-[900px]
-
-    opacity-50
-    pointer-events-none
-    z-0
-  "
+              pl-10
+              lg:pl-20
+              xl:pl-28
+            "
           >
-            <img
-              src="/images/cupping.JPG"
-              alt=""
-              className="h-full w-full object-cover rounded-full"
-            />
-          </div>
 
-          {/* Cards */}
-          <div className="relative z-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {treatments.items.map((item, index) => {
-              const Icon =
-                icons[item.icon as keyof typeof icons];
+            <p
+              className="
+                uppercase
+                tracking-[0.35em]
+                text-sm
+                text-[#D6A8C9]
+                mb-8
+              "
+            >
+              {treatments.eyebrow}
+            </p>
 
-              return (
-                <Card
-                  key={`${item.title}-${index}`}
-                  theme={theme}
-                >
+            <h2
+              className={`
+                ${theme.typography.heading}
+
+                text-[#F2F2F2]
+
+                text-5xl
+                lg:text-7xl
+
+                leading-[1.05]
+
+                max-w-3xl
+              `}
+            >
+              {treatments.title}
+            </h2>
+
+            <p
+              className={`
+                ${theme.typography.body}
+
+                mt-8
+
+                max-w-2xl
+
+                text-xl
+                leading-9
+
+                text-[#DDD5D8]
+              `}
+            >
+              {treatments.subtitle}
+            </p>
+
+            <div className="flex items-center gap-6 mt-14">
+
+              <div className="w-24 h-px bg-[#A87897]" />
+
+              <span
+                className="
+                  uppercase
+                  tracking-[0.35em]
+                  text-xs
+                  text-[#A87897]
+                "
+              >
+                Personalized Wellness
+              </span>
+
+            </div>
+
+            {/* Treatments */}
+
+            <div className="mt-16 space-y-6">
+
+              {treatments.items.map((item, index) => {
+
+                const Icon =
+                  featureIcons[index % featureIcons.length];
+
+                return (
+
                   <div
-                    className={`
-                      mb-8
-                      inline-flex
-                      rounded-2xl
-                      p-4
-                      transition
-                      group-hover:scale-110
-                      ${theme.colors.primary}
-                      ${theme.colors.accent}
-                    `}
+                    key={`${item.title}-${index}`}
+                    className="
+border-b
+border-[#6A4558]
+pb-6
+"
                   >
-                    <Icon size={34} />
+
+                    <div className="flex items-start gap-6">
+
+                      {/* Icon */}
+
+                      <div
+                        className="
+                          mt-1
+
+                          h-12
+                          w-12
+
+                          shrink-0
+
+                          rounded-full
+
+                          border
+                          border-[#A87897]/40
+
+                          bg-[#591E4A]/25
+
+                          flex
+                          items-center
+                          justify-center
+                        "
+                      >
+                        <Icon
+                          size={24}
+                          strokeWidth={1.6}
+                          className="text-[#D6A8C9]"
+                        />
+                      </div>
+
+                      {/* Content */}
+
+                      <div>
+
+                        <h3
+                          className={`
+                            ${theme.typography.heading}
+
+                            text-[#F2F2F2]
+
+                            text-3xl
+                          `}
+                        >
+                          {item.title}
+                        </h3>
+
+                        <p
+                          className={`
+                            ${theme.typography.body}
+
+                            2
+
+                            max-w-xl
+
+                            text-lg
+                            leading-8
+
+                            text-[#CFC7CB]
+                          `}
+                        >
+                          {item.description}
+                        </p>
+
+                      </div>
+
+                    </div>
+
                   </div>
 
-                  <h3
-                    className={`${theme.typography.heading} ${theme.colors.text} text-2xl`}
-                  >
-                    {item.title}
-                  </h3>
+                );
 
-                  <p
-                    className={`${theme.colors.textLight} mt-4 leading-8`}
-                  >
-                    {item.description}
-                  </p>
-                </Card>
-              );
-            })}
+              })}
+
+            </div>
+
           </div>
 
         </div>
 
       </Container>
+
     </section>
   );
 }

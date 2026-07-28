@@ -2,15 +2,22 @@ import { ThemeConfig } from "./types";
 
 export const acupunctureTheme: ThemeConfig = {
     colors: {
-    primary: "bg-amber-50",
-    secondary: "border border-emerald-800 bg-transparent text-emerald-800",
-    accent: "text-amber-700",
-    underline: "bg-amber-700",
-    background: "bg-white",
-    surface: "bg-stone-50/60 backdrop-blur-md",
-    text: "text-stone-900",
-    textLight: "text-stone-600",
-    border: "border-stone-200/40",
+    primary: "bg-[#261020]",
+    secondary: "border border-[#591E4A] bg-[#F4F0EA] text-[#261020]",
+
+    accent: "text-[#591E4A]",
+
+    underline: "bg-[#591E4A]",
+
+    background: "bg-[#261020]",
+
+    surface: "bg-[#F4F0EA]",
+
+    text: "text-[#261020]",
+
+    textLight: "text-[#3B2D34]",
+
+    border: "border-[#591E4A]/20",
 },
 
     about: {
@@ -23,18 +30,22 @@ export const acupunctureTheme: ThemeConfig = {
     },
 
     navigation: {
-        background: "bg-amber-50/80 backdrop-blur-md",
-        backgroundScrolled: "bg-[#381f28] backdrop-blur-md",
+        background: "bg-[#261020]/90 backdrop-blur-md",
+        backgroundScrolled: "bg-[#261020]/95 backdrop-blur-lg",
 
-        text: "text-stone-800",
-        textScrolled: "text-white",
-        textHover: "hover:text-amber-700",
-        textHoverScrolled: "hover:text-amber-300",
-        activeText: "text-amber-700",
-        activeTextScrolled: "text-amber-300",
-        underline: "bg-amber-700",
-        logo: "text-stone-900",
-        logoScrolled: "text-white",
+        text: "text-[#F2F2F2]",
+        textScrolled: "text-[#F2F2F2]",
+
+        textHover: "hover:text-[#B46AA4]",
+        textHoverScrolled: "hover:text-[#B46AA4]",
+
+        activeText: "text-[#B46AA4]",
+        activeTextScrolled: "text-[#B46AA4]",
+
+        underline: "bg-[#591E4A]",
+
+        logo: "text-[#F2F2F2]",
+        logoScrolled: "text-[#F2F2F2]",
     },
 
     layout: {
@@ -44,8 +55,10 @@ export const acupunctureTheme: ThemeConfig = {
     },
 
     typography: {
-        heading: "font-sans font-bold",
-        body: "font-sans",
+        display: "font-wildflower",
+        heading: "font-wildflower",
+        body: "font-serif",
+        button: "font-sans",
     },
 
     button: {
@@ -53,22 +66,21 @@ export const acupunctureTheme: ThemeConfig = {
         padding: "px-8 py-4",
         shadow: "shadow-md",
 
-        // Sage Green
-        primaryColor: "bg-violet-900 text-white",
+        primaryColor: "bg-[#591E4A] text-[#F2F2F2]",
 
         primaryHover:
-            "hover:bg-violet-600 hover:shadow-lg hover:-translate-y-1",
+            "hover:bg-[#6B2558] hover:shadow-xl hover:-translate-y-1",
 
         secondaryHover:
-            "hover:bg-emerald-900 hover:text-white hover:shadow-lg hover:-translate-y-1",
+            "hover:bg-[#F2F2F2]/10 hover:text-[#F2F2F2] hover:-translate-y-1",
 
         transition: "transition-all duration-300",
     },
 
     cards: {
-        rounded: "rounded-2xl",
-        shadow: "shadow-md",
-        hoverBorder: "hover:border-amber-700",
+        rounded: "rounded-[28px]",
+        shadow: "shadow-2xl",
+        hoverBorder: "hover:border-[#591E4A]",
     },
 
 };

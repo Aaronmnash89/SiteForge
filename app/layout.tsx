@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { wildflower } from "./fonts/fonts";
 import configData from "@/configs/content/acupuncture.json";
 
 const geistSans = Geist({
@@ -27,7 +28,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body>
+      <body
+        className={`
+    ${geistSans.variable}
+    ${geistMono.variable}
+    ${wildflower.variable}
+  `}
+      >
         <div className="relative min-h-screen">
           <div className="relative z-10">
             {children}

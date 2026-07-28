@@ -12,13 +12,13 @@ export interface ThemeConfig {
   };
 
   about?: {
-  imageDecoration?: {
-    enabled: boolean;
-    image: string;
-    fit: "cover" | "contain";
-    opacity: number;
+    imageDecoration?: {
+      enabled: boolean;
+      image: string;
+      fit: "cover" | "contain";
+      opacity: number;
+    };
   };
-};
 
   layout: {
     sectionSpacing: string;
@@ -27,9 +27,11 @@ export interface ThemeConfig {
   }
 
   typography: {
-    heading: string;
-    body: string;
-  };
+  display: string;
+  heading: string;
+  body: string;
+  button: string;
+};
 
   navigation: {
     background: string;
@@ -48,7 +50,7 @@ export interface ThemeConfig {
 
     logo: string;
     logoScrolled: string;
-};
+  };
 
   button: {
     rounded: string;
