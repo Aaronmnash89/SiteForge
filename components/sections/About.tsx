@@ -46,16 +46,22 @@ export default function About({
           >
 
             <div
-              className="
-          overflow-hidden
-          rounded-[52px]
+  className="
+    overflow-hidden
 
-          shadow-[0_45px_90px_rgba(0,0,0,.18)]
+    rounded-[34px]
+    lg:rounded-[52px]
 
-          h-[900px]
-          xl:h-[1040px]
-        "
-            >
+    shadow-[0_30px_60px_rgba(0,0,0,.15)]
+    lg:shadow-[0_45px_90px_rgba(0,0,0,.18)]
+
+    h-[360px]
+    sm:h-[460px]
+    md:h-[560px]
+    lg:h-[900px]
+    xl:h-[1040px]
+  "
+>
 
               <Image
                 src={about.image}
@@ -63,13 +69,19 @@ export default function About({
                 width={900}
                 height={1200}
                 className="
-            h-full
-            w-full
-            object-cover
-            transition
-            duration-700
-            hover:scale-105
-          "
+  h-full
+  w-full
+
+  object-cover
+
+  object-center
+  lg:object-center
+
+  transition
+  duration-700
+
+  hover:scale-105
+"
               />
 
             </div>
@@ -80,7 +92,7 @@ export default function About({
         CONTENT
     ====================================== */}
 
-          <div className="max-w-xl">
+          <div className="max-w-xl mt-10 lg:mt-0">
 
             <p
               className="
@@ -117,10 +129,12 @@ export default function About({
 
     max-w-xl
 
+    whitespace-pre-line
+
     text-[#4C4542]
 
-    text-xl
-    leading-10
+    text-lg
+    leading-9
   `}
 >
   {about.description}

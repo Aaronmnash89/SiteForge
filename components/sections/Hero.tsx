@@ -20,7 +20,16 @@ export default function Hero({
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden"
+      className="
+    relative
+    min-h-screen
+
+    overflow-hidden
+
+    pt-32
+    sm:pt-36
+    lg:pt-0
+  "
     >
       {/* Background Image */}
       <div className="absolute inset-0">
@@ -29,7 +38,12 @@ export default function Hero({
           alt="Traditional Chinese Medicine Herbs"
           fill
           priority
-          className="object-cover"
+          className="
+  object-cover
+
+  object-[58%_center]
+  sm:object-center
+"
         />
 
         {/* Warm Overlay */}
@@ -38,14 +52,21 @@ export default function Hero({
 
       <Container
         className="
-          relative
-          z-10
-          flex
-          min-h-screen
-          items-center
-          justify-center
-          px-6
-        "
+    relative
+    z-10
+
+    flex
+    items-center
+    justify-center
+
+    min-h-screen
+
+    px-6
+
+    py-20
+    sm:py-24
+    lg:py-0
+  "
       >
         <div
           className="
@@ -93,17 +114,22 @@ export default function Hero({
 
           <p
             className={`
-              ${theme.typography.body}
+    ${theme.typography.body}
 
-              mt-10
-              mx-auto
-              max-w-3xl
+    mt-8
+    sm:mt-10
 
-              text-xl
-              leading-9
+    mx-auto
+    max-w-3xl
 
-              text-[#F2F2F2]/90
-            `}
+    text-lg
+    sm:text-xl
+
+    leading-8
+    sm:leading-9
+
+    text-[#F2F2F2]/90
+  `}
           >
             {hero.subtitle}
           </p>
@@ -112,45 +138,59 @@ export default function Hero({
 
           <div
             className="
-              mx-auto
-              mt-12
-              h-px
-              w-36
+    mx-auto
 
-              bg-gradient-to-r
-              from-transparent
-              via-[#F2F2F2]/70
-              to-transparent
-            "
+    mt-10
+    sm:mt-12
+
+    h-px
+
+    w-24
+    sm:w-36
+
+    bg-gradient-to-r
+    from-transparent
+    via-[#F2F2F2]/70
+    to-transparent
+  "
           />
 
           {/* CTA Area */}
 
           <div
             className="
-              mt-12
+    mt-10
+    sm:mt-12
 
-              inline-flex
+    inline-flex
 
-              flex-col
-              sm:flex-row
+    w-full
+    sm:w-auto
 
-              gap-5
+    flex-col
+    sm:flex-row
 
-              rounded-full
+    gap-4
+    sm:gap-5
 
-              bg-[#261020]/45
+    rounded-3xl
+    sm:rounded-full
 
-              backdrop-blur-sm
+    bg-[#261020]/45
 
-              border
-              border-white/10
+    backdrop-blur-sm
 
-              px-8
-              py-6
+    border
+    border-white/10
 
-              shadow-[0_15px_45px_rgba(0,0,0,.25)]
-            "
+    px-6
+    sm:px-8
+
+    py-5
+    sm:py-6
+
+    shadow-[0_15px_45px_rgba(0,0,0,.25)]
+  "
           >
             <Button
               href="/booking"
