@@ -31,36 +31,61 @@ export default function WhyChooseUs({
   return (
     <section
       id="whyChooseUs"
-      className="relative overflow-hidden"
+      className="
+    relative
+    overflow-hidden
+
+    bg-[#261020]
+
+    lg:bg-transparent
+  "
     >
-      {/* Background Image */}
-      <div className="absolute inset-0">
+      {/* Desktop Background Only */}
+
+      <div className="absolute inset-0 hidden lg:block">
+
         <Image
           src="/images/medBowl1.png"
           alt="Traditional Chinese Medicine"
           fill
-          className="object-cover"
           priority
+          className="object-cover"
+          sizes="100vw"
         />
 
-        {/* Darken left side slightly */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#120A10]/35 via-[#120A10]/15 to-[#120A10]/70" />
+
       </div>
 
       {/* Content */}
 
       <Container
         className="
-          relative
-          z-10
+    relative
+    z-10
 
-          min-h-[950px]
+    min-h-screen
+    lg:min-h-[950px]
 
-          flex
-          items-center
-        "
+    flex
+    items-center
+
+    py-20
+    sm:py-24
+    lg:py-0
+  "
       >
-        <div className="grid lg:grid-cols-2 w-full gap-16">
+        <div
+          className="
+    grid
+    lg:grid-cols-2
+
+    w-full
+
+    gap-12
+    lg:gap-16
+  "
+        >
 
           {/* LEFT SIDE */}
 
@@ -71,15 +96,28 @@ export default function WhyChooseUs({
 
           {/* RIGHT SIDE */}
 
-          <div className="max-w-xl ml-auto">
+          <div
+            className="
+    max-w-xl
 
+    mx-auto
+    lg:ml-auto
+
+    px-4
+    sm:px-2
+    lg:px-0
+
+    text-center
+    lg:text-left
+  "
+          >
             <p
               className="
                 uppercase
                 tracking-[0.35em]
                 text-sm
                 text-[#E8D8E5]
-                mb-8
+                mb-6 lg:mb-8
               "
             >
               {whyChooseUs.eyebrow}
@@ -91,8 +129,10 @@ export default function WhyChooseUs({
 
                 text-[#F7F3EE]
 
-                text-5xl
-                lg:text-7xl
+                text-4xl
+sm:text-5xl
+lg:text-7xl
+leading-tight
 
                 leading-tight
               `}
@@ -106,16 +146,25 @@ export default function WhyChooseUs({
 
                 mt-8
 
-                text-lg
-                leading-9
+                text-base
+sm:text-lg
+
+leading-8
+sm:leading-9
 
                 text-[#ECE6E0]
               `}
             >
               {whyChooseUs.subtitle}
             </p>
+            <div className="flex justify-center lg:justify-start mt-10 mb-12">
 
-            <div className="mt-16 space-y-10">
+              <div className="w-24 h-px bg-white/20" />
+
+            </div>
+            {/* Mobile Image */}
+
+            <div className="mt-12 sm:mt-16 space-y-8 sm:space-y-10">
 
               {whyChooseUs.features.map((feature) => {
                 const Icon =
@@ -125,19 +174,27 @@ export default function WhyChooseUs({
                   <div
                     key={feature.title}
                     className="
-                      flex
-                      gap-5
+  flex
+  items-start
 
-                      border-b
-                      border-white/15
+  gap-4
+  sm:gap-5
 
-                      pb-8
-                    "
+  pb-6
+  sm:pb-8
+
+  border-b
+  border-white/15
+
+  text-left
+"
                   >
                     <div
                       className="
-                        h-14
-                        w-14
+                        h-12
+w-12
+sm:h-14
+sm:w-14
                         shrink-0
 
                         rounded-full
@@ -151,7 +208,10 @@ export default function WhyChooseUs({
                         text-[#E8D8E5]
                       "
                     >
-                      <Icon size={24} />
+                      <Icon
+                        size={20}
+                        className="sm:h-6 sm:w-6"
+                      />
                     </div>
 
                     <div>
@@ -162,7 +222,8 @@ export default function WhyChooseUs({
 
                           text-[#F7F3EE]
 
-                          text-2xl
+                          text-xl
+sm:text-2xl
                         `}
                       >
                         {feature.title}
@@ -174,8 +235,11 @@ export default function WhyChooseUs({
 
                           mt-3
 
-                          text-base
-                          leading-8
+                          text-sm
+sm:text-base
+
+leading-7
+sm:leading-8
 
                           text-[#DDD6D0]
                         `}
