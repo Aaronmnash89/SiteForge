@@ -36,8 +36,10 @@ export const dentalTheme: ThemeConfig = {
     },
 
     typography: {
+        display: "font-wildflower",      // or whatever class you're using
         heading: "font-sans font-bold",
         body: "font-sans",
+        button: "font-sans font-semibold",
     },
 
     button: {

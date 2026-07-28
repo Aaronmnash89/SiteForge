@@ -38,8 +38,10 @@ export const roofingTheme: ThemeConfig = {
     },
 
     typography: {
-        heading: "font-serif",
+        display: "font-wildflower",      // or whatever class you're using
+        heading: "font-sans font-bold",
         body: "font-sans",
+        button: "font-sans font-semibold",
     },
 
     button: {

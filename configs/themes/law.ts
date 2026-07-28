@@ -36,9 +36,11 @@ export const lawTheme: ThemeConfig = {
         logoScrolled: "text-white",
     },
 
-    typography: {
-        heading: "font-serif",
+     typography: {
+        display: "font-wildflower",      // or whatever class you're using
+        heading: "font-sans font-bold",
         body: "font-sans",
+        button: "font-sans font-semibold",
     },
 
     button: {
