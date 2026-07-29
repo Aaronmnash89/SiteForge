@@ -51,126 +51,115 @@ export default function Treatments({
       {/* Content */}
 
       <Container
-        className="
+  className="
     relative
     z-10
 
-    min-h-[700px]
-    lg:min-h-screen
+    py-24
+    lg:py-32
+  "
+>
+
+  {/* Header */}
+
+  <div
+  className="
+    w-full
+    max-w-5xl
+    mx-auto
 
     flex
+    flex-col
     items-center
+    text-center
 
-    py-24
-    lg:py-0
+    mb-20
   "
-      >
-        <div
-          className="
-            w-full
-            grid
-            lg:grid-cols-2
-            items-center
-          "
-        >
+>
 
-          {/* Empty side */}
-
-          <div />
-
-          {/* Right Content */}
-
-          <div
-            className="
-              max-w-2xl
-
-              px-2
-sm:px-6
-
-lg:pl-20
-lg:pr-0
-
-xl:pl-28
-            "
-          >
-
-            <p
-              className="
-                uppercase
-                tracking-[0.35em]
-                text-sm
-                text-[#D6A8C9]
-                mb-8
-              "
-            >
-              {treatments.eyebrow}
-            </p>
-
-            <h2
-              className={`
-                ${theme.typography.heading}
-
-                text-[#F2F2F2]
-
-                text-5xl
-                lg:text-7xl
-
-                leading-[1.05]
-
-                max-w-3xl
-              `}
-            >
-              {treatments.title}
-            </h2>
-
-            <p
-              className={`
-                ${theme.typography.body}
-
-                mt-8
-
-                max-w-2xl
-
-                text-xl
-                leading-9
-
-                text-[#DDD5D8]
-              `}
-            >
-              {treatments.subtitle}
-            </p>
-
-            <div className="mt-14 max-w-xl">
-
-  <div className="flex items-center gap-4">
-
-    <div className="h-px flex-1 bg-[#A87897]" />
-
-    <span
+    <p
       className="
         uppercase
         tracking-[0.35em]
-        text-xs
-        text-[#A87897]
-        whitespace-nowrap
+        text-sm
+        text-[#D6A8C9]
+        mb-8
       "
     >
-      Personalized Wellness
-    </span>
+      {treatments.eyebrow}
+    </p>
 
-    <div className="h-px flex-1 bg-[#A87897]" />
+    <h2
+      className={`
+        ${theme.typography.heading}
+
+        text-[#F2F2F2]
+
+        text-5xl
+        lg:text-7xl
+
+        leading-[1.05]
+      `}
+    >
+      {treatments.title}
+    </h2>
+
+    <p
+      className={`
+        ${theme.typography.body}
+
+        mt-8
+
+        max-w-2xl
+        mx-auto
+
+        text-xl
+        leading-9
+
+        text-[#DDD5D8]
+      `}
+    >
+      {treatments.subtitle}
+    </p>
+
+    <div className="mt-14 max-w-xl mx-auto">
+
+      <div className="flex items-center gap-4">
+
+        <div className="h-px flex-1 bg-[#A87897]" />
+
+        <span
+          className="
+            uppercase
+            tracking-[0.35em]
+            text-xs
+            text-[#A87897]
+            whitespace-nowrap
+          "
+        >
+          Personalized Wellness
+        </span>
+
+        <div className="h-px flex-1 bg-[#A87897]" />
+
+      </div>
+
+    </div>
 
   </div>
 
-</div>
+  {/* Treatments */}
 
-            {/* Treatments */}
+  <div
+    className="
+      mt-20
 
-            <div className="mt-12
-sm:mt-16
+      grid
+      gap-10
 
-space-y-4
-sm:space-y-6">
+      lg:grid-cols-2
+    "
+  >
 
               {treatments.items.map((item, index) => {
 
@@ -270,10 +259,6 @@ sm:leading-8
               })}
 
             </div>
-
-          </div>
-
-        </div>
 
       </Container>
 

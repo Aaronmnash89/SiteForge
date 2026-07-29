@@ -52,38 +52,90 @@ export default function About({
             </p>
 
             <h2
-              className={`
-          ${theme.typography.heading}
+  className={`
+    ${theme.typography.heading}
 
-          text-[#2A1B25]
+    text-[#2A1B25]
 
-          text-5xl
-          lg:text-7xl
+    text-5xl
+    lg:text-7xl
 
-          leading-[1.02]
-        `}
-            >
+    leading-[1.02]
+
+    text-center
+    lg:text-left
+  `}
+>
               {about.title}
             </h2>
 
-            <p
-              className={`
-    ${theme.typography.body}
+            {/* Biography */}
 
-    mt-8
+<div className="mt-10">
 
-    max-w-xl
+  {/* Desktop */}
+  <div className="hidden lg:grid lg:grid-cols-2 lg:gap-20 xl:gap-24">
 
-    whitespace-pre-line
+    <div
+      className={`
+  ${theme.typography.body}
 
-    text-[#4C4542]
+  mt-8
 
-    text-lg
-    leading-9
-  `}
-            >
-              {about.description}
-            </p>
+  max-w-xl
+  mx-auto
+  lg:mx-0
+
+  whitespace-pre-line
+
+  text-[#4C4542]
+
+  text-lg
+  leading-9
+
+  text-center
+  lg:text-left
+`}
+    >
+      {about.description
+        .split("\n\n")
+        .slice(0, 3)
+        .join("\n\n")}
+    </div>
+
+    <div
+      className={`
+        ${theme.typography.body}
+        text-[#4C4542]
+        text-lg
+        leading-9
+        whitespace-pre-line
+      `}
+    >
+      {about.description
+        .split("\n\n")
+        .slice(3)
+        .join("\n\n")}
+    </div>
+
+  </div>
+
+  {/* Mobile + Tablet */}
+  <div
+    className={`
+      lg:hidden
+      ${theme.typography.body}
+      text-[#4C4542]
+      text-lg
+      leading-9
+      whitespace-pre-line
+      max-w-xl
+    `}
+  >
+    {about.description}
+  </div>
+
+</div>
 {/* ======================================
         IMAGE
     ====================================== */}
@@ -95,8 +147,8 @@ export default function About({
     mt-12
     lg:mt-14
 
-    lg:-ml-20
-    xl:-ml-28
+    w-full
+    mx-auto
   "
 >
 
@@ -160,17 +212,15 @@ xl:h-[700px]
 
   <span
     className="
-      uppercase
+uppercase
+tracking-[0.35em]
+text-sm
+text-[#7A4B67]
+mb-6
 
-      tracking-[0.35em]
-
-      text-[10px]
-      sm:text-xs
-
-      whitespace-nowrap
-
-      text-[#A87897]
-    "
+text-center
+lg:text-left
+"
   >
     Compassion • Experience • Balance
   </span>

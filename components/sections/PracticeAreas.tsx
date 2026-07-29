@@ -34,7 +34,7 @@ export default function PracticeAreas({
 >
   <Container className="max-w-[1700px]">
 
-    <div className="grid lg:grid-cols-[0.9fr_1.1fr] items-center gap-20">
+    <div className="max-w-5xl mx-auto text-center">
 
   {/* ===========================
       LEFT CONTENT
@@ -66,7 +66,8 @@ export default function PracticeAreas({
 
         leading-[0.98]
 
-        max-w-xl
+        max-w-4xl
+mx-auto
       `}
     >
       {practiceAreas.title}
@@ -81,7 +82,8 @@ export default function PracticeAreas({
         text-xl
         leading-10
 
-        max-w-xl
+        max-w-4xl
+mx-auto
 
         text-[#5E5A56]
       `}
@@ -89,25 +91,45 @@ export default function PracticeAreas({
       {practiceAreas.subtitle}
     </p>
 
-    <div className="mt-14 max-w-xl">
+    <div className="mt-14">
 
-  <div className="flex items-center gap-4">
+  <div
+    className="
+      flex
+      items-center
+      justify-center
 
-    <div className="h-px flex-1 bg-[#A87897]" />
+      gap-3
+      sm:gap-5
+
+      max-w-xs
+      sm:max-w-md
+      lg:max-w-xl
+
+      mx-auto
+    "
+  >
+
+    <div className="h-px w-10 sm:w-20 lg:flex-1 bg-[#A87897]" />
 
     <span
       className="
         uppercase
+
         tracking-[0.35em]
-        text-xs
-        text-[#A87897]
+
+        text-[10px]
+        sm:text-xs
+
         whitespace-nowrap
+
+        text-[#A87897]
       "
     >
       Conditions We Treat
     </span>
 
-    <div className="h-px flex-1 bg-[#A87897]" />
+    <div className="h-px w-10 sm:w-20 lg:flex-1 bg-[#A87897]" />
 
   </div>
 
@@ -118,13 +140,13 @@ export default function PracticeAreas({
 </div>
 
 
-          <div className="mt-28">
+          <div className="mt-20">
 
         {/* ==========================================
             PRACTICE AREAS GRID
         ========================================== */}
 
-        <div className="grid lg:grid-cols-2 gap-x-24 gap-y-14">
+        <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-x-24 gap-y-14">
 
           {practiceAreas.items.map((item, index) => {
 
