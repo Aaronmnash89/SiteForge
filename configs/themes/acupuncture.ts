@@ -66,10 +66,11 @@ export const acupunctureTheme: ThemeConfig = {
         padding: "px-8 py-4",
         shadow: "shadow-md",
 
-        primaryColor: "bg-[#591E4A] text-[#F2F2F2]",
+         primaryColor:
+    "bg-[#591E4A] text-white border border-[#591E4A]",
 
         primaryHover:
-            "hover:bg-[#6B2558] hover:shadow-xl hover:-translate-y-1",
+            "hover:bg-[#6B2558] hover:border-[#6B2558]",
 
         secondaryHover:
             "hover:bg-[#F2F2F2]/10 hover:text-[#F2F2F2] hover:-translate-y-1",

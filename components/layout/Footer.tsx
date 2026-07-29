@@ -14,96 +14,156 @@ export default function Footer({
   theme,
 }: FooterProps) {
   return (
-    <footer
-      className={`${theme.colors.background} border-t ${theme.colors.border}`}
-    >
-      <div
-        className={`mx-auto grid ${theme.layout.containerWidth} gap-16 px-6 py-20 md:grid-cols-4`}
-      >
-        {/* Company */}
-        <div>
+    <footer className="bg-[#182526] text-[#F7F3EE]">
 
+      <div className="mx-auto max-w-7xl px-6 py-24">
 
-          <p className={`mt-4 ${theme.colors.textLight}`}>
-            {footer.tagline}
-          </p>
+        <div className="grid gap-16 lg:grid-cols-4">
 
-          <div className={`mt-6 space-y-2 ${theme.colors.textLight}`}>
-            <p>{company.phone}</p>
-            <p>{company.email}</p>
-            <p className="whitespace-pre-line">
-              {footer.address}
+          {/* ==========================
+              COMPANY
+          ========================== */}
+
+          <div>
+
+            <h3
+  className={`
+    ${theme.typography.heading}
+
+    text-[#F7F3EE]
+
+    text-[clamp(1.3rem,5vw,3rem)]
+
+    leading-tight
+
+    whitespace-nowrap
+  `}
+>
+  {company.name}
+</h3>
+
+            <p className="mt-6 leading-8 text-[#D7DED9]">
+              {footer.tagline}
             </p>
+
+            <div className="mt-8 space-y-3 text-[#C9BEC4]">
+
+              <p>{company.phone}</p>
+
+              <p>{company.email}</p>
+
+              <p className="whitespace-pre-line">
+                {footer.address}
+              </p>
+
+            </div>
+
           </div>
+
+          {/* ==========================
+              QUICK LINKS
+          ========================== */}
+
+          <div>
+
+            <h4
+              className={`
+                ${theme.typography.heading}
+
+                text-2xl
+
+                text-[#F7F3EE]
+              `}
+            >
+              Quick Links
+            </h4>
+
+            <ul className="mt-8 space-y-4">
+
+              {footer.quickLinks.map((link) => (
+
+                <li key={link.label}>
+
+                  <a
+                    href={link.href}
+                    className="
+                      text-[#D7DED9]
+
+                      transition-all
+                      duration-300
+
+                      hover:text-[#D6A8C9]
+                      hover:pl-2
+                    "
+                  >
+                    {link.label}
+                  </a>
+
+                </li>
+
+              ))}
+
+            </ul>
+
+          </div>
+
+
+          {/* ==========================
+              CTA
+          ========================== */}
+
+          <div>
+
+            <h4
+              className={`
+                ${theme.typography.heading}
+
+                text-2xl
+
+                text-[#F7F3EE]
+              `}
+            >
+              Ready to Feel Better?
+            </h4>
+
+            <p className="mt-6 leading-8 text-[#D7DED9]">
+              Schedule your consultation today and begin your personalized
+              path toward better health and lasting wellness.
+            </p>
+
+            <div className="mt-10">
+
+              <Button
+                href="/booking"
+                theme={theme}
+              >
+                Schedule Appointment
+              </Button>
+
+            </div>
+
+          </div>
+
         </div>
 
-        {/* Quick Links */}
-        <div>
-          <h4
-            className={`${theme.colors.text} ${theme.typography.heading}`}
-          >
-            Quick Links
-          </h4>
+      </div>
 
-          <ul className="mt-4 space-y-3">
-            {footer.quickLinks.map((link) => (
-              <li key={link.label}>
-                <a
-                  href={link.href}
-                  className={`${theme.colors.textLight} transition hover:${theme.colors.accent.replace(
-                    "text-",
-                    "text-"
-                  )}`}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+      {/* ==========================
+          BOTTOM BAR
+      ========================== */}
 
-        {/* Services */}
-        <div>
-          <h4
-            className={`${theme.colors.text} ${theme.typography.heading}`}
-          >
-            Services
-          </h4>
+      <div className="border-t border-[#3B4C4A]">
 
-          <ul className={`mt-4 space-y-3 ${theme.colors.textLight}`}>
-            {footer.practiceAreas.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
+        <div className="mx-auto max-w-7xl px-6 py-8">
 
-        {/* CTA */}
-        <div>
-          <h4
-            className={`${theme.colors.text} ${theme.typography.heading}`}
-          >
-            Schedule Today
-          </h4>
-
-          <p className={`mt-4 ${theme.colors.textLight}`}>
-
+          <p className="text-center text-sm tracking-wide text-[#AEBDB6]">
+            {footer.copyright}
           </p>
 
-          <Button
-            href={company.phoneHref}
-            theme={theme}
-            className="mt-6 w-45 px-6 py-3"
-          >
-            Contact Us
-          </Button>
         </div>
+
       </div>
 
-      <div
-        className={`border-t ${theme.colors.border} py-6 text-center text-sm ${theme.colors.textLight}`}
-      >
-        {footer.copyright}
-      </div>
     </footer>
   );
 }

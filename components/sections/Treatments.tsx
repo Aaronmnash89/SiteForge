@@ -39,7 +39,7 @@ export default function Treatments({
         <img
           src="/images/cupping.JPG"
           alt="Traditional Cupping Therapy"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-[55%_center]"
         />
 
         <div className="absolute inset-0 bg-[#261020]/35" />
@@ -52,14 +52,18 @@ export default function Treatments({
 
       <Container
         className="
-          relative
-          z-10
+    relative
+    z-10
 
-          min-h-screen
+    min-h-[700px]
+    lg:min-h-screen
 
-          flex
-          items-center
-        "
+    flex
+    items-center
+
+    py-24
+    lg:py-0
+  "
       >
         <div
           className="
@@ -80,9 +84,13 @@ export default function Treatments({
             className="
               max-w-2xl
 
-              pl-10
-              lg:pl-20
-              xl:pl-28
+              px-2
+sm:px-6
+
+lg:pl-20
+lg:pr-0
+
+xl:pl-28
             "
           >
 
@@ -132,26 +140,37 @@ export default function Treatments({
               {treatments.subtitle}
             </p>
 
-            <div className="flex items-center gap-6 mt-14">
+            <div className="mt-14 max-w-xl">
 
-              <div className="w-24 h-px bg-[#A87897]" />
+  <div className="flex items-center gap-4">
 
-              <span
-                className="
-                  uppercase
-                  tracking-[0.35em]
-                  text-xs
-                  text-[#A87897]
-                "
-              >
-                Personalized Wellness
-              </span>
+    <div className="h-px flex-1 bg-[#A87897]" />
 
-            </div>
+    <span
+      className="
+        uppercase
+        tracking-[0.35em]
+        text-xs
+        text-[#A87897]
+        whitespace-nowrap
+      "
+    >
+      Personalized Wellness
+    </span>
+
+    <div className="h-px flex-1 bg-[#A87897]" />
+
+  </div>
+
+</div>
 
             {/* Treatments */}
 
-            <div className="mt-16 space-y-6">
+            <div className="mt-12
+sm:mt-16
+
+space-y-4
+sm:space-y-6">
 
               {treatments.items.map((item, index) => {
 
@@ -177,8 +196,11 @@ pb-6
                         className="
                           mt-1
 
-                          h-12
-                          w-12
+                          h-10
+w-10
+
+sm:h-12
+sm:w-12
 
                           shrink-0
 
@@ -195,10 +217,9 @@ pb-6
                         "
                       >
                         <Icon
-                          size={24}
-                          strokeWidth={1.6}
-                          className="text-[#D6A8C9]"
-                        />
+  size={20}
+  className="sm:h-6 sm:w-6"
+/>
                       </div>
 
                       {/* Content */}
@@ -211,7 +232,8 @@ pb-6
 
                             text-[#F2F2F2]
 
-                            text-3xl
+                            text-2xl
+sm:text-3xl
                           `}
                         >
                           {item.title}
@@ -225,8 +247,11 @@ pb-6
 
                             max-w-xl
 
-                            text-lg
-                            leading-8
+                           text-base
+sm:text-lg
+
+leading-7
+sm:leading-8
 
                             text-[#CFC7CB]
                           `}

@@ -52,57 +52,70 @@ export default function Navigation({
     return () => observer.disconnect();
   }, []);
 
-  const logoColor = scrolled
-    ? theme.navigation.logoScrolled
-    : theme.navigation.logo;
-
-  const navText = scrolled
-    ? theme.navigation.textScrolled
-    : theme.navigation.text;
-
-  const navHover = scrolled
-    ? theme.navigation.textHoverScrolled
-    : theme.navigation.textHover;
-
-  const navActive = scrolled
-    ? theme.navigation.activeTextScrolled
-    : theme.navigation.activeText;
+  const logoColor = theme.navigation.logoScrolled;
+const navText = theme.navigation.textScrolled;
+const navHover = theme.navigation.textHoverScrolled;
+const navActive = theme.navigation.activeTextScrolled;
 
   return (
     <>
       <nav
         className={`
-    fixed
-    top-0
-    left-0
-    right-0
-    z-50
+  fixed
+  inset-x-0
+  top-0
+  z-50
 
-    pt-[env(safe-area-inset-top)]
-    h-[calc(6rem+env(safe-area-inset-top))]
+  transition-all
+  duration-300
+
+  ${theme.navigation.backgroundScrolled}
+
+  ${scrolled ? "shadow-lg" : ""}
+`}
+      >
+        <div
+          className={`
+    mx-auto
+    flex
+    max-w-[1700px]
+    items-center
+    justify-between
+
+    px-6
+    md:px-10
+    xl:px-20
 
     transition-all
     duration-300
 
     ${scrolled
-            ? `${theme.navigation.backgroundScrolled} shadow-lg`
-            : theme.navigation.background
-          }
+              ? "h-16"
+              : "h-20"
+            }
   `}
-      >
-        <div className="flex h-24 w-full items-center justify-between px-6 md:px-10 xl:px-20 2xl:px-28">
+        >
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link
+            href="/"
+            className="
+    flex
+    items-center
+    shrink-0
+  "
+          >
             {company.logoDark ? (
               <div
                 className={`
         relative
-        origin-left
-        transition-all duration-300
         overflow-hidden
+        origin-left
+        transition-all
+        duration-500
+
         ${scrolled
-                    ? "w-[220px] sm:w-[250px] md:w-[280px] h-20 opacity-100"
-                    : "w-[220px] sm:w-[250px] md:w-[280px] h-20 opacity-0 pointer-events-none"
+                    ? "w-[180px] sm:w-[210px] md:w-[235px] h-14 opacity-100"
+                    : "w-[200px] sm:w-[230px] md:w-[260px] h-16 opacity-100"
                   }
       `}
               >
@@ -111,7 +124,6 @@ export default function Navigation({
                   alt={company.name}
                   fill
                   priority
-                  sizes="(max-width:768px) 220px, 280px"
                   className="object-contain object-left"
                 />
               </div>
@@ -120,8 +132,8 @@ export default function Navigation({
                 className={`
         ${logoColor}
         font-bold
-        transition-all duration-300
-        ${scrolled ? "opacity-100" : "opacity-0"}
+        transition-all
+        duration-300
       `}
               >
                 {company.name}
@@ -132,10 +144,18 @@ export default function Navigation({
           {/* Desktop Navigation */}
           <ul
             className={`
-            hidden md:flex
-            transition-all duration-300
-            ${scrolled ? "gap-6 text-sm" : "gap-8 text-base"}
-          `}
+    hidden
+    md:flex
+    items-center
+
+    transition-all
+    duration-300
+
+    ${scrolled
+                ? "gap-8 text-[15px]"
+                : "gap-10 text-base"
+              }
+  `}
           >
             {navigation.links.map((link) => {
               const isActive =
@@ -150,24 +170,44 @@ export default function Navigation({
                   <Link
                     href={link.href}
                     className={`
-                    transition-colors duration-300
-                    ${isActive ? navActive : `${navText} ${navHover}`}
-                  `}
+    relative
+    py-2
+
+    transition-all
+    duration-300
+
+    ${isActive
+                        ? navActive
+                        : `${navText} ${navHover}`
+                      }
+  `}
                   >
                     {link.label}
                   </Link>
 
                   <span
                     className={`
-                    absolute
-                    -bottom-2
-                    left-0
-                    h-0.5
-                    ${theme.navigation.underline}
-                    transition-all duration-300
-                    ${isActive ? "w-full" : "w-0"}
-                  `}
+    absolute
+    left-0
+    -bottom-1
+
+    h-[2px]
+
+    rounded-full
+
+    ${theme.navigation.underline}
+
+    transition-all
+    duration-300
+
+    ${isActive
+                        ? "w-full"
+                        : "w-0"
+                      }
+  `}
                   />
+
+
                 </li>
               );
             })}
@@ -177,19 +217,26 @@ export default function Navigation({
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className={`
-            md:hidden
-            flex
-            h-11
-            w-11
-            items-center
-            justify-center
-            ${navText}
-            `}
+    md:hidden
+
+    flex
+    items-center
+    justify-center
+
+    h-10
+    w-10
+
+    rounded-full
+
+    transition-all
+
+    ${navText}
+  `}
           >
             {mobileMenuOpen ? (
-              <X size={30} />
+              <X size={26} />
             ) : (
-              <Menu size={30} />
+              <Menu size={26} />
             )}
           </button>
         </div>
@@ -199,34 +246,62 @@ export default function Navigation({
       {mobileMenuOpen && (
         <div
           className={`
-            md:hidden
-            fixed
-            top-24
-            left-0
-            right-0
-            z-40
-            ${theme.navigation.backgroundScrolled}
-            shadow-xl
-          `}
+    md:hidden
+
+    fixed
+    left-0
+    right-0
+    top-16
+
+    z-40
+
+    overflow-hidden
+
+    transition-all
+    duration-300
+
+    ${mobileMenuOpen
+              ? "max-h-[500px] opacity-100"
+              : "max-h-0 opacity-0 pointer-events-none"
+            }
+
+    ${theme.navigation.backgroundScrolled}
+
+    shadow-xl
+  `}
         >
-          <ul className="flex flex-col gap-6 p-6">
+          <ul className="px-8 py-6">
+
             {navigation.links.map((link) => (
-              <li key={link.label}>
+
+              <li
+                key={link.label}
+                className="border-b border-white/10 last:border-none"
+              >
+
                 <Link
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`
-                    block
-                    text-lg
-                    ${theme.navigation.textScrolled}
-                    ${theme.navigation.textHoverScrolled}
-                    transition-colors
-                  `}
+            block
+            py-5
+
+            text-lg
+
+            ${theme.navigation.textScrolled}
+
+            transition-colors
+
+            ${theme.navigation.textHoverScrolled}
+          `}
                 >
                   {link.label}
                 </Link>
+
               </li>
+
             ))}
+
           </ul>
         </div>
       )}

@@ -1,9 +1,8 @@
 import { ContactCTAData, CompanyData } from "@/types/site";
 import Container from "@/components/ui/Container";
-import SectionHeading from "@/components/ui/SectionHeading";
-import { ThemeConfig } from "@/configs/themes/types";
-import Button from "../ui/Button";
+import Button from "@/components/ui/Button";
 import Link from "next/link";
+import { ThemeConfig } from "@/configs/themes/types";
 
 interface ContactCTAProps {
   contactCTA: ContactCTAData;
@@ -19,18 +18,89 @@ export default function ContactCTA({
   return (
     <section
       id="contact"
-      className={`${theme.colors.primary} ${theme.layout.sectionSpacing}`}
+      className="bg-[#261020] py-32"
     >
-      <Container className="mx-auto max-w-5xl px-6 text-center">
+      <Container className="max-w-5xl text-center">
 
-        <SectionHeading
-          eyebrow={contactCTA.eyebrow}
-          title={contactCTA.title}
-          subtitle={contactCTA.subtitle}
-          theme={theme}
-        />
+        {/* Eyebrow */}
 
-        <div className="mt-10 flex flex-wrap justify-center gap-6">
+        <p
+          className="
+            uppercase
+            tracking-[0.35em]
+            text-sm
+
+            text-[#D6A8C9]
+
+            mb-6
+          "
+        >
+          {contactCTA.eyebrow}
+        </p>
+
+        {/* Heading */}
+
+        <h2
+          className={`
+            ${theme.typography.heading}
+
+            text-[#F7F3EE]
+
+            text-5xl
+            lg:text-7xl
+
+            leading-tight
+          `}
+        >
+          {contactCTA.title}
+        </h2>
+
+        {/* Subtitle */}
+
+        <p
+          className={`
+            ${theme.typography.body}
+
+            mt-8
+
+            max-w-3xl
+            mx-auto
+
+            text-lg
+            leading-9
+
+            text-[#DDD5D8]
+          `}
+        >
+          {contactCTA.subtitle}
+        </p>
+
+        {/* Divider */}
+
+        <div className="flex items-center justify-center gap-6 mt-12">
+
+          <div className="w-20 h-px bg-[#A87897]" />
+
+          <span
+            className="
+              uppercase
+              tracking-[0.35em]
+              text-xs
+
+              text-[#A87897]
+            "
+          >
+            Begin Your Healing Journey
+          </span>
+
+          <div className="w-20 h-px bg-[#A87897]" />
+
+        </div>
+
+        {/* Buttons */}
+
+        <div className="mt-14 flex flex-col sm:flex-row justify-center gap-5">
+
           <Button
             href="/booking"
             theme={theme}
@@ -46,6 +116,7 @@ export default function ContactCTA({
               {contactCTA.phoneButton}
             </Button>
           </Link>
+
         </div>
 
       </Container>
