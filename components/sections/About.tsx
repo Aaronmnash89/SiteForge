@@ -4,7 +4,6 @@ import Image from "next/image";
 import { HeartHandshake, Leaf, Sparkles, ShieldPlus } from "lucide-react";
 import { AboutData } from "@/types/site";
 import Container from "@/components/ui/Container";
-import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import { ThemeConfig } from "@/configs/themes/types";
 
@@ -30,69 +29,15 @@ export default function About({
     >
       <Container className="max-w-7xl">
 
-        <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-24 items-center">
+        <div className="max-w-4xl mx-auto">
 
-          {/* ======================================
-        IMAGE
-    ====================================== */}
-
-          <div
-            className="
-    relative
-
-    lg:-ml-20
-    xl:-ml-28
-  "
-          >
-
-            <div
-  className="
-    overflow-hidden
-
-    rounded-[34px]
-    lg:rounded-[52px]
-
-    shadow-[0_30px_60px_rgba(0,0,0,.15)]
-    lg:shadow-[0_45px_90px_rgba(0,0,0,.18)]
-
-    h-[360px]
-    sm:h-[460px]
-    md:h-[560px]
-    lg:h-[900px]
-    xl:h-[1040px]
-  "
->
-
-              <Image
-                src={about.image}
-                alt={about.title}
-                width={900}
-                height={1200}
-                className="
-  h-full
-  w-full
-
-  object-cover
-
-  object-center
-  lg:object-center
-
-  transition
-  duration-700
-
-  hover:scale-105
-"
-              />
-
-            </div>
-
-          </div>
+          
 
           {/* ======================================
         CONTENT
     ====================================== */}
 
-          <div className="max-w-xl mt-10 lg:mt-0">
+          <div className="max-w-4xl mx-auto">
 
             <p
               className="
@@ -122,7 +67,7 @@ export default function About({
             </h2>
 
             <p
-  className={`
+              className={`
     ${theme.typography.body}
 
     mt-8
@@ -136,28 +81,114 @@ export default function About({
     text-lg
     leading-9
   `}
+            >
+              {about.description}
+            </p>
+{/* ======================================
+        IMAGE
+    ====================================== */}
+
+          <div
+  className="
+    relative
+
+    mt-12
+    lg:mt-14
+
+    lg:-ml-20
+    xl:-ml-28
+  "
 >
-  {about.description}
-</p>
 
-            <div className="flex items-center gap-6 mt-12">
+            <div
+              className="
+    overflow-hidden
 
-              <div className="w-20 h-px bg-[#A87897]" />
+    rounded-[34px]
+    lg:rounded-[52px]
 
-              <span
+    shadow-[0_30px_60px_rgba(0,0,0,.15)]
+    lg:shadow-[0_45px_90px_rgba(0,0,0,.18)]
+
+   h-[320px]
+sm:h-[420px]
+md:h-[500px]
+lg:h-[620px]
+xl:h-[700px]
+  "
+            >
+
+              <Image
+                src={about.image}
+                alt={about.title}
+                width={900}
+                height={1200}
                 className="
-            uppercase
-            tracking-[0.35em]
-            text-xs
-            text-[#A87897]
-          "
-              >
-                Compassion • Experience • Balance
-              </span>
+  h-full
+  w-full
+
+  object-cover
+
+  object-center
+  lg:object-center
+
+  transition
+  duration-700
+
+  hover:scale-105
+"
+              />
 
             </div>
 
-            <div className="mt-14 space-y-4">
+          </div>
+            <div
+  className="
+    flex
+    items-center
+    justify-center
+
+    gap-4
+    sm:gap-6
+
+    mt-14
+    mb-4
+  "
+>
+
+  <div className="h-px w-16 sm:w-24 lg:w-32 bg-[#B37B9C]" />
+
+  <span
+    className="
+      uppercase
+
+      tracking-[0.35em]
+
+      text-[10px]
+      sm:text-xs
+
+      whitespace-nowrap
+
+      text-[#A87897]
+    "
+  >
+    Compassion • Experience • Balance
+  </span>
+
+  <div className="h-px w-16 sm:w-24 lg:w-32 bg-[#B37B9C]" />
+
+</div>
+
+            <div
+              className="
+    mt-10
+    lg:mt-14
+
+    space-y-2
+    sm:space-y-3
+    lg:space-y-4
+  "
+            >
 
               {about.highlights.map((highlight, index) => {
 
@@ -168,51 +199,74 @@ export default function About({
                   <div
                     key={highlight}
                     className="
-    flex
-    items-center
-    gap-4
+  flex
+  items-center
 
-    py-2
-  "
+  gap-3
+  lg:gap-4
+
+  py-2
+  lg:py-3
+"
                   >
 
                     <div
                       className="
-      h-10
-      w-10
+  h-9
+  w-9
 
-      shrink-0
+  sm:h-10
+  sm:w-10
 
-      rounded-full
+  lg:h-11
+  lg:w-11
 
-      bg-[#591E4A]/12
+  shrink-0
 
-      flex
-      items-center
-      justify-center
-    "
+  rounded-full
+
+  bg-[#591E4A]/12
+
+  flex
+  items-center
+  justify-center
+"
                     >
 
                       <Icon
-                        size={18}
+                        className="
+    h-4
+    w-4
+
+    sm:h-[18px]
+    sm:w-[18px]
+
+    lg:h-5
+    lg:w-5
+
+    text-[#591E4A]
+  "
                         strokeWidth={1.8}
-                        className="text-[#591E4A]"
                       />
 
                     </div>
 
                     <p
-  className={`
-    ${theme.typography.body}
+                      className={`
+  ${theme.typography.body}
 
-    text-lg
-    leading-8
+  text-[#3F3733]
 
-    text-[#3F3733]
-  `}
->
-  {highlight}
-</p>
+  text-base
+  sm:text-lg
+
+  font-medium
+
+  leading-7
+`}
+                    >
+                      {highlight}
+                    </p>
 
                   </div>
 
@@ -227,7 +281,7 @@ export default function About({
             <div className="mt-14">
 
               <p
-  className={`
+                className={`
     ${theme.typography.body}
 
     text-[#5B5652]
@@ -237,7 +291,7 @@ export default function About({
 
     max-w-lg
   `}
->
+              >
                 Every treatment begins with a personalized consultation where we
                 discuss your goals, evaluate your concerns, and build a treatment
                 plan designed specifically for your body and lifestyle.

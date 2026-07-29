@@ -143,8 +143,10 @@ export interface FooterData {
   tagline: string;
   address: string;
   copyright: string;
-  quickLinks: NavigationLink[];
-  practiceAreas: string[];
+  quickLinks: {
+    label: string;
+    href: string;
+  }[];
 }
 
 export interface PageSection {

@@ -37,7 +37,7 @@
   },
   "theme": "acupuncture",
   "company": {
-    "name": "East West Acupuncture",
+    "name": "East West Acupuncture & Herbs",
     "logo": "/images/ew_nav_logo.png",
     "logoDark": "/images/ew_nav_logo.png",
     "phone": "(828) 407-0412",
@@ -272,14 +272,6 @@
         "label": "Contact",
         "href": "/contact"
       }
-    ],
-    "practiceAreas": [
-      "Pain Management",
-      "Stress & Anxiety",
-      "Women's Health",
-      "Chronic Conditions",
-      "Oncology Support",
-      "End of Life Care"
     ]
   },
   "seo": {

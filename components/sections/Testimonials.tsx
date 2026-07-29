@@ -23,9 +23,10 @@ export default function Testimonials({
     >
       <Container className="mx-auto max-w-7xl px-6">
 
+        {/* Header */}
         <Card
           theme={theme}
-          className="mb-16 text-center"
+          className="mb-16 py-8 lg:py-10 text-center"
         >
           <SectionHeading
             eyebrow={testimonials.eyebrow}
@@ -34,11 +35,15 @@ export default function Testimonials({
           />
         </Card>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        {/* Reviews */}
+        <div className="grid gap-8 md:grid-cols-3 items-start">
+
           {testimonials.reviews.map((review, index) => (
+
             <Card
               key={`${review.name}-${index}`}
               theme={theme}
+              className="self-start"
             >
               <div className="mb-6 flex gap-1">
                 {[...Array(5)].map((_, i) => (
@@ -51,24 +56,35 @@ export default function Testimonials({
               </div>
 
               <p
-                className={`mb-8 leading-8 ${theme.colors.textLight}`}
+                className={`
+                  mb-8
+                  leading-8
+                  ${theme.colors.textLight}
+                `}
               >
                 "{review.quote}"
               </p>
 
-              <div>
-                <h3
-                  className={`${theme.typography.heading} ${theme.colors.text} text-xl`}
-                >
-                  {review.name}
-                </h3>
+              <h3
+                className={`
+                  ${theme.typography.heading}
+                  ${theme.colors.text}
+                  text-xl
+                `}
+              >
+                {review.name}
+              </h3>
 
+              {review.case && (
                 <p className={theme.colors.accent}>
                   {review.case}
                 </p>
-              </div>
+              )}
+
             </Card>
+
           ))}
+
         </div>
 
       </Container>

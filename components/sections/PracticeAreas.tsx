@@ -89,84 +89,34 @@ export default function PracticeAreas({
       {practiceAreas.subtitle}
     </p>
 
-    <div className="flex items-center gap-6 mt-14">
+    <div className="mt-14 max-w-xl">
 
-      <div className="w-24 h-px bg-[#A87897]" />
+  <div className="flex items-center gap-4">
 
-      <span
-        className="
-          uppercase
-          tracking-[0.35em]
-          text-xs
-          text-[#A87897]
-        "
-      >
-        Conditions We Treat
-      </span>
+    <div className="h-px flex-1 bg-[#A87897]" />
 
-    </div>
-
-  </div>
-
-  {/* ===========================
-      HERO IMAGE
-  =========================== */}
-
-  <div
-    className="
-      relative
-
-    lg:-mr-44
-    xl:-mr-56
-    2xl:-mr-72
-
-    lg:mt-8
-    xl:mt-16
-    "
-  >
-
-    <div
+    <span
       className="
-        overflow-hidden
-
-        rounded-[56px]
-
-        shadow-[0_55px_110px_rgba(0,0,0,.18)]
-
-        h-[900px]
-        xl:h-[1080px]
-
-        w-full
+        uppercase
+        tracking-[0.35em]
+        text-xs
+        text-[#A87897]
+        whitespace-nowrap
       "
     >
+      Conditions We Treat
+    </span>
 
-      <img
-        src="/images/IMG_0466.JPG"
-        alt="Acupuncture treatment"
-        className="
-          h-full
-          w-full
-
-          object-cover
-          object-center
-
-          transition
-          duration-700
-
-          hover:scale-105
-        "
-      />
-
-    </div>
+    <div className="h-px flex-1 bg-[#A87897]" />
 
   </div>
 
 </div>
 
+  </div>  
 
-    {/* ===========================
-        PRACTICE AREA LIST
-    =========================== */}
+</div>
+
 
           <div className="mt-28">
 
