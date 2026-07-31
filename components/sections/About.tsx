@@ -31,7 +31,7 @@ export default function About({
 
         <div className="max-w-4xl mx-auto">
 
-          
+
 
           {/* ======================================
         CONTENT
@@ -52,7 +52,7 @@ export default function About({
             </p>
 
             <h2
-  className={`
+              className={`
     ${theme.typography.heading}
 
     text-[#2A1B25]
@@ -65,19 +65,19 @@ export default function About({
     text-center
     lg:text-left
   `}
->
+            >
               {about.title}
             </h2>
 
             {/* Biography */}
 
-<div className="mt-10">
+            <div className="mt-10">
 
-  {/* Desktop */}
-  <div className="hidden lg:grid lg:grid-cols-2 lg:gap-20 xl:gap-24">
+              {/* Desktop */}
+              <div className="hidden lg:grid lg:grid-cols-2 lg:gap-20 xl:gap-24">
 
-    <div
-      className={`
+                <div
+                  className={`
   ${theme.typography.body}
 
   mt-8
@@ -96,33 +96,33 @@ export default function About({
   text-center
   lg:text-left
 `}
-    >
-      {about.description
-        .split("\n\n")
-        .slice(0, 3)
-        .join("\n\n")}
-    </div>
+                >
+                  {about.description
+                    .split("\n\n")
+                    .slice(0, 3)
+                    .join("\n\n")}
+                </div>
 
-    <div
-      className={`
+                <div
+                  className={`
         ${theme.typography.body}
         text-[#4C4542]
         text-lg
         leading-9
         whitespace-pre-line
       `}
-    >
-      {about.description
-        .split("\n\n")
-        .slice(3)
-        .join("\n\n")}
-    </div>
+                >
+                  {about.description
+                    .split("\n\n")
+                    .slice(3)
+                    .join("\n\n")}
+                </div>
 
-  </div>
+              </div>
 
-  {/* Mobile + Tablet */}
-  <div
-    className={`
+              {/* Mobile + Tablet */}
+              <div
+                className={`
       lg:hidden
       ${theme.typography.body}
       text-[#4C4542]
@@ -131,17 +131,17 @@ export default function About({
       whitespace-pre-line
       max-w-xl
     `}
-  >
-    {about.description}
-  </div>
+              >
+                {about.description}
+              </div>
 
-</div>
-{/* ======================================
+            </div>
+            {/* ======================================
         IMAGE
     ====================================== */}
 
-          <div
-  className="
+            <div
+              className="
     relative
 
     mt-12
@@ -150,10 +150,10 @@ export default function About({
     w-full
     mx-auto
   "
->
+            >
 
-            <div
-              className="
+              <div
+                className="
     overflow-hidden
 
     rounded-[34px]
@@ -168,14 +168,14 @@ md:h-[500px]
 lg:h-[620px]
 xl:h-[700px]
   "
-            >
+              >
 
-              <Image
-                src={about.image}
-                alt={about.title}
-                width={900}
-                height={1200}
-                className="
+                <Image
+                  src={about.image}
+                  alt={about.title}
+                  width={900}
+                  height={1200}
+                  className="
   h-full
   w-full
 
@@ -189,175 +189,11 @@ xl:h-[700px]
 
   hover:scale-105
 "
-              />
-
-            </div>
-
-          </div>
-            <div
-  className="
-    flex
-    items-center
-    justify-center
-
-    gap-4
-    sm:gap-6
-
-    mt-14
-    mb-4
-  "
->
-
-  <div className="h-px w-16 sm:w-24 lg:w-32 bg-[#B37B9C]" />
-
-  <span
-    className="
-uppercase
-tracking-[0.35em]
-text-sm
-text-[#7A4B67]
-mb-6
-
-text-center
-lg:text-left
-"
-  >
-    Compassion • Experience • Balance
-  </span>
-
-  <div className="h-px w-16 sm:w-24 lg:w-32 bg-[#B37B9C]" />
-
-</div>
-
-            <div
-              className="
-    mt-10
-    lg:mt-14
-
-    space-y-2
-    sm:space-y-3
-    lg:space-y-4
-  "
-            >
-
-              {about.highlights.map((highlight, index) => {
-
-                const Icon = featureIcons[index % featureIcons.length];
-
-                return (
-
-                  <div
-                    key={highlight}
-                    className="
-  flex
-  items-center
-
-  gap-3
-  lg:gap-4
-
-  py-2
-  lg:py-3
-"
-                  >
-
-                    <div
-                      className="
-  h-9
-  w-9
-
-  sm:h-10
-  sm:w-10
-
-  lg:h-11
-  lg:w-11
-
-  shrink-0
-
-  rounded-full
-
-  bg-[#591E4A]/12
-
-  flex
-  items-center
-  justify-center
-"
-                    >
-
-                      <Icon
-                        className="
-    h-4
-    w-4
-
-    sm:h-[18px]
-    sm:w-[18px]
-
-    lg:h-5
-    lg:w-5
-
-    text-[#591E4A]
-  "
-                        strokeWidth={1.8}
-                      />
-
-                    </div>
-
-                    <p
-                      className={`
-  ${theme.typography.body}
-
-  text-[#3F3733]
-
-  text-base
-  sm:text-lg
-
-  font-medium
-
-  leading-7
-`}
-                    >
-                      {highlight}
-                    </p>
-
-                  </div>
-
-                );
-
-              })}
-
-            </div>
-
-            {/* CTA */}
-
-            <div className="mt-14">
-
-              <p
-                className={`
-    ${theme.typography.body}
-
-    text-[#5B5652]
-
-    text-lg
-    leading-9
-
-    max-w-lg
-  `}
-              >
-                Every treatment begins with a personalized consultation where we
-                discuss your goals, evaluate your concerns, and build a treatment
-                plan designed specifically for your body and lifestyle.
-              </p>
-
-              <div className="mt-10">
-
-                <Button
-                  href="/booking"
-                  theme={theme}
-                >
-                  {about.buttonText}
-                </Button>
+                />
 
               </div>
 
+          
             </div>
 
           </div>
