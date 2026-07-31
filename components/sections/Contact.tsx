@@ -64,7 +64,7 @@ export default function ContactCTA({
 
             text-lg
             leading-9
-
+            whitespace-pre-line
             text-[#DDD5D8]
           `}
         >

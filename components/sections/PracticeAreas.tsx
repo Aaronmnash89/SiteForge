@@ -1,12 +1,13 @@
 "use client";
 
 import {
-  HeartPulse,
+  Bone,
+  Brain,
   Flower2,
-  Leaf,
-  MoonStar,
+  HeartPulse,
+  ShieldPlus,
+  HeartHandshake,
 } from "lucide-react";
-
 import { PracticeAreasData } from "@/types/site";
 import Container from "@/components/ui/Container";
 import { ThemeConfig } from "@/configs/themes/types";
@@ -17,10 +18,12 @@ interface PracticeAreasProps {
 }
 
 const featureIcons = [
-  HeartPulse,
+  Bone,
+  Brain,
   Flower2,
-  Leaf,
-  MoonStar,
+  HeartPulse,
+  ShieldPlus,
+  HeartHandshake,
 ];
 
 export default function PracticeAreas({
@@ -29,31 +32,28 @@ export default function PracticeAreas({
 }: PracticeAreasProps) {
   return (
     <section
-  id="practiceAreas"
-  className="bg-[#F7F3EE] py-36 overflow-hidden relative"
->
-  <Container className="max-w-[1700px]">
+      id="practiceAreas"
+      className="bg-[#F7F3EE] py-36 overflow-hidden relative"
+    >
+      <Container className="max-w-[1700px]">
+        <div className="max-w-5xl mx-auto text-center">
+          {/* LEFT CONTENT */}
 
-    <div className="max-w-5xl mx-auto text-center">
-
-  {/* LEFT CONTENT */}
-
-  <div className="relative z-10">
-
-    <p
-      className="
+          <div className="relative z-10">
+            <p
+              className="
         uppercase
         tracking-[0.35em]
         text-sm
         text-[#7A4B67]
         mb-6
       "
-    >
-      {practiceAreas.eyebrow}
-    </p>
+            >
+              {practiceAreas.eyebrow}
+            </p>
 
-    <h2
-      className={`
+            <h2
+              className={`
         ${theme.typography.heading}
 
         text-[#261020]
@@ -67,12 +67,12 @@ export default function PracticeAreas({
         max-w-4xl
 mx-auto
       `}
-    >
-      {practiceAreas.title}
-    </h2>
+            >
+              {practiceAreas.title}
+            </h2>
 
-    <p
-      className={`
+            <p
+              className={`
         ${theme.typography.body}
 
         mt-10
@@ -85,14 +85,13 @@ mx-auto
 
         text-[#5E5A56]
       `}
-    >
-      {practiceAreas.subtitle}
-    </p>
+            >
+              {practiceAreas.subtitle}
+            </p>
 
-    <div className="mt-14">
-
-  <div
-    className="
+            <div className="mt-14">
+              <div
+                className="
       flex
       items-center
       justify-center
@@ -106,12 +105,11 @@ mx-auto
 
       mx-auto
     "
-  >
+              >
+                <div className="h-px w-10 sm:w-20 lg:flex-1 bg-[#A87897]" />
 
-    <div className="h-px w-10 sm:w-20 lg:flex-1 bg-[#A87897]" />
-
-    <span
-      className="
+                <span
+                  className="
         uppercase
 
         tracking-[0.35em]
@@ -123,36 +121,27 @@ mx-auto
 
         text-[#A87897]
       "
-    >
-      Conditions We Treat
-    </span>
+                >
+                  Conditions We Treat
+                </span>
 
-    <div className="h-px w-10 sm:w-20 lg:flex-1 bg-[#A87897]" />
+                <div className="h-px w-10 sm:w-20 lg:flex-1 bg-[#A87897]" />
+              </div>
+            </div>
+          </div>
+        </div>
 
-  </div>
+        <div className="mt-20">
+          {/* PRACTICE AREAS GRID */}
 
-</div>
+          <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-x-24 gap-y-14">
+            {practiceAreas.items.map((item, index) => {
+              const Icon = featureIcons[index % featureIcons.length];
 
-  </div>  
-
-</div>
-
-
-          <div className="mt-20">
-
-        {/* PRACTICE AREAS GRID */}
-
-        <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-x-24 gap-y-14">
-
-          {practiceAreas.items.map((item, index) => {
-
-  const Icon = featureIcons[index % featureIcons.length];
-
-  return (
-
-    <div
-      key={`${item.title}-${index}`}
-      className="
+              return (
+                <div
+                  key={`${item.title}-${index}`}
+                  className="
         group
         flex
         items-start
@@ -166,10 +155,9 @@ mx-auto
         transition-all
         duration-300
       "
-    >
-
-      <div
-        className="
+                >
+                  <div
+                    className="
           h-14
           w-14
           shrink-0
@@ -187,12 +175,11 @@ mx-auto
 
           group-hover:bg-[#591E4A]
         "
-      >
-
-        <Icon
-          size={22}
-          strokeWidth={1.7}
-          className="
+                  >
+                    <Icon
+                      size={22}
+                      strokeWidth={1.7}
+                      className="
             text-[#591E4A]
             transition-all
             duration-300
@@ -200,14 +187,12 @@ mx-auto
             group-hover:text-white
             group-hover:scale-110
           "
-        />
+                    />
+                  </div>
 
-      </div>
-
-      <div className="flex-1">
-
-        <h3
-          className={`
+                  <div className="flex-1">
+                    <h3
+                      className={`
             ${theme.typography.heading}
 
             text-[#261020]
@@ -219,12 +204,12 @@ mx-auto
 
             group-hover:translate-x-1
           `}
-        >
-          {item.title}
-        </h3>
+                    >
+                      {item.title}
+                    </h3>
 
-        <p
-          className={`
+                    <p
+                      className={`
             ${theme.typography.body}
 
             mt-3
@@ -234,24 +219,16 @@ mx-auto
 
             text-[#5E5A56]
           `}
-        >
-          {item.description}
-        </p>
-
-      </div>
-
-    </div>
-
-  );
-
-})}
-
+                    >
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
-
-      </div>
-
-    </Container>
-
-  </section>
+      </Container>
+    </section>
   );
 }

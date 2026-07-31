@@ -1,7 +1,17 @@
 "use client";
 
-import { Leaf, HeartHandshake, Sparkles, Flower2 } from "lucide-react";
-
+import {
+  Pin,
+  Leaf,
+  HeartPulse,
+  Smile,
+  Apple,
+  HeartHandshake,
+  CircleDot,
+  Flame,
+  Zap,
+  HandHeart,
+} from "lucide-react";
 import { TreatmentsData } from "@/types/site";
 import Container from "@/components/ui/Container";
 import { ThemeConfig } from "@/configs/themes/types";
@@ -11,18 +21,46 @@ interface TreatmentsProps {
   theme: ThemeConfig;
 }
 
-const featureIcons = [Leaf, HeartHandshake, Sparkles, Flower2];
+const featureIcons = [
+  Pin,
+  Leaf,
+  HeartPulse,
+  Smile,
+  Apple,
+  HeartHandshake,
+  CircleDot,
+  Flame,
+  Zap,
+  HandHeart,
+];
 
 export default function Treatments({ treatments, theme }: TreatmentsProps) {
   return (
-    <section id="treatments" className="relative overflow-hidden min-h-screen">
+    <section
+      id="treatments"
+      className="
+  relative
+  overflow-hidden
+
+  min-h-[100svh]
+  lg:min-h-screen
+"
+    >
       {/* Background */}
 
       <div className="absolute inset-0">
         <img
           src="/images/cupping.JPG"
           alt="Traditional Cupping Therapy"
-          className="h-full w-full object-cover object-[55%_center]"
+          className="
+  h-full
+  w-full
+  object-cover
+
+  object-[72%_center]
+  sm:object-[60%_center]
+  lg:object-[55%_center]
+"
         />
 
         <div className="absolute inset-0 bg-[#261020]/35" />
@@ -163,7 +201,8 @@ export default function Treatments({ treatments, theme }: TreatmentsProps) {
                           bg-[#591E4A]/25
                           flex
                           items-center
-                          justify-center">
+                          justify-center"
+                  >
                     <Icon
                       size={20}
                       strokeWidth={1.8}
