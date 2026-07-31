@@ -140,9 +140,7 @@ mx-auto
 
           <div className="mt-20">
 
-        {/* ==========================================
-            PRACTICE AREAS GRID
-        ========================================== */}
+        {/* PRACTICE AREAS GRID */}
 
         <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-x-24 gap-y-14">
 

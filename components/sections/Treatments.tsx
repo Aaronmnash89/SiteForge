@@ -115,7 +115,7 @@ export default function Treatments({ treatments, theme }: TreatmentsProps) {
             whitespace-nowrap
           "
               >
-                Personalized Wellness
+                Supportive Care
               </span>
 
               <div className="h-px flex-1 bg-[#A87897]" />
@@ -142,10 +142,9 @@ export default function Treatments({ treatments, theme }: TreatmentsProps) {
               <div
                 key={`${item.title}-${index}`}
                 className="
-border-b
-border-[#6A4558]
-pb-6
-"
+                border-b
+                border-[#6A4558]
+                pb-6"
               >
                 <div className="flex items-start gap-6">
                   {/* Icon */}
@@ -153,27 +152,18 @@ pb-6
                   <div
                     className="
                           mt-1
-
                           h-10
-w-10
-
-sm:h-12
-sm:w-12
-
+                          w-10
+                          sm:h-12
+                          sm:w-12
                           shrink-0
-
                           rounded-full
-
                           border
                           border-[#A87897]/40
-
                           bg-[#591E4A]/25
-
                           flex
                           items-center
-                          justify-center
-                        "
-                  >
+                          justify-center">
                     <Icon
                       size={20}
                       strokeWidth={1.8}
@@ -206,8 +196,7 @@ sm:text-3xl
                       className={`
                             ${theme.typography.body}
 
-                            2
-
+                          
                             max-w-xl
 
                            text-base

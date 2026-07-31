@@ -116,25 +116,25 @@
   },
   "practiceAreas": {
     "eyebrow": "",
-    "title": "Acupuncture Treatments",
+    "title": "Chinese Medicine Treatments",
     "subtitle": "Natural therapies designed to improve your health and quality of life.",
     "items": [
       {
         "icon": "Sparkles",
         "title": "Pain Relief",
-        "description": "Reduce chronic pain, headaches, neck pain, back pain, and joint discomfort through targeted acupuncture treatments.",
+        "description": "Reduce acute and chronic musculoskeletal pain including; back pain, headaches, and joint pain from varying anatomical or inflammatory causes. “Dry Needling” or orthopedic acupuncture is utilized for those that need it or a gentler approach can be applied for sensitive or more vulnerable patients.",
         "href": "#"
       },
       {
         "icon": "Smile",
         "title": "Stress & Anxiety",
-        "description": "Restore balance, improve sleep quality, and reduce everyday stress naturally.",
+        "description": "Balance mood, improve sleep quality, and reduce stress.",
         "href": "#"
       },
       {
         "icon": "ShieldPlus",
         "title": "Women's Health",
-        "description": "Hormonal balance, fertility, pregnancy wellness, and overall reproductive health.",
+        "description": "Hormonal balancing including menopause/perimenopause symptoms, irregular periods, and fertility concerns, as well as pregnancy wellness, and overall reproductive health. Gain support for endometriosis, PCOS, fibroids/cysts, cystitis/UTIs, yeast infections/candida, HSV, and HPV.",
         "href": "#"
       },
       {
@@ -160,7 +160,7 @@
   "treatments": {
     "eyebrow": "",
     "title": "Modalities",
-    "subtitle": "Natural therapies designed to improve your health and quality of life.",
+    "subtitle": "Treatment services offered for an integrative and thorough approach to medicine ",
     "items": [
       {
         "icon": "Sparkles",
@@ -171,32 +171,47 @@
       {
         "icon": "Smile",
         "title": "Herbal Medicine",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum nulla eu sem interdum tempor. Suspendisse accumsan mauris massa, quis. ",
-        "href": "#"
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum nulla eu sem interdum tempor. Suspendisse accumsan mauris massa, quis. "
+      },
+      {
+        "icon": "Pulse",
+        "title": "Pulse Taking",
+        "description": "A critical piece of pattern diagnosis, your practitioner will take pulses on the radial artery (both left and right) in three positions and three depths. These pulse positions are associated with all of your organ systems. Dr. Maegan will assess your energetic health, where there is stagnation or deficiency, and what meridians and organ systems to focus on by the pulse characteristics. This will generally take place before needles are placed and are re-checked at most appointments, as it is always in flux."
+      },
+      {
+        "icon": "Pulse",
+        "title": "Tongue Diagnosis ",
+        "description": "The tongue will be checked at the beginning of most appointments. It is a microcosm or mirror of the health of the body and mind. Areas of the tongue correspond to certain organ systems. The color of the tongue body, the coating of the tongue, and characteristics like cracking or peeling, tell the practitioner what the patient’s treatment needs are to create harmony and encourage healing."
+      },
+      {
+        "icon": "Pulse",
+        "title": "Chinese Medicine Dietary Therapy ",
+        "description": "Each person has specific dietary needs to thrive. When desired/needed, we empower and educate the patient to choose foods that balance their elemental constitution, support organs that are out of balance, and reduce inflammation. These are long or short term changes that feel applicable, without harsh parameters or judgement."
+      },
+      {
+        "icon": "Pulse",
+        "title": "Lifestyle Recommendations",
+        "description": "Receive advice on how to create more harmony in your daily routines to support your specific health goals (exercises, mindfulness tools, stress reduction techniques, etc.) through a Chinese Medicine lens."
       },
       {
         "icon": "ShieldPlus",
         "title": "Cupping & Gua sha",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus consequat ultricies. Etiam eleifend est vel nisi hendrerit mattis. In. ",
-        "href": "#"
+        "description": "These types of bodywork utilize suction (cupping) or scraping (gua sha) techniques to increase blood flow to areas of tension, break up bound tissues, invigorate the nerves, and reduce pain."
       },
       {
         "icon": "Sparkles",
         "title": "Moxibustion",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit auctor mauris. Suspendisse condimentum pulvinar leo. Integer sodales fringilla libero. ",
-        "href": "#"
+        "description": "Often shortened as, “Moxa,” this ancient modality is practiced with an herb, mugwort/Ai Ye, that is placed on needles, hovered over acupuncture points/body areas, or put safely over the skin. Moxa is warming, moving, tonifying, and calming. It is used for pain reduction, women’s health, and to strengthen acupuncture treatments when needed for certain individuals."
       },
       {
         "icon": "Smile",
         "title": "Electro Acupunture",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus tellus et molestie aliquam. Suspendisse porttitor ipsum at tortor lacinia. ",
-        "href": "#"
+        "description": "A more modern addition to Chinese Medicine based on the ancient approach of consistent needle stimulation. Gentle electrical stimulation can be applied to needle points to create more efficient treatments. This is often used for pain syndromes or nerve stimulation (neuropathy) but can be applied for other reasons to strengthen the effects of the acupuncture."
       },
       {
         "icon": "ShieldPlus",
         "title": "Tui Na",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent condimentum sit amet justo in pharetra. Cras tincidunt facilisis nisl, sit. ",
-        "href": "#"
+        "description": "Chinese Medicine bodywork that is hands-on to stimulate meridians, reduce pain, and balance the organ systems."
       }
     ]
   },
@@ -222,9 +237,9 @@
     ]
   },
   "contact": {
-    "eyebrow": "START YOUR WELLNESS JOURNEY",
-    "title": "Ready To Feel Better Naturally?",
-    "subtitle": "Whether you're seeking pain relief, stress reduction, or better overall wellness, we're here to help. Schedule your consultation today.",
+    "eyebrow": "",
+    "title": " Ready to Start Feeling Better?",
+    "subtitle": "Whether you’re seeking assistance with a specific condition or simply interested in stress reduction and increasing your quality of life, we’re here to help. \n\nSchedule your consultation today. We offer free, 15 minute consults, if you still have questions (schedule by booking online or request by phone/text).",
     "buttonText": "Book Appointment",
     "phoneButton": "Call (828) 407-0412"
   },
@@ -248,6 +263,18 @@
       {
         "question": "How many treatments will I need?",
         "answer": "This varies by condition. Acute issues may improve in a few visits while chronic conditions generally require ongoing care."
+      },
+      {
+        "question": "Do you take insurance?",
+        "answer": ""
+      },
+      {
+        "question": "What are your fees?",
+        "answer": ""
+      },
+      {
+        "question": "What is your Cancellation Policy?",
+        "answer": ""
       }
     ]
   },
