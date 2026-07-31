@@ -6,6 +6,7 @@ import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { ThemeConfig } from "@/configs/themes/types";
+import TestimonialText from "@/components/ui/TestimonialText";
 
 interface TestimonialsProps {
   testimonials: TestimonialsData;
@@ -43,7 +44,12 @@ export default function Testimonials({
             <Card
               key={`${review.name}-${index}`}
               theme={theme}
-              className="self-start"
+              className="
+    self-start
+    min-h-[420px]
+    flex
+    flex-col
+  "
             >
               <div className="mb-6 flex gap-1">
                 {[...Array(5)].map((_, i) => (
@@ -55,16 +61,10 @@ export default function Testimonials({
                 ))}
               </div>
 
-              <p
-                className={`
-                  mb-8
-                  leading-8
-                  ${theme.colors.textLight}
-                `}
-              >
-                "{review.quote}"
-              </p>
-
+              <div className="mb-8">
+                <TestimonialText text={review.quote} />
+              </div>
+                <div className="mt-auto">
               <h3
                 className={`
                   ${theme.typography.heading}
@@ -80,7 +80,7 @@ export default function Testimonials({
                   {review.case}
                 </p>
               )}
-
+              </div>
             </Card>
 
           ))}

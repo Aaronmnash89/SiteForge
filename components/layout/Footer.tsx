@@ -27,12 +27,18 @@ export default function Footer({
 
             <h3
               className={`
-                ${theme.typography.heading}
-                text-[#F7F3EE]
-                text-[clamp(1.4rem,2vw,2.8rem)]
-                leading-tight
-                whitespace-nowrap
-              `}
+    ${theme.typography.heading}
+
+    text-[#F7F3EE]
+
+    text-[clamp(1.6rem,7vw,2.9rem)]
+
+    leading-tight
+
+    break-words
+    text-center
+    sm:text-left
+  `}
             >
               {company.name}
             </h3>
