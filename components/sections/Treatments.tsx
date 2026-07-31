@@ -174,7 +174,16 @@ sm:w-12
                           justify-center
                         "
                   >
-                    <Icon size={20} className="sm:h-6 sm:w-6" />
+                    <Icon
+                      size={20}
+                      strokeWidth={1.8}
+                      style={{
+                        color: "#FFFFFF",
+                        stroke: "#FFFFFF",
+                        flexShrink: 0,
+                      }}
+                      className="h-5 w-5 sm:h-6 sm:w-6"
+                    />
                   </div>
 
                   {/* Content */}
