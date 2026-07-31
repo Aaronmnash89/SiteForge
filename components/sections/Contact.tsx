@@ -16,12 +16,8 @@ export default function ContactCTA({
   theme,
 }: ContactCTAProps) {
   return (
-    <section
-      id="contact"
-      className="bg-[#261020] py-32"
-    >
+    <section id="contact" className="bg-[#261020] py-32">
       <Container className="max-w-5xl text-center">
-
         {/* Eyebrow */}
 
         <p
@@ -78,7 +74,6 @@ export default function ContactCTA({
         {/* Divider */}
 
         <div className="flex items-center justify-center gap-6 mt-12">
-
           <div className="w-20 h-px bg-[#A87897]" />
 
           <span
@@ -94,31 +89,26 @@ export default function ContactCTA({
           </span>
 
           <div className="w-20 h-px bg-[#A87897]" />
-
         </div>
 
         {/* Buttons */}
 
         <div className="mt-14 flex flex-col sm:flex-row justify-center gap-5">
-
           <Button
-            href="/booking"
+            href="https://eastwestacupuncture.acubliss.app"
+            target="_blank"
+            rel="noopener noreferrer"
             theme={theme}
           >
             {contactCTA.buttonText}
           </Button>
 
           <Link href={`tel:${company.phone.replace(/[^\d+]/g, "")}`}>
-            <Button
-              variant="secondary"
-              theme={theme}
-            >
+            <Button variant="secondary" theme={theme}>
               {contactCTA.phoneButton}
             </Button>
           </Link>
-
         </div>
-
       </Container>
     </section>
   );

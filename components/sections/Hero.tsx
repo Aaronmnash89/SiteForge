@@ -186,7 +186,7 @@ export default function Hero({ hero, company, theme }: HeroProps) {
     shadow-[0_18px_45px_rgba(0,0,0,.28)]
   "
           >
-            <Button href="https://eastwestacupuncture.acubliss.app" theme={theme}>
+            <Button href="/booking" theme={theme}>
               {hero.buttonText}
             </Button>
 

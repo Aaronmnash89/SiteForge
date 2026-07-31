@@ -8,6 +8,8 @@ interface ButtonProps {
   className?: string;
   theme: ThemeConfig;
   href?: string;
+  target?: React.HTMLAttributeAnchorTarget;
+  rel?: string;
 }
 
 export default function Button({
