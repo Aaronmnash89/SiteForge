@@ -152,29 +152,39 @@ pb-6
 
                   <div
                     className="
-                          mt-1
+    mt-1
 
-                          h-10
-w-10
+    h-10
+    w-10
 
-sm:h-12
-sm:w-12
+    sm:h-12
+    sm:w-12
 
-                          shrink-0
+    shrink-0
 
-                          rounded-full
+    rounded-full
 
-                          border
-                          border-[#A87897]/40
+    border
+    border-[#A87897]/40
 
-                          bg-[#591E4A]/25
+    bg-[#591E4A]/25
 
-                          flex
-                          items-center
-                          justify-center
-                        "
+    flex
+    items-center
+    justify-center
+
+    text-[#F2F2F2]
+  "
                   >
-                    <Icon size={20} className="sm:h-6 sm:w-6" />
+                    <Icon
+                      size={20}
+                      className="
+                  h-5
+                  w-5
+              absoluteStrokeWidth
+              sm:w-6
+              text-[#F2F2F2]"
+                    />
                   </div>
 
                   {/* Content */}
