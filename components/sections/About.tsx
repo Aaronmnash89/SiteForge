@@ -25,7 +25,7 @@ export default function About({
   return (
     <section
       id="about"
-      className="bg-[#F7F3EE] py-36 overflow-hidden"
+      className="bg-[#F7F3EE] pt-36 pb-20 lg:pb-32 overflow-hidden"
     >
       <Container className="max-w-7xl">
 
