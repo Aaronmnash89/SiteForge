@@ -102,7 +102,7 @@ export default function Treatments({ treatments, theme }: TreatmentsProps) {
             {treatments.subtitle}
           </p>
 
-          <div className="mt-14 max-w-xl mx-auto">
+          <div className="mt-14 w-full max-w-xl mx-auto">
             <div className="flex items-center gap-4">
               <div className="h-px flex-1 bg-[#A87897]" />
 
