@@ -81,22 +81,22 @@
     "subtitle": "Our goal is to help you achieve your health objectives through compassionate care and evidence-based and clinically-proven natural medicine.",
     "features": [
       {
-        "icon": "Award",
+        "icon": "HeartPulse",
         "title": "Experienced Practitioner",
         "description": "Years of experience helping patients manage pain, stress, and chronic conditions naturally."
       },
       {
-        "icon": "ShieldCheck",
+        "icon": "ScanHeart",
         "title": "Whole-Body Approach",
         "description": "We focus on treating the root cause rather than simply masking symptoms."
       },
       {
-        "icon": "Leaf",
+        "icon": "Clock3",
         "title": "Quality Time",
         "description": "Appointments that are never rushed and where you feel completely heard by your practitioner."
       },
       {
-        "icon": "Scale",
+        "icon": "ClipboardList",
         "title": "Customized Treatment Plans",
         "description": "Every patient receives care tailored to their unique health goals and needs using Chinese Medicine tongue and pulse diagnosis."
       }

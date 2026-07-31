@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import {
-  Scale,
-  ShieldCheck,
-  Award,
-  Leaf,
+  HeartPulse,
+  ScanHeart,
+  Clock3,
+  ClipboardList,
 } from "lucide-react";
 
 import { WhyChooseUsData } from "@/types/site";
@@ -18,10 +18,10 @@ interface WhyChooseUsProps {
 }
 
 const icons = {
-  Scale,
-  ShieldCheck,
-  Leaf,
-  Award,
+  HeartPulse,
+  ScanHeart,
+  Clock3,
+  ClipboardList,
 };
 
 export default function WhyChooseUs({
