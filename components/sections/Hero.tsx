@@ -15,7 +15,7 @@ interface HeroProps {
 export default function Hero({ hero, company, theme }: HeroProps) {
   return (
     <section
-  className="
+      className="
     relative
     min-h-screen
 
@@ -25,7 +25,7 @@ export default function Hero({ hero, company, theme }: HeroProps) {
     sm:pt-24
     lg:pt-0
   "
->
+    >
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -46,23 +46,21 @@ export default function Hero({ hero, company, theme }: HeroProps) {
       </div>
 
       <Container
-  className="
+        className="
     relative
     z-10
-
     flex
     items-center
     justify-center
-
     min-h-screen
-
     px-6
-
-    py-10
-    sm:py-14
-    lg:py-0
-  "
->
+    pt-16
+    pb-10
+    sm:pt-20
+    sm:pb-14
+    lg:pt-24
+    lg:pb-0"
+      >
         <div
           className="
             w-full
@@ -70,6 +68,36 @@ export default function Hero({ hero, company, theme }: HeroProps) {
             text-center
           "
         >
+          {/* Hero Logo */}
+          <div className="mb-4 flex justify-center">
+            <Image
+              src="/images/whiteLogo.png"
+              alt="East West Acupuncture & Herbs"
+              width={350}
+              height={350}
+              priority
+              className="
+      mx-auto
+      mt-2
+      sm:mt-4
+      lg:mt-2
+
+      mb-2
+      sm:mb-4
+      lg:mb-4
+
+      w-[160px]
+      sm:w-[190px]
+      lg:w-[230px]
+      xl:w-[250px]
+
+      h-auto
+
+      drop-shadow-[0_12px_35px_rgba(0,0,0,.5)]
+      drop-shadow-[0_0_22px_rgba(255,255,255,.18)]
+    "
+            />
+          </div>
           {/* Eyebrow */}
 
           <p
@@ -152,47 +180,38 @@ export default function Hero({ hero, company, theme }: HeroProps) {
 
           {/* CTA Area */}
 
-          <div
-            className="
-    mt-10
-    sm:mt-12
+          <div className="mt-10 sm:mt-12 pb-12 sm:pb-16">
+            <div
+              className="
+      inline-flex
+      w-full
+      sm:w-auto
+      flex-col
+      sm:flex-row
+      gap-4
+      sm:gap-5
+      rounded-[26px]
+      bg-[#261020]/45
+      backdrop-blur-md
+      border
+      border-white/10
+      px-5
+      py-5
+      shadow-[0_18px_45px_rgba(0,0,0,.28)]
+    "
+            >
+              <Button href="/booking" theme={theme}>
+                {hero.buttonText}
+              </Button>
 
-    inline-flex
-
-    w-full
-    sm:w-auto
-
-    flex-col
-    sm:flex-row
-
-    gap-4
-    sm:gap-5
-
-    rounded-[26px]
-
-    bg-[#261020]/45
-
-    backdrop-blur-md
-
-    border
-    border-white/10
-
-    px-5
-    sm:px-5
-    lg:px-5
-
-    py-5
-
-    shadow-[0_18px_45px_rgba(0,0,0,.28)]
-  "
-          >
-            <Button href="/booking" theme={theme}>
-              {hero.buttonText}
-            </Button>
-
-            <Button href={company.phoneHref} variant="secondary" theme={theme}>
-              {hero.callButton}
-            </Button>
+              <Button
+                href={company.phoneHref}
+                variant="secondary"
+                theme={theme}
+              >
+                {hero.callButton}
+              </Button>
+            </div>
           </div>
         </div>
       </Container>

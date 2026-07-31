@@ -25,9 +25,9 @@ export default function FAQ({
     >
       <Container className="max-w-5xl">
 
-        {/* ===========================
+        {/* 
             HEADER
-        =========================== */}
+         */}
 
         <div className="max-w-4xl mx-auto text-center">
 
@@ -78,9 +78,9 @@ export default function FAQ({
 
         </div>
 
-        {/* ===========================
+        {/* 
             DIVIDER
-        =========================== */}
+         */}
 
         <div className="mt-14 max-w-xl mx-auto">
 
@@ -106,9 +106,9 @@ export default function FAQ({
 
         </div>
 
-        {/* ===========================
+        {/* 
             FAQ LIST
-        =========================== */}
+         */}
 
         <div className="mt-20 space-y-6">
 

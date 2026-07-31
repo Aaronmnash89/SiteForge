@@ -37,9 +37,9 @@
   },
   "theme": "acupuncture",
   "company": {
-    "name": "East West Acupuncture & Herbs",
-    "logo": "/images/ew_nav_logo.png",
-    "logoDark": "/images/ew_nav_logo.png",
+    "name": "",
+    "logo": "/images/BlackLogo.png",
+    "logoDark": "/images/whiteLogo.png",
     "phone": "(828) 407-0412",
     "phoneHref": "tel:8284070412",
     "email": ""
@@ -71,14 +71,14 @@
   "hero": {
     "eyebrow": "",
     "title": "Ancient Medicine for Modern Health",
-    "subtitle": "Experience personalized acupuncture treatments designed to reduce pain, restore balance, and support your body's natural healing process.",
+    "subtitle": "Experience personalized Chinese Medicine treatments designed to restore balance and support your body’s natural healing process",
     "buttonText": "Book Appointment",
     "callButton": "Call Today"
   },
   "whyChooseUs": {
     "eyebrow": "",
-    "title": "Personalized Care For Your Wellness Journey",
-    "subtitle": "Our goal is to help you achieve lasting wellness through compassionate care, evidence-based acupuncture, and personalized treatment plans.",
+    "title": "Holistic Care For Your Wellness Journey",
+    "subtitle": "Our goal is to help you achieve your health objectives through compassionate care and evidence-based and clinically-proven natural medicine.",
     "features": [
       {
         "icon": "Award",
@@ -105,7 +105,7 @@
   "about": {
     "eyebrow": "",
     "title": "Helping You Achieve Better Health Naturally",
-    "description": "Dr. Maegan has been practicing Chinese Medicine in Asheville for ten years. Her early path began with her love of nature, nutrition, and herbal medicine as ways to find peace and healing in her life. She received her yoga teaching certificate in 2008 in Philadelphia, which expanded her ideas of health and introduced alternative views of wellness that greatly informs how she lives and practices medicine today. \n\nAfter graduating from Green Mountain College in 2012 with a degree in Environmental Studies (education-focused), she joined Americorps for two years. She taught and developed Farm-ToSchool programs in Vermont, focusing on nutrition education, school gardening, organic farming, environmental science, and creating thriving local food systems. \n\nShe then attended a five-year Masters and Doctoral program at Daoist Traditions College of Chinese Medical Arts. Studies focused on the Classical teachings of Chinese medicine with 88th generation Daoist Priest, Jeffrey Yuen. She also undertook advanced studies in orthopedics, women's health and obstetrics, and cardiology in the doctoral program. \n\nDr. Maegan is a primary care acupuncturist with the ability to treat a diverse set of conditions. Her specialties include orthopedic (“dry needling”) for acute and chronic pain, psychological conditions, and hormonal imbalances. She is skilled in treating the “mysterious” illnesses that biomedicine struggles to successfully resolve, such as Long Covid,chronic fatigue, autoimmune conditions, and fibromyalgia. Dr. Maegan also has longterm, mentored experienced in supporting those going through cancer treatment. Additionally,she has studied death medicine and is well versed in end of life care. \n\nAs a Chinese medicine doctor, she is committed to seeing her patient as an individual and not a disease, offering compassionate and effective care to every person. It is her greatest honor in life to hold space for all of those that step into her treatment room. She is dedicated to meeting each patient with the utmost sensitivity, care, and respect. \n\nDr. Maegan’s other interests include Cha Dao/tea ceremony, gardening, travel, and hiking in the beautiful Appalachian mountains with her dogs.",
+    "description": "Dr. Maegan has been practicing Chinese Medicine in Asheville for ten years. Her early path began with her love of nature, nutrition, and herbal medicine as ways to find peace and healing in her life. She received her yoga teaching certificate in 2008 in Philadelphia, which expanded her ideas of health and introduced alternative views of wellness that greatly informs how she lives and practices medicine today. \n\nAfter graduating from Green Mountain College in 2012 with a degree in Environmental Studies (education-focused), she joined Americorps for two years. She taught and developed Farm-To-School programs in Vermont, focusing on nutrition education, school gardening, organic farming, environmental science, and creating thriving local food systems. \n\nShe then attended a five-year Masters and Doctoral program at Daoist Traditions College of Chinese Medical Arts. Studies focused on the Classical teachings of Chinese medicine with 88th generation Daoist Priest, Jeffrey Yuen. She also undertook advanced studies in orthopedics, women's health and obstetrics, and cardiology in the doctoral program. \n\nShe is a primary care acupuncturist with the ability to treat a diverse set of conditions. Her specialties include orthopedic (“dry needling”) for acute and chronic pain, psychological conditions, and hormonal imbalances. She is skilled in treating the “mysterious” illnesses that biomedicine struggles to successfully resolve, such as Long Covid, chronic fatigue, autoimmune conditions, and fibromyalgia. Dr. Maegan also has longterm, mentored experienced in supporting those going through cancer treatment. Additionally, she has studied death medicine and is well versed in end of life care. \n\nAs a Chinese medicine doctor, she is committed to seeing her patient as an individual and not a disease, offering compassionate and effective care to every person. It is her greatest honor in life to hold space for all of those that step into her treatment room. She is dedicated to meeting each patient with the utmost sensitivity, care, and respect. \n\nDr. Maegan’s other interests include Cha Dao/tea ceremony, gardening, travel, and hiking in the beautiful Appalachian mountains with her dogs.",
     "image": "/images/maegan.jpg",
     "buttonText": "Book Appointment",
     "highlights": [
@@ -202,7 +202,7 @@
   },
   "testimonials": {
     "eyebrow": "PATIENT TESTIMONIALS",
-    "title": "Helping Patients Feel Their Best",
+    "title": "Supporting Patients in Feeling Their Best",
     "reviews": [
       {
         "name": "Kim M.",

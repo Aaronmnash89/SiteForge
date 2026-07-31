@@ -44,7 +44,7 @@ export default function Navigation({
       },
       {
         threshold: 0.2,
-      }
+      },
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -53,9 +53,9 @@ export default function Navigation({
   }, []);
 
   const logoColor = theme.navigation.logoScrolled;
-const navText = theme.navigation.textScrolled;
-const navHover = theme.navigation.textHoverScrolled;
-const navActive = theme.navigation.activeTextScrolled;
+  const navText = theme.navigation.textScrolled;
+  const navHover = theme.navigation.textHoverScrolled;
+  const navActive = theme.navigation.activeTextScrolled;
 
   return (
     <>
@@ -89,57 +89,33 @@ const navActive = theme.navigation.activeTextScrolled;
     transition-all
     duration-300
 
-    ${scrolled
-              ? "h-16"
-              : "h-20"
-            }
+    ${scrolled ? "h-16" : "h-20"}
   `}
         >
           {/* Logo */}
-          <Link
-            href="/"
-            className="
-    flex
-    items-center
-    shrink-0
-  "
-          >
-            {company.logoDark ? (
-              <div
-                className={`
-        relative
-        overflow-hidden
-        origin-left
-        transition-all
-        duration-500
-
-        ${scrolled
-                    ? "w-[180px] sm:w-[210px] md:w-[235px] h-14 opacity-100"
-                    : "w-[200px] sm:w-[230px] md:w-[260px] h-16 opacity-100"
-                  }
-      `}
-              >
-                <Image
-                  src={company.logoDark}
-                  alt={company.name}
-                  fill
-                  priority
-                  className="object-contain object-left"
-                />
-              </div>
-            ) : (
-              <h1
-                className={`
-        ${logoColor}
-        font-bold
-        transition-all
-        duration-300
-      `}
-              >
-                {company.name}
-              </h1>
-            )}
-          </Link>
+          <div className="h-16 flex items-center">
+            <Link
+  href="/"
+  className={`
+    flex items-center
+    transition-all duration-500
+    ${
+      scrolled
+        ? "opacity-100 translate-y-0"
+        : "opacity-0 -translate-y-2 pointer-events-none"
+    }
+  `}
+>
+  <Image
+  src="/images/white_logo_text.png"
+  alt={company.name}
+  width={300}
+  height={300}
+  priority
+ className="h-13 lg:h-15 w-auto object-contain"
+/>
+</Link>
+          </div>
 
           {/* Desktop Navigation */}
           <ul
@@ -151,10 +127,7 @@ const navActive = theme.navigation.activeTextScrolled;
     transition-all
     duration-300
 
-    ${scrolled
-                ? "gap-8 text-[15px]"
-                : "gap-10 text-base"
-              }
+    ${scrolled ? "gap-8 text-[15px]" : "gap-10 text-base"}
   `}
           >
             {navigation.links.map((link) => {
@@ -163,10 +136,7 @@ const navActive = theme.navigation.activeTextScrolled;
                 (link.href === "/" && activeSection === "home");
 
               return (
-                <li
-                  key={link.label}
-                  className="relative"
-                >
+                <li key={link.label} className="relative">
                   <Link
                     href={link.href}
                     className={`
@@ -176,10 +146,7 @@ const navActive = theme.navigation.activeTextScrolled;
     transition-all
     duration-300
 
-    ${isActive
-                        ? navActive
-                        : `${navText} ${navHover}`
-                      }
+    ${isActive ? navActive : `${navText} ${navHover}`}
   `}
                   >
                     {link.label}
@@ -200,14 +167,9 @@ const navActive = theme.navigation.activeTextScrolled;
     transition-all
     duration-300
 
-    ${isActive
-                        ? "w-full"
-                        : "w-0"
-                      }
+    ${isActive ? "w-full" : "w-0"}
   `}
                   />
-
-
                 </li>
               );
             })}
@@ -233,11 +195,7 @@ const navActive = theme.navigation.activeTextScrolled;
     ${navText}
   `}
           >
-            {mobileMenuOpen ? (
-              <X size={26} />
-            ) : (
-              <Menu size={26} />
-            )}
+            {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </nav>
@@ -260,10 +218,11 @@ const navActive = theme.navigation.activeTextScrolled;
     transition-all
     duration-300
 
-    ${mobileMenuOpen
-              ? "max-h-[500px] opacity-100"
-              : "max-h-0 opacity-0 pointer-events-none"
-            }
+    ${
+      mobileMenuOpen
+        ? "max-h-[500px] opacity-100"
+        : "max-h-0 opacity-0 pointer-events-none"
+    }
 
     ${theme.navigation.backgroundScrolled}
 
@@ -271,14 +230,11 @@ const navActive = theme.navigation.activeTextScrolled;
   `}
         >
           <ul className="px-8 py-6">
-
             {navigation.links.map((link) => (
-
               <li
                 key={link.label}
                 className="border-b border-white/10 last:border-none"
               >
-
                 <Link
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
@@ -297,11 +253,8 @@ const navActive = theme.navigation.activeTextScrolled;
                 >
                   {link.label}
                 </Link>
-
               </li>
-
             ))}
-
           </ul>
         </div>
       )}

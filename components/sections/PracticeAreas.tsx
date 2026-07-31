@@ -36,9 +36,7 @@ export default function PracticeAreas({
 
     <div className="max-w-5xl mx-auto text-center">
 
-  {/* ===========================
-      LEFT CONTENT
-  =========================== */}
+  {/* LEFT CONTENT */}
 
   <div className="relative z-10">
 

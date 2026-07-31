@@ -33,9 +33,7 @@ export default function About({
 
 
 
-          {/* ======================================
-        CONTENT
-    ====================================== */}
+          {/* CONTENT */}
 
           <div className="max-w-4xl mx-auto">
 
@@ -104,14 +102,17 @@ export default function About({
                 </div>
 
                 <div
-                  className={`
-        ${theme.typography.body}
-        text-[#4C4542]
-        text-lg
-        leading-9
-        whitespace-pre-line
-      `}
-                >
+  className={`
+    ${theme.typography.body}
+
+    mt-8
+
+    text-[#4C4542]
+    text-lg
+    leading-9
+    whitespace-pre-line
+  `}
+>
                   {about.description
                     .split("\n\n")
                     .slice(3)
@@ -136,9 +137,9 @@ export default function About({
               </div>
 
             </div>
-            {/* ======================================
+            {/* 
         IMAGE
-    ====================================== */}
+     */}
 
             <div
               className="
