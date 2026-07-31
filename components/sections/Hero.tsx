@@ -12,25 +12,20 @@ interface HeroProps {
   theme: ThemeConfig;
 }
 
-export default function Hero({
-  hero,
-  company,
-  theme,
-}: HeroProps) {
+export default function Hero({ hero, company, theme }: HeroProps) {
   return (
     <section
-      id="home"
-      className="
+  className="
     relative
     min-h-screen
 
     overflow-hidden
 
-    pt-32
-    sm:pt-36
+   pt-20
+    sm:pt-24
     lg:pt-0
   "
-    >
+>
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -51,7 +46,7 @@ export default function Hero({
       </div>
 
       <Container
-        className="
+  className="
     relative
     z-10
 
@@ -63,11 +58,11 @@ export default function Hero({
 
     px-6
 
-    py-20
-    sm:py-24
+    py-10
+    sm:py-14
     lg:py-0
   "
-      >
+>
         <div
           className="
             w-full
@@ -173,37 +168,29 @@ export default function Hero({
     gap-4
     sm:gap-5
 
-    rounded-3xl
-    sm:rounded-full
+    rounded-[26px]
 
     bg-[#261020]/45
 
-    backdrop-blur-sm
+    backdrop-blur-md
 
     border
     border-white/10
 
-    px-6
-    sm:px-8
+    px-5
+    sm:px-5
+    lg:px-5
 
     py-5
-    sm:py-6
 
-    shadow-[0_15px_45px_rgba(0,0,0,.25)]
+    shadow-[0_18px_45px_rgba(0,0,0,.28)]
   "
           >
-            <Button
-              href="/booking"
-              theme={theme}
-            >
+            <Button href="/booking" theme={theme}>
               {hero.buttonText}
             </Button>
 
-            <Button
-              href={company.phoneHref}
-              variant="secondary"
-              theme={theme}
-            >
+            <Button href={company.phoneHref} variant="secondary" theme={theme}>
               {hero.callButton}
             </Button>
           </div>

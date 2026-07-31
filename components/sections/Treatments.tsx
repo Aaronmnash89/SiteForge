@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  Leaf,
-  HeartHandshake,
-  Sparkles,
-  Flower2,
-} from "lucide-react";
+import { Leaf, HeartHandshake, Sparkles, Flower2 } from "lucide-react";
 
 import { TreatmentsData } from "@/types/site";
 import Container from "@/components/ui/Container";
@@ -16,26 +11,14 @@ interface TreatmentsProps {
   theme: ThemeConfig;
 }
 
-const featureIcons = [
-  Leaf,
-  HeartHandshake,
-  Sparkles,
-  Flower2,
-];
+const featureIcons = [Leaf, HeartHandshake, Sparkles, Flower2];
 
-export default function Treatments({
-  treatments,
-  theme,
-}: TreatmentsProps) {
+export default function Treatments({ treatments, theme }: TreatmentsProps) {
   return (
-    <section
-      id="treatments"
-      className="relative overflow-hidden min-h-screen"
-    >
+    <section id="treatments" className="relative overflow-hidden min-h-screen">
       {/* Background */}
 
       <div className="absolute inset-0">
-
         <img
           src="/images/cupping.JPG"
           alt="Traditional Cupping Therapy"
@@ -45,25 +28,23 @@ export default function Treatments({
         <div className="absolute inset-0 bg-[#261020]/35" />
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_left_center,rgba(92,44,65,.12),transparent_65%)]" />
-
       </div>
 
       {/* Content */}
 
       <Container
-  className="
+        className="
     relative
     z-10
 
     py-24
     lg:py-32
   "
->
+      >
+        {/* Header */}
 
-  {/* Header */}
-
-  <div
-  className="
+        <div
+          className="
     w-full
     max-w-5xl
     mx-auto
@@ -75,22 +56,21 @@ export default function Treatments({
 
     mb-20
   "
->
-
-    <p
-      className="
+        >
+          <p
+            className="
         uppercase
         tracking-[0.35em]
         text-sm
         text-[#D6A8C9]
         mb-8
       "
-    >
-      {treatments.eyebrow}
-    </p>
+          >
+            {treatments.eyebrow}
+          </p>
 
-    <h2
-      className={`
+          <h2
+            className={`
         ${theme.typography.heading}
 
         text-[#F2F2F2]
@@ -100,12 +80,12 @@ export default function Treatments({
 
         leading-[1.05]
       `}
-    >
-      {treatments.title}
-    </h2>
+          >
+            {treatments.title}
+          </h2>
 
-    <p
-      className={`
+          <p
+            className={`
         ${theme.typography.body}
 
         mt-8
@@ -118,40 +98,35 @@ export default function Treatments({
 
         text-[#DDD5D8]
       `}
-    >
-      {treatments.subtitle}
-    </p>
+          >
+            {treatments.subtitle}
+          </p>
 
-    <div className="mt-14 max-w-xl mx-auto">
+          <div className="mt-14 w-full max-w-xl mx-auto">
+            <div className="flex items-center gap-4">
+              <div className="h-px flex-1 bg-[#A87897]" />
 
-      <div className="flex items-center gap-4">
-
-        <div className="h-px flex-1 bg-[#A87897]" />
-
-        <span
-          className="
+              <span
+                className="
             uppercase
             tracking-[0.35em]
             text-xs
             text-[#A87897]
             whitespace-nowrap
           "
-        >
-          Personalized Wellness
-        </span>
+              >
+                Personalized Wellness
+              </span>
 
-        <div className="h-px flex-1 bg-[#A87897]" />
+              <div className="h-px flex-1 bg-[#A87897]" />
+            </div>
+          </div>
+        </div>
 
-      </div>
+        {/* Treatments */}
 
-    </div>
-
-  </div>
-
-  {/* Treatments */}
-
-  <div
-    className="
+        <div
+          className="
       mt-20
 
       grid
@@ -159,30 +134,24 @@ export default function Treatments({
 
       lg:grid-cols-2
     "
-  >
+        >
+          {treatments.items.map((item, index) => {
+            const Icon = featureIcons[index % featureIcons.length];
 
-              {treatments.items.map((item, index) => {
-
-                const Icon =
-                  featureIcons[index % featureIcons.length];
-
-                return (
-
-                  <div
-                    key={`${item.title}-${index}`}
-                    className="
+            return (
+              <div
+                key={`${item.title}-${index}`}
+                className="
 border-b
 border-[#6A4558]
 pb-6
 "
-                  >
+              >
+                <div className="flex items-start gap-6">
+                  {/* Icon */}
 
-                    <div className="flex items-start gap-6">
-
-                      {/* Icon */}
-
-                      <div
-                        className="
+                  <div
+                    className="
                           mt-1
 
                           h-10
@@ -204,19 +173,15 @@ sm:w-12
                           items-center
                           justify-center
                         "
-                      >
-                        <Icon
-  size={20}
-  className="sm:h-6 sm:w-6"
-/>
-                      </div>
+                  >
+                    <Icon size={20} className="sm:h-6 sm:w-6" />
+                  </div>
 
-                      {/* Content */}
+                  {/* Content */}
 
-                      <div>
-
-                        <h3
-                          className={`
+                  <div>
+                    <h3
+                      className={`
                             ${theme.typography.heading}
 
                             text-[#F2F2F2]
@@ -224,12 +189,12 @@ sm:w-12
                             text-2xl
 sm:text-3xl
                           `}
-                        >
-                          {item.title}
-                        </h3>
+                    >
+                      {item.title}
+                    </h3>
 
-                        <p
-                          className={`
+                    <p
+                      className={`
                             ${theme.typography.body}
 
                             2
@@ -244,24 +209,16 @@ sm:leading-8
 
                             text-[#CFC7CB]
                           `}
-                        >
-                          {item.description}
-                        </p>
-
-                      </div>
-
-                    </div>
-
+                    >
+                      {item.description}
+                    </p>
                   </div>
-
-                );
-
-              })}
-
-            </div>
-
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </Container>
-
     </section>
   );
 }
