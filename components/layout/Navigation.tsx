@@ -95,29 +95,37 @@ export default function Navigation({
           {/* Logo */}
           <div className="h-16 flex items-center">
   <Link
-    href="/"
-    className={`
-      flex items-center
-      -ml-4
-      md:-ml-6
-      xl:-ml-8
-      
-      transition-all duration-500
-      ${
-        scrolled
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 -translate-y-2 pointer-events-none"
-      }
-    `}
-  >
+  href="/"
+  className={`
+    flex items-center
+    -ml-4
+    md:-ml-6
+    xl:-ml-8
+
+    transition-opacity duration-300
+
+    ${
+      scrolled
+        ? "opacity-100 visible"
+        : "opacity-0 invisible pointer-events-none"
+    }
+  `}
+>
   <Image
-  src="/images/white_text_only.png"
-  alt={company.name}
-  width={300}
-  height={300}
-  priority
- className="h-13 lg:h-15 w-auto object-contain"
-/>
+    src="/images/white_text_only.png"
+    alt={company.name}
+    width={300}
+    height={300}
+    priority
+    draggable={false}
+    className="
+      h-13
+      lg:h-15
+      w-auto
+      object-contain
+      select-none
+    "
+  />
 </Link>
           </div>
 
