@@ -82,9 +82,9 @@ export default function Navigation({
   md:-ml-6
   xl:-ml-8
 
-  transition-opacity duration-500
+  transition-all duration-500
 
-  ${scrolled ? "opacity-100" : "opacity-0 pointer-events-none"}
+  ${scrolled ? "opacity-100 visible" : "opacity-0 invisible"}
 `}
             >
               <Image
@@ -94,13 +94,7 @@ export default function Navigation({
                 height={300}
                 priority
                 draggable={false}
-                className="
-  h-13
-  lg:h-15
-  w-auto
-  object-contain
-  [transform:translateZ(0)]
-"
+                className="h-13 lg:h-15 w-auto object-contain"
               />
             </Link>
           </div>
