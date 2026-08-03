@@ -17,8 +17,17 @@ export default function Footer({ footer, company, theme }: FooterProps) {
     <div className="grid gap-16 lg:grid-cols-[1.5fr_1fr_1fr]">
 
       {/* COMPANY */}
-
+    
       <div>
+        <h4
+          className={`
+            ${theme.typography.heading}
+            text-2xl
+            text-[#F7F3EE]
+          `}
+        >
+          Contact Info
+        </h4>
         <div className="mt-8 space-y-3 text-[#C9BEC4]">
           <p>{company.phone}</p>
 
