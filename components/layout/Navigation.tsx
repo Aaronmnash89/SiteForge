@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { ThemeConfig } from "@/configs/themes/types";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 interface NavigationProps {
   company: CompanyData;
@@ -19,7 +20,7 @@ export default function Navigation({
   theme,
 }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -29,27 +30,6 @@ export default function Navigation({
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.2,
-      },
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
   }, []);
 
   const logoColor = theme.navigation.logoScrolled;
@@ -140,8 +120,8 @@ export default function Navigation({
           >
             {navigation.links.map((link) => {
               const isActive =
-                activeSection === link.href.replace("#", "") ||
-                (link.href === "/" && activeSection === "home");
+                pathname === link.href ||
+                (pathname === "/" && link.href === "/");
 
               return (
                 <li key={link.label} className="relative">
@@ -247,17 +227,17 @@ export default function Navigation({
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`
-            block
-            py-5
+  block
+  py-5
+  text-lg
+  transition-colors
 
-            text-lg
-
-            ${theme.navigation.textScrolled}
-
-            transition-colors
-
-            ${theme.navigation.textHoverScrolled}
-          `}
+  ${
+    pathname === link.href
+      ? theme.navigation.activeTextScrolled
+      : `${theme.navigation.textScrolled} ${theme.navigation.textHoverScrolled}`
+  }
+`}
                 >
                   {link.label}
                 </Link>
