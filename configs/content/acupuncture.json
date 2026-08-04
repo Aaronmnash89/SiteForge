@@ -306,6 +306,10 @@
       {
         "label": "Patient Portal",
         "href": "https://eastwestacupuncture.acubliss.app"
+      },
+      {
+        "label": "FAQs",
+        "href": "/faq"
       }
     ]
   },
