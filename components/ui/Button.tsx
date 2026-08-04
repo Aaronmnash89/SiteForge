@@ -1,4 +1,5 @@
 "use client";
+
 import { ThemeConfig } from "@/configs/themes/types";
 import Link from "next/link";
 
@@ -17,46 +18,48 @@ export default function Button({
   variant = "primary",
   className = "",
   theme,
-  href
+  href,
+  target,
+  rel,
 }: ButtonProps) {
-
   const styles = {
-  primary: theme.button.primaryColor,
+    primary: theme.button.primaryColor,
+    secondary: theme.colors.secondary,
+  };
 
-  secondary: theme.colors.secondary,
-
-};
-
-const hoverStyles = {
-  primary: theme.button.primaryHover,
-  secondary: theme.button.secondaryHover,
-};
-
+  const hoverStyles = {
+    primary: theme.button.primaryHover,
+    secondary: theme.button.secondaryHover,
+  };
 
   const classes = `
-  ${styles[variant]}
-  ${theme.typography.heading}
-  ${theme.typography.body}
-  ${theme.button.padding}
-  ${theme.button.rounded}
-  ${theme.button.shadow}
-  ${hoverStyles[variant]}
-  ${theme.button.transition}
-  inline-flex items-center justify-center
-  ${className}
-`;
+    ${styles[variant]}
+    ${theme.typography.heading}
+    ${theme.typography.body}
+    ${theme.button.padding}
+    ${theme.button.rounded}
+    ${theme.button.shadow}
+    ${hoverStyles[variant]}
+    ${theme.button.transition}
+    inline-flex items-center justify-center
+    ${className}
+  `;
 
-if (href) {
-  return (
-    <Link href={href} className={classes}>
-      {children}
-    </Link>
-  );
-}
+  if (href) {
+    const isExternal =
+      href.startsWith("http://") || href.startsWith("https://");
 
-return (
-  <button className={classes}>
-    {children}
-  </button>
-);
+    return (
+      <Link
+        href={href}
+        target={isExternal ? "_blank" : target}
+        rel={isExternal ? "noopener noreferrer" : rel}
+        className={classes}
+      >
+        {children}
+      </Link>
+    );
+  }
+
+  return <button className={classes}>{children}</button>;
 }
