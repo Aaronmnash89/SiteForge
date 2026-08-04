@@ -113,45 +113,70 @@ export default function Navigation({
   `}
           >
             {navigation.links.map((link) => {
+              const isExternal = link.href.startsWith("http");
+
               const isActive =
-                pathname === link.href ||
-                (pathname === "/" && link.href === "/");
+                !isExternal &&
+                (pathname === link.href ||
+                  (pathname === "/" && link.href === "/"));
 
               return (
                 <li key={link.label} className="relative">
-                  <Link
-                    href={link.href}
-                    className={`
-    relative
-    py-2
+                  {isExternal ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`
+            relative
+            py-2
 
-    transition-all
-    duration-300
+            transition-all
+            duration-300
 
-    ${isActive ? navActive : `${navText} ${navHover}`}
-  `}
-                  >
-                    {link.label}
-                  </Link>
+            ${navText}
+            ${navHover}
+          `}
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className={`
+            relative
+            py-2
 
-                  <span
-                    className={`
-    absolute
-    left-0
-    -bottom-1
+            transition-all
+            duration-300
 
-    h-[2px]
+            ${isActive ? navActive : `${navText} ${navHover}`}
+          `}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
 
-    rounded-full
+                  {!isExternal && (
+                    <span
+                      className={`
+            absolute
+            left-0
+            -bottom-1
 
-    ${theme.navigation.underline}
+            h-[2px]
 
-    transition-all
-    duration-300
+            rounded-full
 
-    ${isActive ? "w-full" : "w-0"}
-  `}
-                  />
+            ${theme.navigation.underline}
+
+            transition-all
+            duration-300
+
+            ${isActive ? "w-full" : "w-0"}
+          `}
+                    />
+                  )}
                 </li>
               );
             })}
@@ -212,31 +237,62 @@ export default function Navigation({
   `}
         >
           <ul className="px-8 py-6">
-            {navigation.links.map((link) => (
-              <li
-                key={link.label}
-                className="border-b border-white/10 last:border-none"
-              >
-                <Link
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`
-  block
-  py-5
-  text-lg
-  transition-colors
+            {navigation.links.map((link) => {
+              const isExternal = link.href.startsWith("http");
 
-  ${
-    pathname === link.href
-      ? theme.navigation.activeTextScrolled
-      : `${theme.navigation.textScrolled} ${theme.navigation.textHoverScrolled}`
-  }
-`}
+              const isActive =
+                !isExternal &&
+                (pathname === link.href ||
+                  (pathname === "/" && link.href === "/"));
+
+              return (
+                <li
+                  key={link.label}
+                  className="border-b border-white/10 last:border-none"
                 >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+                  {isExternal ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`
+            block
+            py-5
+            text-lg
+
+            ${theme.navigation.textScrolled}
+            ${theme.navigation.textHoverScrolled}
+
+            transition-colors
+          `}
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`
+            block
+            py-5
+            text-lg
+
+            transition-colors
+
+            ${
+              isActive
+                ? theme.navigation.activeTextScrolled
+                : `${theme.navigation.textScrolled} ${theme.navigation.textHoverScrolled}`
+            }
+          `}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}

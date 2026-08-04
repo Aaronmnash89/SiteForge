@@ -2,6 +2,7 @@ import { FooterData, CompanyData } from "@/types/site";
 import Button from "../ui/Button";
 import { ThemeConfig } from "@/configs/themes/types";
 import Image from "next/image";
+import Link from "next/link";
 
 interface FooterProps {
   footer: FooterData;
@@ -41,36 +42,59 @@ export default function Footer({ footer, company, theme }: FooterProps) {
 
       {/* QUICK LINKS */}
 
-      <div>
-        <h4
-          className={`
-            ${theme.typography.heading}
-            text-2xl
-            text-[#F7F3EE]
-          `}
-        >
-          Quick Links
-        </h4>
+<div>
+  <h4
+    className={`
+      ${theme.typography.heading}
+      text-2xl
+      text-[#F7F3EE]
+    `}
+  >
+    Quick Links
+  </h4>
 
-        <ul className="mt-8 space-y-4">
-          {footer.quickLinks.map((link) => (
-            <li key={link.label}>
-              <a
-                href={link.href}
-                className="
-                  text-[#D7DED9]
-                  transition-all
-                  duration-300
-                  hover:text-[#D6A8C9]
-                  hover:pl-2
-                "
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+  <ul className="mt-8 space-y-4">
+    {footer.quickLinks.map((link) => {
+      const isExternal =
+        link.href.startsWith("http://") ||
+        link.href.startsWith("https://");
+
+      return (
+        <li key={link.label}>
+          {isExternal ? (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                text-[#D7DED9]
+                transition-all
+                duration-300
+                hover:text-[#D6A8C9]
+                hover:pl-2
+              "
+            >
+              {link.label}
+            </a>
+          ) : (
+            <Link
+              href={link.href}
+              className="
+                text-[#D7DED9]
+                transition-all
+                duration-300
+                hover:text-[#D6A8C9]
+                hover:pl-2
+              "
+            >
+              {link.label}
+            </Link>
+          )}
+        </li>
+      );
+    })}
+  </ul>
+</div>
 
       {/* CTA */}
 
