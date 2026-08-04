@@ -94,12 +94,7 @@ export default function ContactCTA({
         {/* Buttons */}
 
         <div className="mt-14 flex flex-col sm:flex-row justify-center gap-5">
-          <Button
-            href="https://eastwestacupuncture.acubliss.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            theme={theme}
-          >
+          <Button href="https://eastwestacupuncture.acubliss.app" theme={theme}>
             {contactCTA.buttonText}
           </Button>
 
